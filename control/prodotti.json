@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "test",
+    "data_scadenza": "25/10/20",
+    "lotto": null,
+    "concentrazione": null
+  },
+  {
+    "nome": "yyyyy",
+    "data_scadenza": "01/10/25",
+    "lotto": null,
+    "concentrazione": null
+  },
+  {
+    "nome": "Idraulico Liquido",
+    "data_scadenza": "18/12/25",
+    "lotto": null,
+    "concentrazione": null
+  }
+]

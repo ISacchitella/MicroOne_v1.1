@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="567945a4-b155-44df-b0a0-ac2fe047e519" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MicroOne_v1.1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ROS.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ros.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/ambienti.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/connectors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/controllers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/errors.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/img_resources_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/prodotti.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/save.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/class diagram.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/ambiente_prodotto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/dispositivo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/img_resources.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/main_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/main_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/qrc_maker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/registra_ambienti.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/registra_ambienti.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/registra_prodotti.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/registra_prodotti.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/down_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/home_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/logo_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/prodotto_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/sanifica_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/save.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/res/up_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/sanifica_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/sanifica_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/seleziona_ambiente.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/seleziona_ambiente.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/timer_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/timer_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ui_maker.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jkOLtPcJRce3g7RZFwwxVngydR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <output_file path="$PROJECT_DIR$/control/errors.log" is_save="true" />
+      <log_file alias="logs" path="$PROJECT_DIR$/control/errors.log" />
+      <module name="MicroOne_v1.1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/control" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/control/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="567945a4-b155-44df-b0a0-ac2fe047e519" name="Default Changelist" comment="" />
+      <created>1604344570115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604344570115</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604344848135">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.-355.1920.1040@0.0.1920.1040" timestamp="1604344848135" />
+    <state x="740" y="237" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1604344828637">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="237" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.-355.1920.1040@0.0.1920.1040" timestamp="1604344828637" />
+    <state x="739" y="275" key="FileChooserDialogImpl" timestamp="1604344788523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.-355.1920.1040@0.0.1920.1040" timestamp="1604344788523" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1604344642776">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.-355.1920.1040@0.0.1920.1040" timestamp="1604344642776" />
+  </component>
+</project>
