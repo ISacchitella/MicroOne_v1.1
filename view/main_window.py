@@ -25,14 +25,15 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.reg_ambiente_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.reg_ambiente_btn.setGeometry(QtCore.QRect(120, 80, 91, 91))
+        self.reg_ambiente_btn.setGeometry(QtCore.QRect(195, 180, 91, 91))
+        self.reg_ambiente_btn.setMaximumSize(QtCore.QSize(91, 91))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.reg_ambiente_btn.setFont(font)
         self.reg_ambiente_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                            "      border: 5px solid rgb(0,140,255);\n"
-                                            "      border-radius:45px;\n"
-                                            "     ")
+"      border: 5px solid rgb(0,140,255);\n"
+"      border-radius:45px;\n"
+"     ")
         self.reg_ambiente_btn.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/icons/res/save.png.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -40,15 +41,16 @@ class Ui_MainWindow(object):
         self.reg_ambiente_btn.setIconSize(QtCore.QSize(32, 32))
         self.reg_ambiente_btn.setObjectName("reg_ambiente_btn")
         self.sel_ambiente_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.sel_ambiente_btn.setGeometry(QtCore.QRect(230, 100, 91, 91))
+        self.sel_ambiente_btn.setGeometry(QtCore.QRect(195, 40, 91, 91))
+        self.sel_ambiente_btn.setMaximumSize(QtCore.QSize(91, 91))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.sel_ambiente_btn.setFont(font)
         self.sel_ambiente_btn.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.sel_ambiente_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                            "      border: 5px solid rgb(0,140,255);\n"
-                                            "      border-radius:45px;\n"
-                                            "     ")
+"      border: 5px solid rgb(0,140,255);\n"
+"      border-radius:45px;\n"
+"     ")
         self.sel_ambiente_btn.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/icons/res/select.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -56,14 +58,15 @@ class Ui_MainWindow(object):
         self.sel_ambiente_btn.setIconSize(QtCore.QSize(50, 50))
         self.sel_ambiente_btn.setObjectName("sel_ambiente_btn")
         self.reg_prodotto_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.reg_prodotto_btn.setGeometry(QtCore.QRect(350, 130, 91, 91))
+        self.reg_prodotto_btn.setGeometry(QtCore.QRect(360, 110, 91, 91))
+        self.reg_prodotto_btn.setMaximumSize(QtCore.QSize(91, 91))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.reg_prodotto_btn.setFont(font)
         self.reg_prodotto_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                            "      border: 5px solid rgb(0,140,255);\n"
-                                            "      border-radius:45px;\n"
-                                            "     ")
+"      border: 5px solid rgb(0,140,255);\n"
+"      border-radius:45px;\n"
+"     ")
         self.reg_prodotto_btn.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/icons/res/prodotto_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -71,18 +74,18 @@ class Ui_MainWindow(object):
         self.reg_prodotto_btn.setIconSize(QtCore.QSize(32, 32))
         self.reg_prodotto_btn.setObjectName("reg_prodotto_btn")
         self.quit_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.quit_btn.setGeometry(QtCore.QRect(20, 270, 75, 34))
+        self.quit_btn.setGeometry(QtCore.QRect(10, 280, 75, 34))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.quit_btn.setFont(font)
         self.quit_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
-                                    "background-color: rgb(0, 140, 255);\n"
-                                    "border-radius:10px;")
+"background-color: rgb(0, 140, 255);\n"
+"border-radius:10px;")
         self.quit_btn.setObjectName("quit_btn")
         self.sanifica_label = QtWidgets.QLabel(self.centralwidget)
-        self.sanifica_label.setGeometry(QtCore.QRect(40, 150, 55, 16))
+        self.sanifica_label.setGeometry(QtCore.QRect(40, 210, 55, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(False)
         font.setWeight(50)
         self.sanifica_label.setFont(font)
@@ -91,21 +94,18 @@ class Ui_MainWindow(object):
         self.sanifica_label.setTextFormat(QtCore.Qt.AutoText)
         self.sanifica_label.setAlignment(QtCore.Qt.AlignCenter)
         self.sanifica_label.setObjectName("sanifica_label")
-        self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(450, 290, 21, 16))
-        self.label_6.setStyleSheet("color: rgb(0, 0, 0);")
-        self.label_6.setObjectName("label_6")
         self.sanifica_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.sanifica_btn.setGeometry(QtCore.QRect(20, 50, 91, 91))
+        self.sanifica_btn.setGeometry(QtCore.QRect(30, 110, 91, 91))
+        self.sanifica_btn.setMaximumSize(QtCore.QSize(91, 91))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.sanifica_btn.setFont(font)
         self.sanifica_btn.setToolTipDuration(10)
         self.sanifica_btn.setStyleSheet("color: rgb(0, 0, 0);\n"
-                                        "      background-color: rgb(255, 255, 255);\n"
-                                        "      border-radius:45px;\n"
-                                        "      border: 5px solid rgb(0,140,255);\n"
-                                        "     ")
+"      background-color: rgb(255, 255, 255);\n"
+"      border-radius:45px;\n"
+"      border: 5px solid rgb(0,140,255);\n"
+"     ")
         self.sanifica_btn.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap(":/icons/res/sanifica_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -113,9 +113,9 @@ class Ui_MainWindow(object):
         self.sanifica_btn.setIconSize(QtCore.QSize(32, 32))
         self.sanifica_btn.setObjectName("sanifica_btn")
         self.registra_p_label = QtWidgets.QLabel(self.centralwidget)
-        self.registra_p_label.setGeometry(QtCore.QRect(330, 230, 121, 16))
+        self.registra_p_label.setGeometry(QtCore.QRect(350, 210, 121, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(False)
         font.setWeight(50)
         self.registra_p_label.setFont(font)
@@ -125,9 +125,9 @@ class Ui_MainWindow(object):
         self.registra_p_label.setAlignment(QtCore.Qt.AlignCenter)
         self.registra_p_label.setObjectName("registra_p_label")
         self.seleziona_a_label = QtWidgets.QLabel(self.centralwidget)
-        self.seleziona_a_label.setGeometry(QtCore.QRect(210, 210, 121, 16))
+        self.seleziona_a_label.setGeometry(QtCore.QRect(180, 140, 121, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(False)
         font.setWeight(50)
         self.seleziona_a_label.setFont(font)
@@ -137,9 +137,9 @@ class Ui_MainWindow(object):
         self.seleziona_a_label.setAlignment(QtCore.Qt.AlignCenter)
         self.seleziona_a_label.setObjectName("seleziona_a_label")
         self.registra_a_label = QtWidgets.QLabel(self.centralwidget)
-        self.registra_a_label.setGeometry(QtCore.QRect(100, 190, 121, 16))
+        self.registra_a_label.setGeometry(QtCore.QRect(180, 290, 121, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(False)
         font.setWeight(50)
         self.registra_a_label.setFont(font)
@@ -148,6 +148,27 @@ class Ui_MainWindow(object):
         self.registra_a_label.setTextFormat(QtCore.Qt.AutoText)
         self.registra_a_label.setAlignment(QtCore.Qt.AlignCenter)
         self.registra_a_label.setObjectName("registra_a_label")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(-10, 0, 501, 31))
+        self.label.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.label.setText("")
+        self.label.setObjectName("label")
+        self.cancel_btn_ = QtWidgets.QPushButton(self.centralwidget)
+        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.cancel_btn_.setFont(font)
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"                    color: rgb(255, 255, 255);\n"
+"                    border-radius:10px;\n"
+"                ")
+        self.cancel_btn_.setText("")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.cancel_btn_.setIcon(icon5)
+        self.cancel_btn_.setObjectName("cancel_btn_")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -158,13 +179,10 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MicroOne"))
         self.quit_btn.setText(_translate("MainWindow", "Esci"))
         self.sanifica_label.setText(_translate("MainWindow", "Sanifica"))
-        self.label_6.setText(_translate("MainWindow", "v1.0"))
         self.sanifica_btn.setToolTip(_translate("MainWindow", "Clicca per avviare la sanificazione"))
         self.registra_p_label.setText(_translate("MainWindow", "Registra Prodotto"))
         self.seleziona_a_label.setText(_translate("MainWindow", "Seleziona Ambiente"))
         self.registra_a_label.setText(_translate("MainWindow", "Registra Ambiente"))
-
-
 import img_resources_rc
 
 

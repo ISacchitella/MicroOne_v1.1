@@ -17,16 +17,19 @@ class Ui_Reg_prodotto_Window(object):
         Reg_prodotto_Window.resize(480, 320)
         Reg_prodotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.nome_label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.nome_label.setGeometry(QtCore.QRect(140, 30, 161, 30))
+        self.nome_label.setGeometry(QtCore.QRect(140, 60, 191, 20))
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
         self.nome_label.setFont(font)
         self.nome_label.setStyleSheet("color: rgb(0, 0, 0);")
         self.nome_label.setObjectName("nome_label")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_prodotto_Window)
-        self.nome_textbox.setGeometry(QtCore.QRect(110, 70, 231, 41))
+        self.nome_textbox.setGeometry(QtCore.QRect(60, 110, 371, 41))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.nome_textbox.setFont(font)
         self.nome_textbox.setStyleSheet("border-radius:10px;\n"
 "background-color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -34,76 +37,79 @@ class Ui_Reg_prodotto_Window(object):
 "")
         self.nome_textbox.setObjectName("nome_textbox")
         self.data_scad_label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.data_scad_label.setGeometry(QtCore.QRect(120, 140, 281, 21))
+        self.data_scad_label.setGeometry(QtCore.QRect(140, 160, 281, 21))
         font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
         self.data_scad_label.setFont(font)
         self.data_scad_label.setStyleSheet("color: rgb(0, 0, 0);")
         self.data_scad_label.setObjectName("data_scad_label")
         self.data_scad_dateEdit = QtWidgets.QDateEdit(Reg_prodotto_Window)
-        self.data_scad_dateEdit.setGeometry(QtCore.QRect(100, 190, 281, 61))
+        self.data_scad_dateEdit.setGeometry(QtCore.QRect(130, 200, 231, 61))
         font = QtGui.QFont()
-        font.setPointSize(25)
+        font.setPointSize(20)
+        font.setBold(False)
+        font.setWeight(50)
         self.data_scad_dateEdit.setFont(font)
         self.data_scad_dateEdit.setStyleSheet("QDateEdit::down-button {\n"
-                                              "\n"
-                                              "\n"
-                                              "     image: url(:/arrows/res/down_arrow.png);\n"
-                                              "     width:50px;\n"
-                                              "\n"
-                                              "\n"
-                                              "     }\n"
-                                              "\n"
-                                              "\n"
-                                              "     QDateEdit::up-button {\n"
-                                              "\n"
-                                              "\n"
-                                              "     image: url(:/arrows/res/up_arrow.png);\n"
-                                              "     width: 50px;\n"
-                                              "     }\n"
-                                              "\n"
-                                              "\n"
-                                              "     QDateEdit {\n"
-                                              "     color: rgb(0, 0, 0);\n"
-                                              "\n"
-                                              "     border-radius:25px;\n"
-                                              "\n"
-                                              "\n"
-                                              "}")
+"\n"
+"\n"
+"     image: url(:/arrows/res/down_arrow.png);\n"
+"     width:50px;\n"
+"\n"
+"\n"
+"     }\n"
+"\n"
+"\n"
+"     QDateEdit::up-button {\n"
+"\n"
+"\n"
+"     image: url(:/arrows/res/up_arrow.png);\n"
+"     width: 50px;\n"
+"     }\n"
+"\n"
+"\n"
+"     QDateEdit {\n"
+"     color: rgb(0, 0, 0);\n"
+"    background-color: rgb(255, 255, 255);\n"
+"     border-radius:25px;\n"
+"border: 5px solid rgb(0,140,255);\n"
+"\n"
+"\n"
+"}")
         self.data_scad_dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 10, 1), QtCore.QTime(0, 0, 0)))
         self.data_scad_dateEdit.setObjectName("data_scad_dateEdit")
         self.save_btn = QtWidgets.QPushButton(Reg_prodotto_Window)
-        self.save_btn.setGeometry(QtCore.QRect(392, 270, 71, 31))
+        self.save_btn.setGeometry(QtCore.QRect(400, 280, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.save_btn.setFont(font)
         self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                    "color: rgb(255, 255, 255);\n"
-                                    "border-radius:10px;")
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
         self.save_btn.setObjectName("save_btn")
         self.label_5 = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 31))
+        self.label_5.setGeometry(QtCore.QRect(-10, 0, 501, 31))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.label.setGeometry(QtCore.QRect(310, 30, 41, 31))
+        self.label.setGeometry(QtCore.QRect(330, 50, 41, 31))
         self.label.setStyleSheet("image: url(:/icons/res/prodotto_icon.png);")
         self.label.setText("")
         self.label.setObjectName("label")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_prodotto_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(10, 280, 71, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
         self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                       "                    color: rgb(255, 255, 255);\n"
-                                       "                    border-radius:10px;\n"
-                                       "                ")
+"                 color: rgb(255, 255, 255);\n"
+"                 border-radius:10px;\n"
+"             ")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -117,11 +123,9 @@ class Ui_Reg_prodotto_Window(object):
     def retranslateUi(self, Reg_prodotto_Window):
         _translate = QtCore.QCoreApplication.translate
         Reg_prodotto_Window.setWindowTitle(_translate("Reg_prodotto_Window", "Registra Prodotto"))
-        self.nome_label.setText(_translate("Reg_prodotto_Window", "Inserisci nome"))
-        self.data_scad_label.setText(_translate("Reg_prodotto_Window", "Seleziona data di scadenza"))
+        self.nome_label.setText(_translate("Reg_prodotto_Window", "Inserisci nome Prodotto"))
+        self.data_scad_label.setText(_translate("Reg_prodotto_Window", "Inserisci data di scadenza"))
         self.save_btn.setText(_translate("Reg_prodotto_Window", "Salva"))
-
-
 import img_resources_rc
 
 

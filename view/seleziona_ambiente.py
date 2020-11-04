@@ -17,77 +17,77 @@ class Ui_Sel_ambiente_Window(object):
         Sel_ambiente_Window.resize(480, 320)
         Sel_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.comboBox = QtWidgets.QComboBox(Sel_ambiente_Window)
-        self.comboBox.setGeometry(QtCore.QRect(110, 160, 271, 41))
+        self.comboBox.setGeometry(QtCore.QRect(60, 160, 371, 41))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.comboBox.sizePolicy().hasHeightForWidth())
         self.comboBox.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(25)
+        font.setPointSize(15)
         self.comboBox.setFont(font)
         self.comboBox.setStyleSheet("QComboBox::down-arrow {\n"
-                                    "\n"
-                                    "\n"
-                                    "        image: url(:/arrows/res/down_arrow.png);\n"
-                                    "        width: 14px;\n"
-                                    "        height: 14px;\n"
-                                    "\n"
-                                    "        }\n"
-                                    "        QComboBox::drop-down\n"
-                                    "        {\n"
-                                    "        border: 0px; /* This seems to replace the whole arrow of the combo box */\n"
-                                    "\n"
-                                    "        }\n"
-                                    "\n"
-                                    "QComboBox {\n"
-                                    "    color: black;\n"
-                                    "border-radius:10px;\n"
-                                    "border: 5px solid rgb(0,140,255);\n"
-                                    "    selection-color: rgb(0, 0, 0);\n"
-                                    "}\n"
-                                    "")
+"\n"
+"\n"
+"        image: url(:/arrows/res/down_arrow.png);\n"
+"        width: 14px;\n"
+"        height: 14px;\n"
+"\n"
+"        }\n"
+"        QComboBox::drop-down\n"
+"        {\n"
+"        border: 0px; /* This seems to replace the whole arrow of the combo box */\n"
+"\n"
+"        }\n"
+"\n"
+"QComboBox {\n"
+"    color: black;\n"
+"border-radius:10px;\n"
+"border: 5px solid rgb(0,140,255);\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"}\n"
+"")
         self.comboBox.setMaxVisibleItems(100)
         self.comboBox.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.comboBox.setObjectName("comboBox")
         self.label_5 = QtWidgets.QLabel(Sel_ambiente_Window)
-        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 31))
+        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 41))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Sel_ambiente_Window)
-        self.label.setGeometry(QtCore.QRect(130, 90, 231, 31))
+        self.label.setGeometry(QtCore.QRect(140, 70, 151, 31))
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
         self.label.setFont(font)
         self.label.setStyleSheet("color: rgb(0, 0, 0);")
         self.label.setObjectName("label")
         self.nome_label = QtWidgets.QLabel(Sel_ambiente_Window)
-        self.nome_label.setGeometry(QtCore.QRect(340, 90, 51, 31))
+        self.nome_label.setGeometry(QtCore.QRect(290, 70, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.nome_label.setFont(font)
         self.nome_label.setStyleSheet("color: rgb(0, 0, 0);\n"
-                                      "\n"
-                                      "        image: url(:/icons/res/select.png);\n"
-                                      "    ")
+"\n"
+"              image: url(:/icons/res/select.png);\n"
+"          ")
         self.nome_label.setText("")
         self.nome_label.setObjectName("nome_label")
         self.cancel_btn_ = QtWidgets.QPushButton(Sel_ambiente_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(30, 270, 71, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
         self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                       "                    color: rgb(255, 255, 255);\n"
-                                       "                    border-radius:10px;\n"
-                                       "                ")
+"                 color: rgb(255, 255, 255);\n"
+"                 border-radius:10px;\n"
+"             ")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -102,8 +102,6 @@ class Ui_Sel_ambiente_Window(object):
         _translate = QtCore.QCoreApplication.translate
         Sel_ambiente_Window.setWindowTitle(_translate("Sel_ambiente_Window", "Seleziona Ambiente"))
         self.label.setText(_translate("Sel_ambiente_Window", "Seleziona Ambiente"))
-
-
 import img_resources_rc
 
 

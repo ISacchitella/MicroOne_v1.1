@@ -23,7 +23,8 @@ class Ui_Timer_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.description_label.setFont(font)
-        self.description_label.setStyleSheet("color: rgb(0, 0, 0);")
+        self.description_label.setStyleSheet("color: rgb(0, 0, 0);\n"
+"color: rgb(170, 0, 0);")
         self.description_label.setAlignment(QtCore.Qt.AlignCenter)
         self.description_label.setObjectName("description_label")
         self.timer_label = QtWidgets.QLabel(Timer_Window)
@@ -31,27 +32,28 @@ class Ui_Timer_Window(object):
         font = QtGui.QFont()
         font.setPointSize(40)
         self.timer_label.setFont(font)
-        self.timer_label.setStyleSheet("color: rgb(0, 0, 0);")
+        self.timer_label.setStyleSheet("color: rgb(0, 0, 0);\n"
+"color: rgb(170, 0, 0);")
         self.timer_label.setTextFormat(QtCore.Qt.AutoText)
         self.timer_label.setAlignment(QtCore.Qt.AlignCenter)
         self.timer_label.setObjectName("timer_label")
         self.label_5 = QtWidgets.QLabel(Timer_Window)
-        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 31))
+        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 41))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(Timer_Window)
         self.cancel_btn.setEnabled(False)
-        self.cancel_btn.setGeometry(QtCore.QRect(10, 270, 71, 31))
+        self.cancel_btn.setGeometry(QtCore.QRect(0, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn.setFont(font)
         self.cancel_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                      "                    color: rgb(255, 255, 255);\n"
-                                      "                    border-radius:10px;\n"
-                                      "                ")
+"                 color: rgb(255, 255, 255);\n"
+"                 border-radius:10px;\n"
+"             ")
         self.cancel_btn.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -59,16 +61,16 @@ class Ui_Timer_Window(object):
         self.cancel_btn.setObjectName("cancel_btn")
         self.download_btn = QtWidgets.QPushButton(Timer_Window)
         self.download_btn.setEnabled(False)
-        self.download_btn.setGeometry(QtCore.QRect(390, 270, 71, 31))
+        self.download_btn.setGeometry(QtCore.QRect(380, 280, 91, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.download_btn.setFont(font)
         self.download_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                        "                    color: rgb(255, 255, 255);\n"
-                                        "                    border-radius:10px;\n"
-                                        "                ")
+"                 color: rgb(255, 255, 255);\n"
+"                 border-radius:10px;\n"
+"             ")
         self.download_btn.setObjectName("download_btn")
 
         self.retranslateUi(Timer_Window)
@@ -81,13 +83,11 @@ class Ui_Timer_Window(object):
         self.description_label.setText(_translate("Timer_Window", "ALLONTANARSI"))
         self.timer_label.setText(_translate("Timer_Window", "10"))
         self.download_btn.setText(_translate("Timer_Window", "Download"))
-
-
 import img_resources_rc
+
 
 if __name__ == "__main__":
     import sys
-
     app = QtWidgets.QApplication(sys.argv)
     Timer_Window = QtWidgets.QWidget()
     ui = Ui_Timer_Window()

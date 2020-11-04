@@ -1,6 +1,7 @@
 from datetime import date
 
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
+from PyQt5.uic.properties import QtGui
 
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, seleziona_ambiente, sanifica, \
     seleziona_prodotto
@@ -55,14 +56,32 @@ class Micro_One_App(Ui_MainWindow):
     def setup_serial_number(self):
         serial_number_dialog = QDialog()
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
+        serial_number_dialog.setObjectName("serial_number_dialog")
+        serial_number_dialog.setStyleSheet("background-color: rgb(255,255,255); \n")
+        serial_number_dialog.resize(240, 140)
+        serial_number_dialog.setWindowTitle("Serial Number")
+
         sn_textbox = QLineEdit(serial_number_dialog)
-        sn_textbox.move(20, 20)
-        sn_textbox.resize(280, 40)
+        sn_textbox.move(10, 30)
+        sn_textbox.resize(220, 40)
+        sn_textbox.setStyleSheet("color: rgb(0,0,0); \n"
+                                 "border-radius: 10px; \n"
+                                 "border: 5px solid rgb(0,140,255); \n")
         # button
         sn_button = QPushButton('Salva', serial_number_dialog)
-        sn_button.move(20, 80)
+        sn_button.move(150, 80)
+        sn_button.resize(75, 34)
+        sn_button.setStyleSheet("background-color: rgb(0, 140, 255); \n"
+                                "color: rgb(0,0,0); \n"
+                                "border-radius: 10px; \n"
+                                "border: 5px solid rgb(0,140,255); \n")
+
         sn_label = QLabel("Inserisci seriale dispositivo", serial_number_dialog)
         sn_label.setBuddy(sn_textbox)
+        sn_label.setStyleSheet("color: rgb(0,0,0); \n"
+                               "font-size: 15px; \n")
+
+
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
         serial_number_dialog.exec()
 

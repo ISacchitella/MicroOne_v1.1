@@ -20,33 +20,38 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>30</y>
-     <width>161</width>
-     <height>30</height>
+     <y>60</y>
+     <width>191</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
-    <string>Inserisci nome</string>
+    <string>Inserisci nome Prodotto</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="nome_textbox">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>70</y>
-     <width>231</width>
+     <x>60</x>
+     <y>110</y>
+     <width>371</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius:10px;
@@ -59,38 +64,40 @@ border: 5px solid rgb(0,140,255);
   <widget class="QLabel" name="data_scad_label">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>140</y>
+     <x>140</x>
+     <y>160</y>
      <width>281</width>
      <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
-    <string>Seleziona data di scadenza</string>
+    <string>Inserisci data di scadenza</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="data_scad_dateEdit">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>190</y>
-     <width>281</width>
+     <x>130</x>
+     <y>200</y>
+     <width>231</width>
      <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>25</pointsize>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -114,8 +121,9 @@ border: 5px solid rgb(0,140,255);
 
      QDateEdit {
      color: rgb(0, 0, 0);
-
+	background-color: rgb(255, 255, 255);
      border-radius:25px;
+border: 5px solid rgb(0,140,255);
 
 
 }</string>
@@ -134,8 +142,8 @@ border: 5px solid rgb(0,140,255);
   <widget class="QPushButton" name="save_btn">
    <property name="geometry">
     <rect>
-     <x>392</x>
-     <y>270</y>
+     <x>400</x>
+     <y>280</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -157,9 +165,9 @@ border-radius:10px;</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>-10</y>
-     <width>481</width>
+     <x>-10</x>
+     <y>0</y>
+     <width>501</width>
      <height>31</height>
     </rect>
    </property>
@@ -173,70 +181,69 @@ border-radius:10px;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>30</y>
+     <x>330</x>
+     <y>50</y>
      <width>41</width>
-        <height>31</height>
+     <height>31</height>
     </rect>
    </property>
-      <property name="styleSheet">
-          <string notr="true">image: url(:/icons/res/prodotto_icon.png);</string>
-      </property>
-      <property name="text">
-          <string/>
-      </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/icons/res/prodotto_icon.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
-     <widget class="QPushButton" name="cancel_btn_">
-         <property name="geometry">
-             <rect>
-                 <x>10</x>
-                 <y>280</y>
-                 <width>71</width>
-                 <height>31</height>
-             </rect>
-         </property>
-         <property name="font">
-             <font>
-                 <pointsize>10</pointsize>
-                 <weight>50</weight>
-                 <bold>false</bold>
-             </font>
-         </property>
-         <property name="styleSheet">
-             <string notr="true">background-color: rgb(0, 140, 255);
+  <widget class="QPushButton" name="cancel_btn_">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 140, 255);
                  color: rgb(255, 255, 255);
                  border-radius:10px;
              </string>
-         </property>
-         <property name="text">
-             <string/>
-         </property>
-         <property name="icon">
-             <iconset resource="img_resources.qrc">
-                 <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png
-             </iconset>
-         </property>
-     </widget>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img_resources.qrc">
+     <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
+   </property>
+  </widget>
  </widget>
-    <resources>
-        <include location="img_resources.qrc"/>
-    </resources>
-    <connections>
-        <connection>
-            <sender>cancel_btn_</sender>
-            <signal>clicked()</signal>
-            <receiver>Reg_prodotto_Window</receiver>
-            <slot>close()</slot>
-            <hints>
-                <hint type="sourcelabel">
-                    <x>45</x>
-                    <y>295</y>
-                </hint>
-                <hint type="destinationlabel">
-                    <x>239</x>
-                    <y>159</y>
-                </hint>
-            </hints>
-        </connection>
-    </connections>
+ <resources>
+  <include location="img_resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>cancel_btn_</sender>
+   <signal>clicked()</signal>
+   <receiver>Reg_prodotto_Window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>45</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

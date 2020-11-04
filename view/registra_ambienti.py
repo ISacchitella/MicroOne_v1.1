@@ -18,68 +18,69 @@ class Ui_Reg_ambiente_Window(object):
         Reg_ambiente_Window.setAutoFillBackground(False)
         Reg_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.nome_label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.nome_label.setGeometry(QtCore.QRect(300, 40, 51, 30))
+        self.nome_label.setGeometry(QtCore.QRect(340, 60, 31, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.nome_label.setFont(font)
         self.nome_label.setStyleSheet("color: rgb(0, 0, 0);\n"
-                                      "                    image: url(:/icons/res/save.png.png);\n"
-                                      "                ")
+"                    image: url(:/icons/res/save.png.png);\n"
+"                ")
         self.nome_label.setText("")
         self.nome_label.setObjectName("nome_label")
         self.metri_cubi_label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.metri_cubi_label.setGeometry(QtCore.QRect(130, 150, 201, 30))
+        self.metri_cubi_label.setGeometry(QtCore.QRect(200, 160, 81, 30))
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
         self.metri_cubi_label.setFont(font)
         self.metri_cubi_label.setStyleSheet("color: rgb(0, 0, 0);")
         self.metri_cubi_label.setObjectName("metri_cubi_label")
         self.save_btn = QtWidgets.QPushButton(Reg_ambiente_Window)
-        self.save_btn.setGeometry(QtCore.QRect(392, 280, 71, 31))
+        self.save_btn.setGeometry(QtCore.QRect(400, 280, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.save_btn.setFont(font)
         self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                    "                    color: rgb(255, 255, 255);\n"
-                                    "                    border-radius:10px;\n"
-                                    "                ")
+"                    color: rgb(255, 255, 255);\n"
+"                    border-radius:10px;\n"
+"                ")
         self.save_btn.setObjectName("save_btn")
         self.metri_cubi_spinBox = QtWidgets.QSpinBox(Reg_ambiente_Window)
-        self.metri_cubi_spinBox.setGeometry(QtCore.QRect(130, 200, 171, 61))
+        self.metri_cubi_spinBox.setGeometry(QtCore.QRect(170, 210, 151, 61))
         font = QtGui.QFont()
-        font.setPointSize(25)
+        font.setPointSize(20)
         self.metri_cubi_spinBox.setFont(font)
         self.metri_cubi_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.metri_cubi_spinBox.setStyleSheet("QSpinBox::down-button {\n"
-                                              "\n"
-                                              "                    image: url(:/arrows/res/down_arrow.png);\n"
-                                              "                    width:50px;\n"
-                                              "                    }\n"
-                                              "\n"
-                                              "\n"
-                                              "                    QSpinBox::up-button {\n"
-                                              "\n"
-                                              "                    image: url(:/arrows/res/up_arrow.png);\n"
-                                              "                    width: 50px;\n"
-                                              "                    }\n"
-                                              "\n"
-                                              "\n"
-                                              "                    QSpinBox {\n"
-                                              "                    color: rgb(0, 0, 0);\n"
-                                              "                    background-color: rgb(0, 140, 255);\n"
-                                              "                    border-radius:25px;\n"
-                                              "\n"
-                                              "\n"
-                                              "                    }\n"
-                                              "                ")
-        self.metri_cubi_spinBox.setInputMethodHints(
-            QtCore.Qt.ImhDigitsOnly | QtCore.Qt.ImhFormattedNumbersOnly | QtCore.Qt.ImhPreferNumbers)
+"\n"
+"                    image: url(:/arrows/res/down_arrow.png);\n"
+"                    width:50px;\n"
+"                    }\n"
+"\n"
+"\n"
+"                    QSpinBox::up-button {\n"
+"\n"
+"                    image: url(:/arrows/res/up_arrow.png);\n"
+"                    width: 50px;\n"
+"                    }\n"
+"\n"
+"\n"
+"                    QSpinBox {\n"
+"                    color: rgb(0, 0, 0);\n"
+"                \n"
+"    background-color: rgb(255, 255, 255);\n"
+"border: 5px solid rgb(0,140,255);\n"
+"                    border-radius:25px;\n"
+"\n"
+"\n"
+"                    }\n"
+"                ")
+        self.metri_cubi_spinBox.setInputMethodHints(QtCore.Qt.ImhDigitsOnly|QtCore.Qt.ImhFormattedNumbersOnly|QtCore.Qt.ImhPreferNumbers)
         self.metri_cubi_spinBox.setAlignment(QtCore.Qt.AlignCenter)
         self.metri_cubi_spinBox.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.metri_cubi_spinBox.setMinimum(1)
@@ -87,43 +88,43 @@ class Ui_Reg_ambiente_Window(object):
         self.metri_cubi_spinBox.setSingleStep(1)
         self.metri_cubi_spinBox.setObjectName("metri_cubi_spinBox")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_ambiente_Window)
-        self.nome_textbox.setGeometry(QtCore.QRect(90, 90, 271, 41))
+        self.nome_textbox.setGeometry(QtCore.QRect(60, 110, 371, 41))
         font = QtGui.QFont()
-        font.setPointSize(25)
+        font.setPointSize(15)
         self.nome_textbox.setFont(font)
         self.nome_textbox.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.nome_textbox.setStyleSheet("border-radius:10px;\n"
-                                        "                    background-color: rgb(0, 0, 0);\n"
-                                        "                    background-color: rgb(255, 255, 255);\n"
-                                        "                    border: 5px solid rgb(0,140,255);\n"
-                                        "                ")
+"                    background-color: rgb(0, 0, 0);\n"
+"                    background-color: rgb(255, 255, 255);\n"
+"                    border: 5px solid rgb(0,140,255);\n"
+"                ")
         self.nome_textbox.setText("")
         self.nome_textbox.setObjectName("nome_textbox")
         self.label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.label.setGeometry(QtCore.QRect(140, 50, 161, 16))
+        self.label.setGeometry(QtCore.QRect(130, 60, 191, 20))
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
         self.label.setFont(font)
         self.label.setStyleSheet("color: rgb(0, 0, 0);")
         self.label.setObjectName("label")
         self.label_5 = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 31))
+        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 41))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_ambiente_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(10, 280, 71, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
         self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                       "                    color: rgb(255, 255, 255);\n"
-                                       "                    border-radius:10px;\n"
-                                       "                ")
+"                    color: rgb(255, 255, 255);\n"
+"                    border-radius:10px;\n"
+"                ")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -137,11 +138,9 @@ class Ui_Reg_ambiente_Window(object):
     def retranslateUi(self, Reg_ambiente_Window):
         _translate = QtCore.QCoreApplication.translate
         Reg_ambiente_Window.setWindowTitle(_translate("Reg_ambiente_Window", "Registra Ambiente"))
-        self.metri_cubi_label.setText(_translate("Reg_ambiente_Window", "Inserisci Metri Cubi"))
+        self.metri_cubi_label.setText(_translate("Reg_ambiente_Window", "Metri cubi"))
         self.save_btn.setText(_translate("Reg_ambiente_Window", "Salva"))
-        self.label.setText(_translate("Reg_ambiente_Window", "Inserisci nome"))
-
-
+        self.label.setText(_translate("Reg_ambiente_Window", "Inserisci nome Ambiente"))
 import img_resources_rc
 
 

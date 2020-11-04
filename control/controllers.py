@@ -120,8 +120,10 @@ def timeout_allontanarsi(window, ui, app):
         ui.timer_label.setText(str(ui.allontanarsi_sec))
         if ui.allontanarsi_sec <= 0:
             ui.timer.stop()
-            ui.timer.disconnect()
-            ui.description_label.setText("Sanificazione in corso!")
+            ui.timer.disconnect()#todo aumentare o diminuire scritta timer
+            ui.description_label.setText("Sanificazione in corso...")
+            ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
+                                               "font-size: 15px; \n")
             ui.timer_label.setText(str(ui.tempo_sanificazione))
             ui.timer.timeout.connect(lambda: timeout_sanificazione(window, ui, app))
             ui.timer.start(1000)
