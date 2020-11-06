@@ -3,17 +3,20 @@
     <file>res/up_arrow.png</file>
     <file>res/down_arrow.png</file>
   </qresource>
-    <qresource prefix="logo">
-        <file>res/logo_icon.png</file>
-    </qresource>
-    <qresource prefix="icons">
-        <file>res/home_menu.png</file>
-        <file>res/prodotto_icon.png</file>
-        <file>res/sanifica_icon.png</file>
-        <file>res/save.png.png</file>
-        <file>res/select.png</file>
-    </qresource>
-    <qresource prefix="cancel">
-        <file>res/cancel.png</file>
-    </qresource>
+  <qresource prefix="logo">
+    <file>res/logo_icon.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>res/home_menu.png</file>
+    <file>res/prodotto_icon.png</file>
+    <file>res/sanifica_icon.png</file>
+    <file>res/save.png.png</file>
+    <file>res/select.png</file>
+  </qresource>
+  <qresource prefix="cancel">
+    <file>res/cancel.png</file>
+  </qresource>
+  <qresource prefix="settings">
+    <file>res/settings.png</file>
+  </qresource>
 </RCC>

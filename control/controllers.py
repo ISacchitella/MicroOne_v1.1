@@ -73,8 +73,13 @@ def seleziona_ambiente(window, ui, app):
 
 
 def seleziona_prodotto(ui, app, prodotti):
-    app.selected_prodotto = next(
-        (prodotto for prodotto in prodotti if prodotto.nome == ui.prodotti_comboBox.currentText()))
+    if ui.prodotti_comboBox.currentText() == "":
+        app.selected_prodotto = None
+        ui.sanifica_btn.setDisabled(True)
+    else:
+        app.selected_prodotto = next(
+            (prodotto for prodotto in prodotti if prodotto.nome == ui.prodotti_comboBox.currentText()))
+        ui.sanifica_btn.setEnabled(True)
 
 
 class Stato(Enum):
@@ -120,7 +125,7 @@ def timeout_allontanarsi(window, ui, app):
         ui.timer_label.setText(str(ui.allontanarsi_sec))
         if ui.allontanarsi_sec <= 0:
             ui.timer.stop()
-            ui.timer.disconnect()#todo aumentare o diminuire scritta timer
+            ui.timer.disconnect()  # todo aumentare o diminuire scritta timer
             ui.description_label.setText("Sanificazione in corso...")
             ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
                                                "font-size: 15px; \n")

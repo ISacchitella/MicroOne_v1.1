@@ -5,11 +5,12 @@ from PyQt5.uic.properties import QtGui
 
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, seleziona_ambiente, sanifica, \
     seleziona_prodotto
-from control.save import load_info, save_info, load_ambienti, load_prodotti
+from control.save import load_info, save_info, load_ambienti, load_prodotti, format_info, copy_info, get_system_info
 from model.ambiente_prodotto import display_ambiente, MAX_METRI_CUBI
 from model.dispositivo import Dispositivo
 # https://stackoverflow.com/questions/7031962/qdateedit-calendar-popup
 from view.main_window import Ui_MainWindow, QtWidgets
+from view.recap_info_window import Ui_recap_info_window
 from view.registra_ambienti import Ui_Reg_ambiente_Window
 from view.registra_prodotti import Ui_Reg_prodotto_Window
 from view.sanifica_window import Ui_Sanifica_Window
@@ -36,6 +37,7 @@ class Micro_One_App(Ui_MainWindow):
         self.reg_prodotto_btn.clicked.connect(self.open_reg_prodotto_window)
         self.reg_ambiente_btn.clicked.connect(self.open_reg_ambiente_window)
         self.sel_ambiente_btn.clicked.connect(self.open_sel_ambiente_window)
+        self.settings_btn.clicked.connect(self.open_recap_info_window)
         self.quit_btn.clicked.connect(exit)
         self.selected_ambiente = None
         self.selected_prodotto = None
@@ -50,6 +52,9 @@ class Micro_One_App(Ui_MainWindow):
             self.setup_serial_number()
             self.info['serial_number'] = self.dispositivo.serial_number
             save_info(self.info)
+        self.serial_label.setText("MicroOne-" + self.dispositivo.serial_number)
+        if 'versione' not in self.info.keys():
+            self.info['versione'] = "v1.1"
         if 'anagrafica' not in self.info.keys():
             self.info['anagrafica'] = []
 
@@ -91,6 +96,17 @@ class Micro_One_App(Ui_MainWindow):
         self.dispositivo = Dispositivo(sn_textbox.text())
         serial_number_dialog.close()
 
+    def open_recap_info_window(self):
+        self.recap_info_window = QtWidgets.QWidget()
+        self.recap_info_ui = Ui_recap_info_window()
+        self.recap_info_ui.setupUi(self.recap_info_window)
+        self.recap_info_ui.recap_info_text_edit.setText(format_info(self.info))
+        self.info['sistema'] = get_system_info()
+        self.recap_info_ui.download_btn.clicked.connect(lambda: copy_info(self.info['sistema']['disk']['disk_partitions']))
+        save_info(self.info)
+        self.recap_info_window.show()
+
+
     def open_sanifica_window(self):
         self.sanifica_window = QtWidgets.QWidget()
         self.sanifica_ui = Ui_Sanifica_Window()
@@ -102,9 +118,10 @@ class Micro_One_App(Ui_MainWindow):
             self.sanifica_ui.metri_cubi_spinBox.setValue(ambiente_selezionato.metri_cubi)
         prodotti = load_prodotti()
         prodotti_str_list = [prodotto.nome for prodotto in prodotti if prodotto.data_scadenza > date.today()]
+        prodotti_str_list.insert(0,"")
         self.sanifica_ui.prodotti_comboBox.clear()
         self.sanifica_ui.prodotti_comboBox.addItems(prodotti_str_list)
-        if len(prodotti_str_list) <= 0:
+        if len(prodotti_str_list) <= 1 or self.sanifica_ui.prodotti_comboBox.currentText()=="":
             self.selected_prodotto = None
             self.sanifica_ui.sanifica_btn.setDisabled(True)
         else:

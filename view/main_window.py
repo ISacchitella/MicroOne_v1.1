@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(480, 320)
+        MainWindow.resize(486, 327)
         MainWindow.setTabletTracking(False)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/logo/res/logo_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -153,22 +153,25 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("background-color: rgb(0, 140, 255);")
         self.label.setText("")
         self.label.setObjectName("label")
-        self.cancel_btn_ = QtWidgets.QPushButton(self.centralwidget)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        self.serial_label = QtWidgets.QLabel(self.centralwidget)
+        self.serial_label.setGeometry(QtCore.QRect(20, 6, 191, 20))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
-        self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"                    color: rgb(255, 255, 255);\n"
-"                    border-radius:10px;\n"
-"                ")
-        self.cancel_btn_.setText("")
+        font.setPointSize(17)
+        font.setBold(True)
+        font.setWeight(75)
+        self.serial_label.setFont(font)
+        self.serial_label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"color: rgb(0, 0, 0);")
+        self.serial_label.setObjectName("serial_label")
+        self.settings_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.settings_btn.setGeometry(QtCore.QRect(400, 0, 61, 31))
+        self.settings_btn.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.settings_btn.setText("")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.cancel_btn_.setIcon(icon5)
-        self.cancel_btn_.setObjectName("cancel_btn_")
+        icon5.addPixmap(QtGui.QPixmap(":/settings/res/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.settings_btn.setIcon(icon5)
+        self.settings_btn.setFlat(True)
+        self.settings_btn.setObjectName("settings_btn")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -183,6 +186,7 @@ class Ui_MainWindow(object):
         self.registra_p_label.setText(_translate("MainWindow", "Registra Prodotto"))
         self.seleziona_a_label.setText(_translate("MainWindow", "Seleziona Ambiente"))
         self.registra_a_label.setText(_translate("MainWindow", "Registra Ambiente"))
+        self.serial_label.setText(_translate("MainWindow", "MicroOne-"))
 import img_resources_rc
 
 

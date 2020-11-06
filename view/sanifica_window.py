@@ -43,6 +43,7 @@ class Ui_Sanifica_Window(object):
 "    selection-color: rgb(0, 0, 0);\n"
 "}\n"
 "")
+        self.prodotti_comboBox.setInsertPolicy(QtWidgets.QComboBox.InsertAtTop)
         self.prodotti_comboBox.setObjectName("prodotti_comboBox")
         self.metri_cubi_spinBox = QtWidgets.QSpinBox(Sanifica_Window)
         self.metri_cubi_spinBox.setGeometry(QtCore.QRect(170, 210, 151, 61))

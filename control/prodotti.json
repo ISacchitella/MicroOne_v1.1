@@ -6,20 +6,26 @@
   "concentrazione": null
  },
  {
-  "nome": "yyyyy",
+  "nome": "Prodotto1",
   "data_scadenza": "01/10/25",
   "lotto": null,
   "concentrazione": null
  },
  {
-  "nome": "Idraulico Liquido",
+  "nome": "Prodotto2",
   "data_scadenza": "18/12/25",
   "lotto": null,
   "concentrazione": null
  },
  {
-  "nome": "Prodotto1",
+  "nome": "Prodotto3",
   "data_scadenza": "01/10/20",
+  "lotto": null,
+  "concentrazione": null
+ },
+ {
+  "nome": "P31",
+  "data_scadenza": "31/12/20",
   "lotto": null,
   "concentrazione": null
  }

@@ -68,6 +68,13 @@ def load_info():
 def save_info(info):
     json.dump(info, open(get_file_path('info'), 'w'), indent='\t')
 
+def format_info(info):
+    formatted_str = ""
+    formatted_str += f"Serial Number {info['serial_number'].upper()}\n"
+    formatted_str += f"Versione {info['versione']}\n"
+    return formatted_str
+
+
 
 FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4')
 
@@ -78,6 +85,7 @@ def copy_info(disk_partitions):
     if usb_drive_path not in [None, '']:
         copy(get_file_path('info'), usb_drive_path)
     else:
+        print('notfound')
         raise FileNotFoundError
 
 

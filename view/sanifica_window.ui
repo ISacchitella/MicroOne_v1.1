@@ -54,6 +54,9 @@ border: 5px solid rgb(0,140,255);
 }
 </string>
    </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtTop</enum>
+   </property>
   </widget>
   <widget class="QSpinBox" name="metri_cubi_spinBox">
    <property name="geometry">
