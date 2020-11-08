@@ -2,6 +2,19 @@
 	"serial_number": "tttt",
 	"anagrafica": [
 		{
+			"data": "18:51:54 08/11/20",
+			"tempo": "0:00:28",
+			"stato": "COMPLETATA",
+			"ambiente": "move",
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"data_scadenza": "01/10/25",
+				"lotto": null,
+				"concentrazione": null
+			}
+		},
+		{
 			"data": "09:03:57 06/11/20",
 			"tempo": "0:00:28",
 			"stato": "COMPLETATA",
@@ -181,13 +194,12 @@
 		],
 		"disk": {
 			"available_drives": [
-				"C:",
-				"D:"
+				"C:"
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 251769061376,
-				"free": 243711406080,
+				"used": 251887120384,
+				"free": 243593347072,
 				"percent": 50.8
 			},
 			"disk_partitions": [
@@ -196,36 +208,30 @@
 					"mountpoint": "C:\\",
 					"fstype": "NTFS",
 					"opts": "rw,fixed"
-				},
-				{
-					"device": "D:\\",
-					"mountpoint": "D:\\",
-					"fstype": "FAT32",
-					"opts": "rw,removable"
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 16302415,
-				"write_count": 10101374,
-				"read_bytes": 333532797440,
-				"write_bytes": 229147281920,
-				"read_time": 7267,
-				"write_time": 3281
+				"read_count": 17226207,
+				"write_count": 11168614,
+				"read_bytes": 375313474048,
+				"write_bytes": 251381551616,
+				"read_time": 7998,
+				"write_time": 3679
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 8489197568,
-				"percent": 50.4,
-				"used": 8614019072,
-				"free": 8489197568
+				"available": 9699663872,
+				"percent": 43.3,
+				"used": 7403552768,
+				"free": 9699663872
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 12774154240,
-				"free": 6879199232,
-				"percent": 65.0,
+				"used": 9610489856,
+				"free": 10042863616,
+				"percent": 48.9,
 				"sin": 0,
 				"sout": 0
 			}
@@ -239,11 +245,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 226084.40625,
-				"system": 170001.59375,
-				"idle": 3601970.15625,
-				"interrupt": 16763.71875,
-				"dpc": 4634.484375
+				"user": 267749.5,
+				"system": 196635.32812499907,
+				"idle": 4304736.78125,
+				"interrupt": 18949.609375,
+				"dpc": 5301.21875
 			}
 		},
 		"users": [
@@ -251,7 +257,7 @@
 				"name": "isacchitella",
 				"terminal": null,
 				"host": null,
-				"started": 1604615338.280654,
+				"started": 1604783801.9393587,
 				"pid": null
 			}
 		],
@@ -260,658 +266,10 @@
 				{
 					"fd": -1,
 					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 59557
-					},
-					"raddr": {
-						"ip": "40.67.254.36",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 4328
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 49669
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 868
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63938
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63937
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 139
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 4
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 55778
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3124
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "fe80::70c9:5bf0:1aa3:9057",
-						"port": 1900
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 54603
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 54602
-					},
-					"status": "ESTABLISHED",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 50068
-					},
-					"raddr": {
-						"ip": "2a01:578:3::3430:6f34",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 25424
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 50081
-					},
-					"raddr": {
-						"ip": "2a00:1450:4002:806::2004",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 25424
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 54601
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 54600
-					},
-					"status": "ESTABLISHED",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 56490
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 4268
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 50877
-					},
-					"raddr": {
-						"ip": "40.67.251.132",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 16656
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 65528
-					},
-					"raddr": {
-						"ip": "52.0.253.166",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 500
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3980
-				},
-				{
-					"fd": -1,
-					"family": 2,
 					"type": 2,
 					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 5353
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 12488
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 30950
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 4548
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 5353
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3716
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 49666
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 1404
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 55555
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3728
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "fe80::2d61:3cc5:340f:e3c1",
-						"port": 1900
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 49891
-					},
-					"raddr": {
-						"ip": "2603:1026:c0b:16::2",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 13444
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 50089
-					},
-					"raddr": {
-						"ip": "52.48.2.255",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 4168
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "fe80::70c9:5bf0:1aa3:9057",
-						"port": 2177
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 10028
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 139
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 4
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49606
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 2384
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 1900
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 56489
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 4268
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 4500
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3980
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63342
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 58623
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3036
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 60134
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 49665
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 788
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 4500
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3980
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 49606
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 2384
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 50071
-					},
-					"raddr": {
-						"ip": "34.95.80.122",
-						"port": 443
-					},
-					"status": "TIME_WAIT",
-					"pid": 0
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "fe80::2d61:3cc5:340f:e3c1",
-						"port": 64970
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 5353
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1420
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::1",
-						"port": 20441
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 14860
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 2177
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 10028
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 61935
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63013
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 2448
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 135
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 920
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 54602
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 54603
-					},
-					"status": "ESTABLISHED",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 49675
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 5028
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49665
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 788
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 137
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 4
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 57723
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 20972
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 7070
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3736
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 5353
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3716
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 60135
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 445
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 4
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 57082
+						"port": 3702
 					},
 					"raddr": [],
 					"status": "NONE",
@@ -920,62 +278,17 @@
 				{
 					"fd": -1,
 					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 50435
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 123
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1276
-				},
-				{
-					"fd": -1,
-					"family": 2,
 					"type": 1,
 					"laddr": {
 						"ip": "127.0.0.1",
-						"port": 6942
+						"port": 64486
 					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 57723
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 64487
 					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 20972
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 1900
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
+					"status": "ESTABLISHED",
+					"pid": 23892
 				},
 				{
 					"fd": -1,
@@ -994,36 +307,12 @@
 					"family": 23,
 					"type": 2,
 					"laddr": {
-						"ip": "::",
-						"port": 5355
+						"ip": "::1",
+						"port": 61823
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 1420
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49667
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 1620
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 58623
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3036
+					"pid": 8060
 				},
 				{
 					"fd": -1,
@@ -1031,26 +320,11 @@
 					"type": 1,
 					"laddr": {
 						"ip": "192.168.1.99",
-						"port": 59576
-					},
-					"raddr": {
-						"ip": "18.221.175.75",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 18960
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 52665
+						"port": 139
 					},
 					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
+					"status": "LISTEN",
+					"pid": 4
 				},
 				{
 					"fd": -1,
@@ -1066,149 +340,23 @@
 				},
 				{
 					"fd": -1,
-					"family": 2,
+					"family": 23,
 					"type": 1,
 					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49668
+						"ip": "::",
+						"port": 49669
 					},
 					"raddr": [],
 					"status": "LISTEN",
-					"pid": 3528
+					"pid": 868
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 2,
 					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 60223
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1076
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 1434
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 4304
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 59536
-					},
-					"raddr": {
-						"ip": "51.89.67.17",
-						"port": 80
-					},
-					"status": "ESTABLISHED",
-					"pid": 3736
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 60223
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1076
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 137
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 4
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 5354
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3716
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 49336
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 20972
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:5d7e:5d03:e0c7:465d",
-						"port": 2177
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 10028
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 45112
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63942
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63941
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 64973
+						"ip": "192.168.56.1",
+						"port": 1900
 					},
 					"raddr": [],
 					"status": "NONE",
@@ -1216,57 +364,69 @@
 				},
 				{
 					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 64501
+					},
+					"raddr": {
+						"ip": "40.67.251.132",
+						"port": 443
+					},
+					"status": "ESTABLISHED",
+					"pid": 2940
+				},
+				{
+					"fd": -1,
 					"family": 23,
-					"type": 2,
+					"type": 1,
 					"laddr": {
 						"ip": "::",
-						"port": 3702
+						"port": 8028
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 4
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.56.1",
+						"port": 61824
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 4888
+					"pid": 8060
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63940
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63939
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 49667
+						"ip": "0.0.0.0",
+						"port": 49665
 					},
 					"raddr": [],
 					"status": "LISTEN",
-					"pid": 1620
+					"pid": 788
 				},
 				{
 					"fd": -1,
-					"family": 23,
+					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 50064
+						"ip": "192.168.1.99",
+						"port": 64424
 					},
 					"raddr": {
-						"ip": "2a05:d018:76c:b683:a2cd:4240:8669:6d4",
+						"ip": "52.159.49.199",
 						"port": 443
 					},
 					"status": "ESTABLISHED",
-					"pid": 25424
+					"pid": 24108
 				},
 				{
 					"fd": -1,
@@ -1282,88 +442,70 @@
 				},
 				{
 					"fd": -1,
-					"family": 23,
+					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 56146
+						"ip": "0.0.0.0",
+						"port": 49669
 					},
-					"raddr": {
-						"ip": "2a02:26f0:df:39b::57",
-						"port": 443
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 868
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 5040
 					},
-					"status": "CLOSE_WAIT",
-					"pid": 8444
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 9688
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 5353
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3716
 				},
 				{
 					"fd": -1,
 					"family": 23,
 					"type": 2,
 					"laddr": {
-						"ip": "2001:b07:a96:27fd:c037:68af:a059:8088",
-						"port": 2177
+						"ip": "fe80::2d61:3cc5:340f:e3c1",
+						"port": 61822
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 10028
+					"pid": 8060
 				},
 				{
 					"fd": -1,
 					"family": 2,
-					"type": 1,
+					"type": 2,
 					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 808
+						"ip": "192.168.1.99",
+						"port": 138
 					},
 					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3940
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 8028
-					},
-					"raddr": [],
-					"status": "LISTEN",
+					"status": "NONE",
 					"pid": 4
 				},
 				{
 					"fd": -1,
 					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 49838
-					},
-					"raddr": {
-						"ip": "2603:1026:c0b:16::2",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 13444
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 135
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 920
-				},
-				{
-					"fd": -1,
-					"family": 2,
 					"type": 2,
 					"laddr": {
-						"ip": "0.0.0.0",
+						"ip": "::",
 						"port": 5353
 					},
 					"raddr": [],
@@ -1372,27 +514,18 @@
 				},
 				{
 					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 8028
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 4
-				},
-				{
-					"fd": -1,
 					"family": 2,
 					"type": 1,
 					"laddr": {
 						"ip": "127.0.0.1",
-						"port": 30666
+						"port": 53968
 					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 22280
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53967
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
 				},
 				{
 					"fd": -1,
@@ -1400,14 +533,26 @@
 					"type": 1,
 					"laddr": {
 						"ip": "192.168.1.99",
-						"port": 50090
+						"port": 64484
 					},
 					"raddr": {
-						"ip": "34.243.99.16",
-						"port": 443
+						"ip": "93.184.220.29",
+						"port": 80
 					},
-					"status": "ESTABLISHED",
-					"pid": 4168
+					"status": "CLOSE_WAIT",
+					"pid": 22608
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 49606
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 2384
 				},
 				{
 					"fd": -1,
@@ -1415,11 +560,26 @@
 					"type": 1,
 					"laddr": {
 						"ip": "127.0.0.1",
-						"port": 20441
+						"port": 6942
 					},
 					"raddr": [],
 					"status": "LISTEN",
-					"pid": 14860
+					"pid": 23892
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 64491
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 64490
+					},
+					"status": "ESTABLISHED",
+					"pid": 23892
 				},
 				{
 					"fd": -1,
@@ -1439,80 +599,23 @@
 					"type": 2,
 					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 1434
+						"port": 56489
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 4304
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63937
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63938
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
+					"pid": 4268
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 2,
 					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49336
+						"ip": "192.168.1.99",
+						"port": 61825
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 20972
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63939
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63940
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49666
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 1404
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 50091
-					},
-					"raddr": {
-						"ip": "52.137.103.96",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 6556
+					"pid": 8060
 				},
 				{
 					"fd": -1,
@@ -1531,6 +634,246 @@
 					"family": 23,
 					"type": 1,
 					"laddr": {
+						"ip": "::1",
+						"port": 48042
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 7200
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 4500
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3980
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "fe80::70c9:5bf0:1aa3:9057",
+						"port": 61821
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 3702
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 4888
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.56.1",
+						"port": 2177
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 10028
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53249
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 1880
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 63342
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 23892
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 123
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 1276
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 64395
+					},
+					"raddr": {
+						"ip": "52.0.253.139",
+						"port": 4244
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 60134
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 64545
+					},
+					"raddr": {
+						"ip": "52.137.103.96",
+						"port": 443
+					},
+					"status": "TIME_WAIT",
+					"pid": 0
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 49666
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 1404
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 58623
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3036
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 61826
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 60135
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 64489
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 64488
+					},
+					"status": "ESTABLISHED",
+					"pid": 23892
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "2001:b07:a96:27fd:f5eb:7e31:e6fe:4a92",
+						"port": 2177
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 10028
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 64419
+					},
+					"raddr": {
+						"ip": "40.67.254.36",
+						"port": 443
+					},
+					"status": "ESTABLISHED",
+					"pid": 4328
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 56488
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3716
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
 						"ip": "::",
 						"port": 7680
 					},
@@ -1543,15 +886,276 @@
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 50083
+						"ip": "127.0.0.1",
+						"port": 64488
 					},
 					"raddr": {
-						"ip": "52.113.199.111",
+						"ip": "127.0.0.1",
+						"port": 64489
+					},
+					"status": "ESTABLISHED",
+					"pid": 23892
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "2001:b07:a96:27fd:f5eb:7e31:e6fe:4a92",
+						"port": 54170
+					},
+					"raddr": {
+						"ip": "2a02:26f0:df:3a1::57",
+						"port": 443
+					},
+					"status": "CLOSE_WAIT",
+					"pid": 15020
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 30950
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 4548
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 500
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3980
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 49675
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 5028
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.56.1",
+						"port": 5353
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3716
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 7680
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 6556
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 64384
+					},
+					"raddr": {
+						"ip": "23.97.215.12",
 						"port": 443
 					},
 					"status": "ESTABLISHED",
-					"pid": 1784
+					"pid": 10832
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 135
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 920
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "fe80::2d61:3cc5:340f:e3c1",
+						"port": 1900
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 52730
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 61935
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 1900
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.56.1",
+						"port": 137
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 4
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 64487
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 64486
+					},
+					"status": "ESTABLISHED",
+					"pid": 23892
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 49684
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 856
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 5355
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 1420
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 1434
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 4304
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::1",
+						"port": 1900
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 49665
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 788
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 500
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3980
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 49668
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3528
 				},
 				{
 					"fd": -1,
@@ -1571,77 +1175,95 @@
 					"type": 1,
 					"laddr": {
 						"ip": "127.0.0.1",
-						"port": 63943
+						"port": 64490
 					},
 					"raddr": {
 						"ip": "127.0.0.1",
-						"port": 63944
+						"port": 64491
 					},
 					"status": "ESTABLISHED",
-					"pid": 22280
+					"pid": 23892
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49684
+						"ip": "127.0.0.1",
+						"port": 48042
 					},
 					"raddr": [],
 					"status": "LISTEN",
-					"pid": 856
+					"pid": 7200
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53963
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53962
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53960
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53961
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53961
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53960
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
 				},
 				{
 					"fd": -1,
 					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::1",
-						"port": 5353
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3716
-				},
-				{
-					"fd": -1,
-					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 63941
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63942
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 50001
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3736
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 26666
+						"ip": "::",
+						"port": 135
 					},
 					"raddr": [],
 					"status": "LISTEN",
-					"pid": 3928
+					"pid": 920
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 55772
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 868
 				},
 				{
 					"fd": -1,
@@ -1649,11 +1271,11 @@
 					"type": 2,
 					"laddr": {
 						"ip": "192.168.1.99",
-						"port": 138
+						"port": 2177
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 4
+					"pid": 10028
 				},
 				{
 					"fd": -1,
@@ -1661,7 +1283,67 @@
 					"type": 2,
 					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 500
+						"port": 1434
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 4304
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 5353
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 1420
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "fe80::70c9:5bf0:1aa3:9057",
+						"port": 2177
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 10028
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 49668
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3528
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 63013
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2448
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 4500
 					},
 					"raddr": [],
 					"status": "NONE",
@@ -1673,14 +1355,11 @@
 					"type": 1,
 					"laddr": {
 						"ip": "127.0.0.1",
-						"port": 63944
+						"port": 45112
 					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 63943
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 17600
 				},
 				{
 					"fd": -1,
@@ -1688,98 +1367,11 @@
 					"type": 2,
 					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 49724
+						"port": 5050
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 2100
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "fe80::70c9:5bf0:1aa3:9057",
-						"port": 64969
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 49669
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 868
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::1",
-						"port": 1900
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 808
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3940
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 5040
-					},
-					"raddr": [],
-					"status": "LISTEN",
 					"pid": 9688
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 5353
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 12488
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 59529
-					},
-					"raddr": {
-						"ip": "13.69.188.18",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 1076
 				},
 				{
 					"fd": -1,
@@ -1798,27 +1390,123 @@
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 54600
+						"ip": "192.168.1.99",
+						"port": 64512
 					},
 					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 54601
+						"ip": "3.17.162.87",
+						"port": 443
 					},
 					"status": "ESTABLISHED",
-					"pid": 24800
+					"pid": 18960
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 2,
 					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 2177
+						"ip": "192.168.1.99",
+						"port": 137
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 10028
+					"pid": 4
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 52666
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "fe80::70c9:5bf0:1aa3:9057",
+						"port": 1900
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::1",
+						"port": 5353
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 3716
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 53515
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 10832
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 49606
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 2384
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 50435
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 49667
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 1620
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 49667
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 1620
 				},
 				{
 					"fd": -1,
@@ -1837,288 +1525,24 @@
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 54598
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 54599
-					},
-					"status": "ESTABLISHED",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 52730
+						"port": 8028
 					},
 					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::1",
-						"port": 64971
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 59593
-					},
-					"raddr": {
-						"ip": "2603:1026:c0b:23::2",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 13444
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 2177
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 10028
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 64972
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 65493
-					},
-					"raddr": {
-						"ip": "52.113.205.234",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 1784
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 56488
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 3716
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 1900
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 49879
-					},
-					"raddr": {
-						"ip": "2603:1026:c0b:16::2",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 13444
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 54599
-					},
-					"raddr": {
-						"ip": "127.0.0.1",
-						"port": 54598
-					},
-					"status": "ESTABLISHED",
-					"pid": 24800
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 50088
-					},
-					"raddr": {
-						"ip": "130.211.34.183",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 22280
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 3702
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 4888
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 53249
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1880
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 1,
-					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 65501
-					},
-					"raddr": {
-						"ip": "52.159.49.199",
-						"port": 443
-					},
-					"status": "ESTABLISHED",
-					"pid": 30000
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "192.168.56.1",
-						"port": 138
-					},
-					"raddr": [],
-					"status": "NONE",
+					"status": "LISTEN",
 					"pid": 4
 				},
 				{
 					"fd": -1,
-					"family": 23,
-					"type": 2,
-					"laddr": {
-						"ip": "::",
-						"port": 123
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1276
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 5355
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 1420
-				},
-				{
-					"fd": -1,
 					"family": 2,
 					"type": 2,
 					"laddr": {
 						"ip": "127.0.0.1",
-						"port": 64974
+						"port": 56490
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 8060
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "::",
-						"port": 49668
-					},
-					"raddr": [],
-					"status": "LISTEN",
-					"pid": 3528
-				},
-				{
-					"fd": -1,
-					"family": 23,
-					"type": 1,
-					"laddr": {
-						"ip": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"port": 65477
-					},
-					"raddr": {
-						"ip": "2a00:1450:400c:c0c::bc",
-						"port": 5228
-					},
-					"status": "ESTABLISHED",
-					"pid": 25424
-				},
-				{
-					"fd": -1,
-					"family": 2,
-					"type": 2,
-					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 52666
-					},
-					"raddr": [],
-					"status": "NONE",
-					"pid": 2100
+					"pid": 4268
 				},
 				{
 					"fd": -1,
@@ -2135,26 +1559,53 @@
 				{
 					"fd": -1,
 					"family": 2,
-					"type": 2,
+					"type": 1,
 					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 5050
+						"port": 55778
 					},
 					"raddr": [],
-					"status": "NONE",
-					"pid": 9688
+					"status": "LISTEN",
+					"pid": 3124
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "0.0.0.0",
-						"port": 7680
+						"ip": "192.168.56.1",
+						"port": 139
 					},
 					"raddr": [],
 					"status": "LISTEN",
-					"pid": 6556
+					"pid": 4
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "2001:b07:a96:27fd:f5eb:7e31:e6fe:4a92",
+						"port": 64482
+					},
+					"raddr": {
+						"ip": "2a02:26f0:b600::213:c052",
+						"port": 443
+					},
+					"status": "CLOSE_WAIT",
+					"pid": 22608
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 1900
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 8060
 				},
 				{
 					"fd": -1,
@@ -2174,7 +1625,7 @@
 					"type": 2,
 					"laddr": {
 						"ip": "0.0.0.0",
-						"port": 57081
+						"port": 53998
 					},
 					"raddr": [],
 					"status": "NONE",
@@ -2185,11 +1636,161 @@
 					"family": 2,
 					"type": 1,
 					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 26666
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3928
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 5354
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3716
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 808
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3940
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
 						"ip": "192.168.1.99",
-						"port": 59560
+						"port": 64551
 					},
 					"raddr": {
-						"ip": "18.221.80.10",
+						"ip": "52.143.80.209",
+						"port": 443
+					},
+					"status": "TIME_WAIT",
+					"pid": 0
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 55555
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3728
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 5355
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 1420
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 808
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3940
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 49724
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 53515
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 10832
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 2,
+					"laddr": {
+						"ip": "::",
+						"port": 53999
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 4888
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "192.168.56.1",
+						"port": 138
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 4
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53967
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53968
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "192.168.1.99",
+						"port": 64509
+					},
+					"raddr": {
+						"ip": "3.20.12.220",
 						"port": 443
 					},
 					"status": "ESTABLISHED",
@@ -2200,34 +1801,124 @@
 					"family": 2,
 					"type": 1,
 					"laddr": {
-						"ip": "192.168.1.99",
-						"port": 59534
+						"ip": "127.0.0.1",
+						"port": 53970
 					},
 					"raddr": {
-						"ip": "52.114.74.211",
-						"port": 443
+						"ip": "127.0.0.1",
+						"port": 53969
 					},
 					"status": "ESTABLISHED",
-					"pid": 20972
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53962
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53963
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 30666
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 49666
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 1404
 				},
 				{
 					"fd": -1,
 					"family": 2,
 					"type": 2,
 					"laddr": {
-						"ip": "127.0.0.1",
-						"port": 55772
+						"ip": "0.0.0.0",
+						"port": 123
 					},
 					"raddr": [],
 					"status": "NONE",
-					"pid": 868
+					"pid": 1276
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "127.0.0.1",
+						"port": 53969
+					},
+					"raddr": {
+						"ip": "127.0.0.1",
+						"port": 53970
+					},
+					"status": "ESTABLISHED",
+					"pid": 17600
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 2,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 52665
+					},
+					"raddr": [],
+					"status": "NONE",
+					"pid": 2100
+				},
+				{
+					"fd": -1,
+					"family": 23,
+					"type": 1,
+					"laddr": {
+						"ip": "::",
+						"port": 58623
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 3036
+				},
+				{
+					"fd": -1,
+					"family": 2,
+					"type": 1,
+					"laddr": {
+						"ip": "0.0.0.0",
+						"port": 445
+					},
+					"raddr": [],
+					"status": "LISTEN",
+					"pid": 4
 				}
 			],
 			"net_io_counters": {
-				"bytes_sent": 411858028,
-				"bytes_recv": 5882057415,
-				"packets_sent": 1387078,
-				"packets_recv": 5356339,
+				"bytes_sent": 87110687,
+				"bytes_recv": 6819407900,
+				"packets_sent": 803542,
+				"packets_recv": 5118982,
 				"errin": 0,
 				"errout": 0,
 				"dropin": 0,
@@ -2373,21 +2064,7 @@
 					},
 					{
 						"family": 23,
-						"address": "2001:b07:a96:27fd:5d7e:5d03:e0c7:465d",
-						"netmask": null,
-						"broadcast": null,
-						"ptp": null
-					},
-					{
-						"family": 23,
-						"address": "2001:b07:a96:27fd:99b1:76c6:8236:5bf8",
-						"netmask": null,
-						"broadcast": null,
-						"ptp": null
-					},
-					{
-						"family": 23,
-						"address": "2001:b07:a96:27fd:c037:68af:a059:8088",
+						"address": "2001:b07:a96:27fd:f5eb:7e31:e6fe:4a92",
 						"netmask": null,
 						"broadcast": null,
 						"ptp": null
@@ -2445,7 +2122,7 @@
 				"Wi-Fi": {
 					"isup": true,
 					"duplex": 2,
-					"speed": 780,
+					"speed": 650,
 					"mtu": 1500
 				},
 				"Connessione alla rete locale (LAN)* 3": {

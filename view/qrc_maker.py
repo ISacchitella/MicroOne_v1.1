@@ -7,4 +7,4 @@ if __name__ == '__main__':
     py_path = qrc_path.split('.')[0] + '_rc.py'
     command = PCUIC5 + qrc_path + ' -o ' + py_path
     system(command)
-    move(py_path, '../control/' + py_path)
+    move(py_path, '../' + py_path)

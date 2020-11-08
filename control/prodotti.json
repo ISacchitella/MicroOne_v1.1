@@ -28,5 +28,11 @@
   "data_scadenza": "31/12/20",
   "lotto": null,
   "concentrazione": null
+ },
+ {
+  "nome": "move",
+  "data_scadenza": "06/12/23",
+  "lotto": null,
+  "concentrazione": null
  }
 ]

@@ -9,11 +9,9 @@ from datetime import date, datetime
 
 from model.ambiente_prodotto import Ambiente, Prodotto
 
-FOLDER: str = os.path.abspath(os.getcwd())
-
 
 def get_file_path(file_name, extension='.json'):
-    path = os.path.join(FOLDER, file_name + extension)
+    path = os.path.join(os.path.abspath(os.getcwd()), file_name + extension)
     if not os.path.exists(path):
         inizializer = {'info': {}, 'prodotti': [], 'ambienti': []}
         json.dump(inizializer[file_name], open(path, 'w+'), indent=1)
@@ -82,11 +80,12 @@ FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4')
 def copy_info(disk_partitions):
     usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
                            drive["fstype"] in FSTYPE_USB_TYPES and 'removable' in drive["opts"].split(',')))
+    print(usb_drive_path)
     if usb_drive_path not in [None, '']:
         copy(get_file_path('info'), usb_drive_path)
     else:
         print('notfound')
-        raise FileNotFoundError
+        #raise FileNotFoundError
 
 
 def get_system_info():
@@ -119,12 +118,12 @@ def get_system_info():
             'battery': psutil.sensors_battery()._asdict(),
         }
     system_info['users'] = psutil.users()
-    system_info['network'] = {  # TODO
-        'net_connections': psutil.net_connections(),
-        'net_io_counters': psutil.net_io_counters(),
-        'net_if_addrs': psutil.net_if_addrs(),
-        'net_if_stats': psutil.net_if_stats(),
-    }
+    # system_info['network'] = {  # TODO
+    #     'net_connections': psutil.net_connections(),
+    #     'net_io_counters': psutil.net_io_counters(),
+    #     'net_if_addrs': psutil.net_if_addrs(),
+    #     'net_if_stats': psutil.net_if_stats(),
+    # }
     return unpack(system_info)
 
 
