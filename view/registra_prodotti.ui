@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>60</y>
+     <y>50</y>
      <width>191</width>
      <height>20</height>
     </rect>
@@ -42,8 +42,8 @@
   <widget class="QLineEdit" name="nome_textbox">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>110</y>
+     <x>50</x>
+     <y>80</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -64,8 +64,8 @@ border: 5px solid rgb(0,140,255);
   <widget class="QLabel" name="data_scad_label">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>160</y>
+     <x>30</x>
+     <y>260</y>
      <width>281</width>
      <height>21</height>
     </rect>
@@ -84,13 +84,189 @@ border: 5px solid rgb(0,140,255);
     <string>Inserisci data di scadenza</string>
    </property>
   </widget>
-  <widget class="QDateEdit" name="data_scad_dateEdit">
+  <widget class="QPushButton" name="save_btn">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>200</y>
-     <width>231</width>
+     <x>400</x>
+     <y>280</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 140, 255);
+color: rgb(255, 255, 255);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>Salva</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>0</y>
+     <width>501</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 140, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>40</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/icons/res/prodotto_icon.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel_btn_">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 140, 255);
+                 color: rgb(255, 255, 255);
+                 border-radius:10px;
+             </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img_resources.qrc">
+     <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="concentrazione_label">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>140</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Concentrazione</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="concentrazione_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>180</y>
+     <width>151</width>
      <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox::down-button {
+
+                    image: url(:/arrows/res/down_arrow.png);
+                    width:50px;
+                    }
+
+
+                    QSpinBox::up-button {
+
+                    image: url(:/arrows/res/up_arrow.png);
+                    width: 50px;
+                    }
+
+
+                    QSpinBox {
+                    color: rgb(0, 0, 0);
+                
+	background-color: rgb(255, 255, 255);
+border: 5px solid rgb(0,140,255);
+                    border-radius:25px;
+
+
+                    }
+                </string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDigitsOnly|Qt::ImhFormattedNumbersOnly|Qt::ImhPreferNumbers</set>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>3000</number>
+   </property>
+   <property name="singleStep">
+    <number>1</number>
+   </property>
+   <property name="value">
+    <number>28</number>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="data_scad_dateEdit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>231</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -137,91 +313,6 @@ border: 5px solid rgb(0,140,255);
      <month>10</month>
      <day>1</day>
     </datetime>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="save_btn">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>280</y>
-     <width>71</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);
-color: rgb(255, 255, 255);
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>Salva</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>-10</x>
-     <y>0</y>
-     <width>501</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>50</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/icons/res/prodotto_icon.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cancel_btn_">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>71</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);
-                 color: rgb(255, 255, 255);
-                 border-radius:10px;
-             </string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset resource="img_resources.qrc">
-     <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
    </property>
   </widget>
  </widget>

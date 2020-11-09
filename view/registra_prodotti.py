@@ -17,7 +17,7 @@ class Ui_Reg_prodotto_Window(object):
         Reg_prodotto_Window.resize(480, 320)
         Reg_prodotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.nome_label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.nome_label.setGeometry(QtCore.QRect(140, 60, 191, 20))
+        self.nome_label.setGeometry(QtCore.QRect(140, 50, 191, 20))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -26,7 +26,7 @@ class Ui_Reg_prodotto_Window(object):
         self.nome_label.setStyleSheet("color: rgb(0, 0, 0);")
         self.nome_label.setObjectName("nome_label")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_prodotto_Window)
-        self.nome_textbox.setGeometry(QtCore.QRect(60, 110, 371, 41))
+        self.nome_textbox.setGeometry(QtCore.QRect(50, 80, 371, 41))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.nome_textbox.setFont(font)
@@ -37,7 +37,7 @@ class Ui_Reg_prodotto_Window(object):
 "")
         self.nome_textbox.setObjectName("nome_textbox")
         self.data_scad_label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.data_scad_label.setGeometry(QtCore.QRect(140, 160, 281, 21))
+        self.data_scad_label.setGeometry(QtCore.QRect(30, 260, 281, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -45,8 +45,91 @@ class Ui_Reg_prodotto_Window(object):
         self.data_scad_label.setFont(font)
         self.data_scad_label.setStyleSheet("color: rgb(0, 0, 0);")
         self.data_scad_label.setObjectName("data_scad_label")
+        self.save_btn = QtWidgets.QPushButton(Reg_prodotto_Window)
+        self.save_btn.setGeometry(QtCore.QRect(400, 280, 71, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.save_btn.setFont(font)
+        self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
+        self.save_btn.setObjectName("save_btn")
+        self.label_5 = QtWidgets.QLabel(Reg_prodotto_Window)
+        self.label_5.setGeometry(QtCore.QRect(-10, 0, 501, 31))
+        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.label_5.setText("")
+        self.label_5.setObjectName("label_5")
+        self.label = QtWidgets.QLabel(Reg_prodotto_Window)
+        self.label.setGeometry(QtCore.QRect(330, 40, 41, 31))
+        self.label.setStyleSheet("image: url(:/icons/res/prodotto_icon.png);")
+        self.label.setText("")
+        self.label.setObjectName("label")
+        self.cancel_btn_ = QtWidgets.QPushButton(Reg_prodotto_Window)
+        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.cancel_btn_.setFont(font)
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"                 color: rgb(255, 255, 255);\n"
+"                 border-radius:10px;\n"
+"             ")
+        self.cancel_btn_.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.cancel_btn_.setIcon(icon)
+        self.cancel_btn_.setObjectName("cancel_btn_")
+        self.concentrazione_label = QtWidgets.QLabel(Reg_prodotto_Window)
+        self.concentrazione_label.setGeometry(QtCore.QRect(160, 140, 191, 20))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.concentrazione_label.setFont(font)
+        self.concentrazione_label.setStyleSheet("color: rgb(0, 0, 0);")
+        self.concentrazione_label.setObjectName("concentrazione_label")
+        self.concentrazione_spinBox = QtWidgets.QSpinBox(Reg_prodotto_Window)
+        self.concentrazione_spinBox.setGeometry(QtCore.QRect(140, 180, 151, 61))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.concentrazione_spinBox.setFont(font)
+        self.concentrazione_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.concentrazione_spinBox.setStyleSheet("QSpinBox::down-button {\n"
+"\n"
+"                    image: url(:/arrows/res/down_arrow.png);\n"
+"                    width:50px;\n"
+"                    }\n"
+"\n"
+"\n"
+"                    QSpinBox::up-button {\n"
+"\n"
+"                    image: url(:/arrows/res/up_arrow.png);\n"
+"                    width: 50px;\n"
+"                    }\n"
+"\n"
+"\n"
+"                    QSpinBox {\n"
+"                    color: rgb(0, 0, 0);\n"
+"                \n"
+"    background-color: rgb(255, 255, 255);\n"
+"border: 5px solid rgb(0,140,255);\n"
+"                    border-radius:25px;\n"
+"\n"
+"\n"
+"                    }\n"
+"                ")
+        self.concentrazione_spinBox.setInputMethodHints(QtCore.Qt.ImhDigitsOnly|QtCore.Qt.ImhFormattedNumbersOnly|QtCore.Qt.ImhPreferNumbers)
+        self.concentrazione_spinBox.setAlignment(QtCore.Qt.AlignCenter)
+        self.concentrazione_spinBox.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
+        self.concentrazione_spinBox.setMinimum(1)
+        self.concentrazione_spinBox.setMaximum(3000)
+        self.concentrazione_spinBox.setSingleStep(1)
+        self.concentrazione_spinBox.setProperty("value", 28)
+        self.concentrazione_spinBox.setObjectName("concentrazione_spinBox")
         self.data_scad_dateEdit = QtWidgets.QDateEdit(Reg_prodotto_Window)
-        self.data_scad_dateEdit.setGeometry(QtCore.QRect(130, 200, 231, 61))
+        self.data_scad_dateEdit.setEnabled(False)
+        self.data_scad_dateEdit.setGeometry(QtCore.QRect(40, 280, 231, 31))
         font = QtGui.QFont()
         font.setPointSize(20)
         font.setBold(False)
@@ -80,41 +163,6 @@ class Ui_Reg_prodotto_Window(object):
 "}")
         self.data_scad_dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 10, 1), QtCore.QTime(0, 0, 0)))
         self.data_scad_dateEdit.setObjectName("data_scad_dateEdit")
-        self.save_btn = QtWidgets.QPushButton(Reg_prodotto_Window)
-        self.save_btn.setGeometry(QtCore.QRect(400, 280, 71, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.save_btn.setFont(font)
-        self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:10px;")
-        self.save_btn.setObjectName("save_btn")
-        self.label_5 = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.label_5.setGeometry(QtCore.QRect(-10, 0, 501, 31))
-        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
-        self.label_5.setText("")
-        self.label_5.setObjectName("label_5")
-        self.label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.label.setGeometry(QtCore.QRect(330, 50, 41, 31))
-        self.label.setStyleSheet("image: url(:/icons/res/prodotto_icon.png);")
-        self.label.setText("")
-        self.label.setObjectName("label")
-        self.cancel_btn_ = QtWidgets.QPushButton(Reg_prodotto_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
-        self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
-        self.cancel_btn_.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.cancel_btn_.setIcon(icon)
-        self.cancel_btn_.setObjectName("cancel_btn_")
 
         self.retranslateUi(Reg_prodotto_Window)
         self.cancel_btn_.clicked.connect(Reg_prodotto_Window.close)
@@ -126,6 +174,7 @@ class Ui_Reg_prodotto_Window(object):
         self.nome_label.setText(_translate("Reg_prodotto_Window", "Inserisci nome Prodotto"))
         self.data_scad_label.setText(_translate("Reg_prodotto_Window", "Inserisci data di scadenza"))
         self.save_btn.setText(_translate("Reg_prodotto_Window", "Salva"))
+        self.concentrazione_label.setText(_translate("Reg_prodotto_Window", "Concentrazione"))
 import img_resources_rc
 
 

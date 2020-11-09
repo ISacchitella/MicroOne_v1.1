@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Sel_ambiente_Window(object):
     def setupUi(self, Sel_ambiente_Window):
         Sel_ambiente_Window.setObjectName("Sel_ambiente_Window")
-        Sel_ambiente_Window.resize(478, 313)
+        Sel_ambiente_Window.resize(480, 320)
         Sel_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.comboBox = QtWidgets.QComboBox(Sel_ambiente_Window)
         self.comboBox.setGeometry(QtCore.QRect(80, 120, 371, 41))
@@ -94,6 +94,16 @@ class Ui_Sel_ambiente_Window(object):
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
+        self.avanti_btn = QtWidgets.QPushButton(Sel_ambiente_Window)
+        self.avanti_btn.setGeometry(QtCore.QRect(380, 260, 71, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.avanti_btn.setFont(font)
+        self.avanti_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
+        self.avanti_btn.setObjectName("avanti_btn")
 
         self.retranslateUi(Sel_ambiente_Window)
         self.cancel_btn_.clicked.connect(Sel_ambiente_Window.close)
@@ -103,6 +113,7 @@ class Ui_Sel_ambiente_Window(object):
         _translate = QtCore.QCoreApplication.translate
         Sel_ambiente_Window.setWindowTitle(_translate("Sel_ambiente_Window", "Seleziona Ambiente"))
         self.label.setText(_translate("Sel_ambiente_Window", "Seleziona Ambiente"))
+        self.avanti_btn.setText(_translate("Sel_ambiente_Window", "Avanti"))
 import img_resources_rc
 
 

@@ -9,9 +9,10 @@ class Dispositivo:
 
     def __init__(self, serial_number: str):
         self.serial_number = serial_number
+        self.tempo_sanificazione = None
 
     def calcola_tempo(self, metri_cubi, concentrazione=Prodotto.CONCENTRAZIONE_STANDARD):
-        return timedelta(seconds=metri_cubi * concentrazione)
+        self.tempo_sanificazione = timedelta(seconds=metri_cubi * concentrazione)
 
     def sanifica(self, prodotto, ambiente):
         pass

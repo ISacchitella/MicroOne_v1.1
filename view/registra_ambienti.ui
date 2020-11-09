@@ -154,6 +154,9 @@ border: 5px solid rgb(0,140,255);
    <property name="singleStep">
     <number>1</number>
    </property>
+   <property name="value">
+    <number>1</number>
+   </property>
   </widget>
   <widget class="QLineEdit" name="nome_textbox">
    <property name="geometry">

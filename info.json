@@ -1,0 +1,96 @@
+{
+	"serial_number": "ST-1001",
+	"anagrafica": [],
+	"sistema": {
+		"boot_time": "09:00:09 09/11/20",
+		"os": {
+			"system": "Windows",
+			"node": "SACCHITELLA-PC",
+			"release": "10",
+			"version": "10.0.18362",
+			"machine": "AMD64",
+			"processor": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+			"architecture": [
+				"32bit",
+				"WindowsPE"
+			]
+		},
+		"measures": [
+			"bytes",
+			"mega bits (MB)",
+			"seconds",
+			"Mhz",
+			"celsius"
+		],
+		"disk": {
+			"available_drives": [
+				"C:"
+			],
+			"disk_usage": {
+				"total": 495480467456,
+				"used": 252201291776,
+				"free": 243279175680,
+				"percent": 50.9
+			},
+			"disk_partitions": [
+				{
+					"device": "C:\\",
+					"mountpoint": "C:\\",
+					"fstype": "NTFS",
+					"opts": "rw,fixed"
+				}
+			],
+			"disk_io_counters": {
+				"read_count": 369932,
+				"write_count": 421275,
+				"read_bytes": 8327876096,
+				"write_bytes": 7442454528,
+				"read_time": 302,
+				"write_time": 140
+			}
+		},
+		"memory": {
+			"virtual_memory": {
+				"total": 17103216640,
+				"available": 9159913472,
+				"percent": 46.4,
+				"used": 7943303168,
+				"free": 9159913472
+			},
+			"swap_memory": {
+				"total": 19653353472,
+				"used": 11050790912,
+				"free": 8602562560,
+				"percent": 56.2,
+				"sin": 0,
+				"sout": 0
+			}
+		},
+		"cpu": {
+			"total_cores": 8,
+			"physical_cores": 4,
+			"frequency": {
+				"current": 1792.0,
+				"min": 0.0,
+				"max": 1992.0
+			},
+			"cpu_times": {
+				"user": 11370.421874999998,
+				"system": 8531.046875,
+				"idle": 253071.51562499997,
+				"interrupt": 728.265625,
+				"dpc": 269.328125
+			}
+		},
+		"users": [
+			{
+				"name": "isacchitella",
+				"terminal": null,
+				"host": null,
+				"started": 1604908837.3013828,
+				"pid": null
+			}
+		]
+	},
+	"versione": "v1.1"
+}

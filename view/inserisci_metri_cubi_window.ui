@@ -1,77 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Sel_ambiente_Window</class>
- <widget class="QWidget" name="Sel_ambiente_Window">
+ <class>Inserisci_Metri_Cubi_Window</class>
+ <widget class="QWidget" name="Inserisci_Metri_Cubi_Window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>320</height>
+    <width>274</width>
+    <height>112</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Seleziona Ambiente</string>
+   <string>Metri Cubi</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QComboBox" name="comboBox">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>120</y>
-     <width>371</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QComboBox::down-arrow {
-
-
-        image: url(:/arrows/res/down_arrow.png);
-        width: 14px;
-        height: 14px;
-
-        }
-        QComboBox::drop-down
-        {
-        border: 0px; /* This seems to replace the whole arrow of the combo box */
-
-        }
-
-QComboBox {
-    color: black;
-border-radius:10px;
-border: 5px solid rgb(0,140,255);
-	selection-color: rgb(0, 0, 0);
-}
-</string>
-   </property>
-   <property name="maxVisibleItems">
-    <number>100</number>
-   </property>
-   <property name="insertPolicy">
-    <enum>QComboBox::InsertAlphabetically</enum>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>-20</x>
      <y>-10</y>
-     <width>481</width>
+     <width>531</width>
      <height>41</height>
     </rect>
    </property>
@@ -103,33 +53,7 @@ border: 5px solid rgb(0,140,255);
 background-color: rgb(0, 140, 255);</string>
    </property>
    <property name="text">
-    <string>Seleziona Ambiente</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="nome_label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>120</y>
-     <width>61</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-
-              image: url(:/icons/res/select.png);
-          </string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>Inserisci Metri Cubi</string>
    </property>
   </widget>
   <widget class="QPushButton" name="cancel_btn_">
@@ -137,7 +61,7 @@ background-color: rgb(0, 140, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>71</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -165,8 +89,8 @@ background-color: rgb(0, 140, 255);</string>
   <widget class="QPushButton" name="avanti_btn">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>260</y>
+     <x>190</x>
+     <y>60</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -183,7 +107,69 @@ color: rgb(255, 255, 255);
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>Avanti</string>
+    <string>Riepilogo</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="metri_cubi_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox::down-button {
+
+        image: url(:/arrows/res/down_arrow.png);
+        width:50px;
+
+
+        }
+
+
+        QSpinBox::up-button {
+
+
+        image: url(:/arrows/res/up_arrow.png);
+        width: 50px;
+        }
+
+
+        QSpinBox {
+        color: rgb(0, 0, 0);
+        border-radius:25px;
+	background-color: rgb(255, 255, 255);
+border: 5px solid rgb(0,140,255);
+
+
+        }</string>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>3000</number>
    </property>
   </widget>
  </widget>
@@ -194,11 +180,11 @@ border-radius:10px;</string>
   <connection>
    <sender>cancel_btn_</sender>
    <signal>clicked()</signal>
-   <receiver>Sel_ambiente_Window</receiver>
+   <receiver>Inserisci_Metri_Cubi_Window</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>65</x>
+     <x>55</x>
      <y>285</y>
     </hint>
     <hint type="destinationlabel">

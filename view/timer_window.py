@@ -72,6 +72,19 @@ class Ui_Timer_Window(object):
 "                 border-radius:10px;\n"
 "             ")
         self.download_btn.setObjectName("download_btn")
+        self.poweroff_btn = QtWidgets.QPushButton(Timer_Window)
+        self.poweroff_btn.setGeometry(QtCore.QRect(20, 260, 51, 41))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.poweroff_btn.setFont(font)
+        self.poweroff_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
+        self.poweroff_btn.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/poweroff /res/poweroff_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.poweroff_btn.setIcon(icon1)
+        self.poweroff_btn.setObjectName("poweroff_btn")
 
         self.retranslateUi(Timer_Window)
         self.cancel_btn.clicked.connect(Timer_Window.close)

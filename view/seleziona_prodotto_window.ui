@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Sanifica_Window</class>
- <widget class="QWidget" name="Sanifica_Window">
+ <class>Seleziona_Prodotto_Window</class>
+ <widget class="QWidget" name="Seleziona_Prodotto_Window">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sanifica</string>
+   <string>Prodotto</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -33,8 +33,7 @@
    <property name="styleSheet">
     <string notr="true">QComboBox::down-arrow {
 
-
-        image: url(:/icons/res/sanifica_icon.png);
+	image: url(:/arrows/res/down_arrow.png);
         width: 14px;
         height: 14px;
 
@@ -58,92 +57,6 @@ border: 5px solid rgb(0,140,255);
     <enum>QComboBox::InsertAtTop</enum>
    </property>
   </widget>
-  <widget class="QSpinBox" name="metri_cubi_spinBox">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>210</y>
-     <width>151</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>20</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QSpinBox::down-button {
-
-        image: url(:/arrows/res/down_arrow.png);
-        width:50px;
-
-
-        }
-
-
-        QSpinBox::up-button {
-
-
-        image: url(:/arrows/res/up_arrow.png);
-        width: 50px;
-        }
-
-
-        QSpinBox {
-        color: rgb(0, 0, 0);
-        border-radius:25px;
-	background-color: rgb(255, 255, 255);
-border: 5px solid rgb(0,140,255);
-
-
-        }</string>
-   </property>
-   <property name="wrapping">
-    <bool>false</bool>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="readOnly">
-    <bool>false</bool>
-   </property>
-   <property name="buttonSymbols">
-    <enum>QAbstractSpinBox::PlusMinus</enum>
-   </property>
-   <property name="minimum">
-    <number>1</number>
-   </property>
-   <property name="maximum">
-    <number>3000</number>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="sanifica_btn">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>280</y>
-     <width>71</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);
-
-color: rgb(255, 255, 255);
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>Sanifica</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
@@ -163,8 +76,8 @@ border-radius:10px;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>60</y>
+     <x>80</x>
+     <y>0</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -177,7 +90,8 @@ border-radius:10px;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);</string>
+    <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(0, 140, 255);</string>
    </property>
    <property name="text">
     <string>Seleziona Prodotto</string>
@@ -186,8 +100,8 @@ border-radius:10px;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>60</y>
+     <x>10</x>
+     <y>110</y>
      <width>41</width>
      <height>41</height>
     </rect>
@@ -197,27 +111,6 @@ border-radius:10px;</string>
    </property>
    <property name="text">
     <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>160</y>
-     <width>81</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string>Metri Cubi</string>
    </property>
   </widget>
   <widget class="QPushButton" name="cancel_btn_1">
@@ -280,6 +173,30 @@ border-radius:10px;</string>
      <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
    </property>
   </widget>
+  <widget class="QPushButton" name="avanti_btn">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>270</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 140, 255);
+
+color: rgb(255, 255, 255);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>Avanti</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>
@@ -288,7 +205,7 @@ border-radius:10px;</string>
   <connection>
    <sender>cancel_btn_</sender>
    <signal>clicked()</signal>
-   <receiver>Sanifica_Window</receiver>
+   <receiver>Seleziona_Prodotto_Window</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">

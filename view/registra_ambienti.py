@@ -86,6 +86,7 @@ class Ui_Reg_ambiente_Window(object):
         self.metri_cubi_spinBox.setMinimum(1)
         self.metri_cubi_spinBox.setMaximum(3000)
         self.metri_cubi_spinBox.setSingleStep(1)
+        self.metri_cubi_spinBox.setProperty("value", 1)
         self.metri_cubi_spinBox.setObjectName("metri_cubi_spinBox")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_ambiente_Window)
         self.nome_textbox.setGeometry(QtCore.QRect(60, 110, 371, 41))

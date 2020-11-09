@@ -46,10 +46,12 @@ def load_prodotti():
     list = json.load(open(get_file_path('prodotti')))
     prodotti = []
     for prodotto in list:
-        data_scadenza_l = prodotto['data_scadenza'].split('/')
-        data_scadenza = date(int(data_scadenza_l[2]) + 2000, int(data_scadenza_l[1]), int(data_scadenza_l[0]))
-        prodotti.append(Prodotto(prodotto['nome'], data_scadenza, lotto=prodotto['lotto'],
-                                 concentrazione=prodotto['concentrazione']))
+        if prodotto['data_scadenza'] != None:
+            data_scadenza_l = prodotto['data_scadenza'].split('/')
+            data_scadenza = date(int(data_scadenza_l[2]) + 2000, int(data_scadenza_l[1]), int(data_scadenza_l[0]))
+        else:
+            data_scadenza = None
+        prodotti.append(Prodotto(prodotto['nome'], prodotto['concentrazione'], data_scadenza = data_scadenza, lotto=prodotto['lotto']))
     return prodotti
 
 
@@ -66,6 +68,21 @@ def load_info():
 def save_info(info):
     json.dump(info, open(get_file_path('info'), 'w'), indent='\t')
 
+
+def poweroff():
+    os.system("shutdown /s /t 1")
+    # os.system("shutdown now -h")  # shut down the Pi -h is or -r will reset
+
+
+def display_riepilogo(riepilogo):
+    formatted_str = ""
+    formatted_str += f"Data del trattamento: {riepilogo['data']} \n"
+    formatted_str += f"Prodotto selezionato: {str(riepilogo['prodotto'])} \n"
+    formatted_str += f"Ambiente selezionato: {riepilogo['ambiente']} \n"
+    formatted_str += f"Metri cubi inseriti: {riepilogo['metri_cubi']} \n"
+    return formatted_str
+
+
 def format_info(info):
     formatted_str = ""
     formatted_str += f"Serial Number {info['serial_number'].upper()}\n"
@@ -73,11 +90,11 @@ def format_info(info):
     return formatted_str
 
 
-
 FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4')
 
 
-def copy_info(disk_partitions):
+def copy_info():
+    disk_partitions = unpack(psutil.disk_partitions())
     usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
                            drive["fstype"] in FSTYPE_USB_TYPES and 'removable' in drive["opts"].split(',')))
     print(usb_drive_path)
@@ -85,7 +102,7 @@ def copy_info(disk_partitions):
         copy(get_file_path('info'), usb_drive_path)
     else:
         print('notfound')
-        #raise FileNotFoundError
+        # raise FileNotFoundError
 
 
 def get_system_info():
@@ -152,7 +169,8 @@ def unpack(obj):
 
 
 if __name__ == '__main__':
-    copy_info(get_system_info()['disk']['disk_partitions'])
+    pass
+    # poweroff()
     # print(Ambiente('p',9)._asdict())
     # print()
     # save_prodotti([Prodotto('test', date.today())])

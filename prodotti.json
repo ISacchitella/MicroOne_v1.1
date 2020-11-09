@@ -1,0 +1,8 @@
+[
+ {
+  "nome": "Prodotto1",
+  "concentrazione": 12,
+  "data_scadenza": "05/07/25",
+  "lotto": ["prova"]
+ }
+]
