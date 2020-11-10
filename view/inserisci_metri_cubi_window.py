@@ -48,7 +48,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.avanti_btn = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.avanti_btn.setGeometry(QtCore.QRect(190, 60, 71, 31))
+        self.avanti_btn.setGeometry(QtCore.QRect(180, 70, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.avanti_btn.setFont(font)
@@ -96,6 +96,20 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.metri_cubi_spinBox.setMinimum(1)
         self.metri_cubi_spinBox.setMaximum(3000)
         self.metri_cubi_spinBox.setObjectName("metri_cubi_spinBox")
+        self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
+        self.keyboard_btn.setGeometry(QtCore.QRect(160, 30, 81, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.keyboard_btn.setFont(font)
+        self.keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
+        self.keyboard_btn.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.keyboard_btn.setIcon(icon1)
+        self.keyboard_btn.setObjectName("keyboard_btn")
 
         self.retranslateUi(Inserisci_Metri_Cubi_Window)
         self.cancel_btn_.clicked.connect(Inserisci_Metri_Cubi_Window.close)

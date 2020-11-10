@@ -1,20 +1,18 @@
 from datetime import date
 
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
-from PyQt5.uic.properties import QtGui
 
-from control.controllers import salva_prodotto, salva_ambiente, make_logger, seleziona_ambiente, sanifica, \
-    seleziona_prodotto, make_error_msg, open_lotto
-from control.save import load_info, save_info, load_ambienti, load_prodotti, format_info, copy_info, get_system_info, \
+from control.controllers import salva_prodotto, salva_ambiente, make_logger, seleziona_prodotto, make_error_msg, \
+    open_lotto
+from control.save import load_info, save_info, load_prodotti, format_info, copy_info, get_system_info, \
     poweroff
-from model.ambiente_prodotto import display_ambiente, MAX_METRI_CUBI
+from model.ambiente_prodotto import MAX_METRI_CUBI
 from model.dispositivo import Dispositivo
 # https://stackoverflow.com/questions/7031962/qdateedit-calendar-popup
 from view.main_window import Ui_MainWindow, QtWidgets
 from view.recap_info_window import Ui_recap_info_window
 from view.registra_ambienti import Ui_Reg_ambiente_Window
 from view.registra_prodotti import Ui_Reg_prodotto_Window
-from view.seleziona_ambiente import Ui_Sel_ambiente_Window
 from view.seleziona_prodotto_window import Ui_Seleziona_Prodotto_Window
 
 
@@ -102,7 +100,7 @@ class Micro_One_App(Ui_MainWindow):
         self.recap_info_ui.setupUi(self.recap_info_window)
         self.recap_info_ui.recap_info_text_edit.setText(format_info(self.info))
         self.info['sistema'] = get_system_info()
-        self.recap_info_ui.download_btn.clicked.connect(lambda: copy_info(self.info['sistema']['disk']['disk_partitions']))
+        self.recap_info_ui.download_btn.clicked.connect(copy_info)
         save_info(self.info)
         self.recap_info_window.show()
 
@@ -112,7 +110,7 @@ class Micro_One_App(Ui_MainWindow):
         self.seleziona_prodotto_ui = Ui_Seleziona_Prodotto_Window()
         self.seleziona_prodotto_ui.setupUi(self.seleziona_prodotto_window)
         prodotti = load_prodotti()
-        prodotti_str_list = [prodotto.nome for prodotto in prodotti if prodotto.data_scadenza ==None or prodotto.data_scadenza > date.today() ]
+        prodotti_str_list = [str(prodotto) for prodotto in prodotti if prodotto.data_scadenza ==None or prodotto.data_scadenza > date.today() ]
         prodotti_str_list.insert(0,"")
         self.seleziona_prodotto_ui.prodotti_comboBox.clear()
         self.seleziona_prodotto_ui.prodotti_comboBox.addItems(prodotti_str_list)
@@ -121,7 +119,7 @@ class Micro_One_App(Ui_MainWindow):
             self.seleziona_prodotto_ui.avanti_btn.setDisabled(True)
         else:
             self.selected_prodotto = next((prodotto for prodotto in prodotti if
-                                           prodotto.nome == self.seleziona_prodotto_ui.prodotti_comboBox.currentText()))
+                                           prodotto.nome == self.seleziona_prodotto_ui.prodotti_comboBox.currentText().split(':')[0]))
             self.seleziona_prodotto_ui.avanti_btn.setEnabled(True)
         self.seleziona_prodotto_ui.prodotti_comboBox.currentTextChanged.connect(
             lambda: seleziona_prodotto(self.seleziona_prodotto_ui, self, prodotti))

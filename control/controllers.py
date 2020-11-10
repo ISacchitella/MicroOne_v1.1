@@ -1,12 +1,12 @@
 import logging
 from collections import OrderedDict
 from datetime import timedelta, datetime
-from enum import Enum, auto
-from time import sleep
+from enum import Enum
 
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import Qt
 
+from control.keyboard_controller import Keyboard
 from control.save import load_ambienti, save_ambienti, load_prodotti, save_prodotti, save_info, get_system_info, \
     copy_info, poweroff, display_riepilogo
 from model.ambiente_prodotto import Ambiente, check_metri_cubi, Prodotto, TEMPO_ALLONTANAMENTO, display_ambiente, \
@@ -28,7 +28,7 @@ def make_logger():
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
-    file_handler = logging.FileHandler('errors.log', mode='w')
+    file_handler = logging.FileHandler('../errors.log', mode='w')
     file_handler.setLevel(logging.ERROR)
     file_handler.setFormatter(logging.Formatter(
         '%(levelname)s-%(asctime)s\nmessagge: %(message)s\nmodule: %(module)s\nfunction: %(funcName)s\nline: %(lineno)d\n'))
@@ -81,7 +81,7 @@ def seleziona_prodotto(ui, app, prodotti):
         ui.avanti_btn.setDisabled(True)
     else:
         app.selected_prodotto = next(
-            (prodotto for prodotto in prodotti if prodotto.nome == ui.prodotti_comboBox.currentText()))
+            (prodotto for prodotto in prodotti if prodotto.nome == ui.prodotti_comboBox.currentText().split(':')[0]))
         ui.avanti_btn.setEnabled(True)
 
 
@@ -89,6 +89,8 @@ def make_window(ui_class):
     next_window = QtWidgets.QWidget()
     next_ui = ui_class()
     next_ui.setupUi(next_window)
+    if hasattr(next_ui, 'keyboard_btn'):
+        next_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
     return [next_window, next_ui]
 
 
@@ -138,6 +140,13 @@ def open_ambiente(current_window, current_ui, app):
     next_window = temp[0]
     next_ui = temp[1]
     # -----Middle-----
+    app.selected_prodotto.data_scadenza = current_ui.data_scad_dateEdit.date().toPyDate()
+    prodotti = load_prodotti()
+    prodotto_old_version = [prodotto for prodotto in prodotti if prodotto.nome == app.selected_prodotto.nome]
+    if len(prodotto_old_version) > 0 and prodotto_old_version[0] != None:
+        prodotti.remove(prodotto_old_version[0])
+        prodotti.append(app.selected_prodotto)
+        save_prodotti(prodotti)
     next_ui.comboBox.clear()
     ambienti = load_ambienti()
     for ambiente in ambienti:
@@ -170,6 +179,11 @@ def open_riepilogo(current_window, current_ui, app):
     next_ui = temp[1]
     # -----Middle-----
     app.selected_metri_cubi = current_ui.metri_cubi_spinBox.value()
+    app.selected_prodotto.millilitri = app.selected_metri_cubi
+    if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
+        next_ui.millilitri_label.setText('mL necessari per il trattamento sono: ' + str(app.selected_prodotto.millilitri))
+    else:
+        next_ui.millilitri_label.setText("Controllare se è presente abbastanza prodotto!")
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
     sessione = OrderedDict({
         'data': datetime.now().strftime("%H:%M:%S %d/%m/%y"),
@@ -225,12 +239,14 @@ def timeout_allontanarsi(window, ui, app):
         ui.timer.timeout.connect(lambda: timeout_sanificazione(window, ui, app))
         ui.timer.start(1000)
         ui.timer.startTimer(ui.tempo_sanificazione.total_seconds(), timerType=Qt.VeryCoarseTimer)
+        app.dispositivo.sanifica()
 
 
 def timeout_sanificazione(window, ui, app):
     ui.tempo_sanificazione -= ONE_SECOND
     ui.timer_label.setText(str(ui.tempo_sanificazione))
     if ui.tempo_sanificazione.total_seconds() <= 0:
+        app.dispositivo.arresta()
         ui.timer.stop()
         ui.description_label.setText("Trattamento completato!")
         app.info['anagrafica'][0]['stato'] = Stato.COMPLETATA.name

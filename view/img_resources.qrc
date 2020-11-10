@@ -3,6 +3,9 @@
     <file>res/up_arrow.png</file>
     <file>res/down_arrow.png</file>
   </qresource>
+  <qresource prefix="keyboard">
+    <file>res/keyboard_icon.png</file>
+  </qresource>
   <qresource prefix="poweroff ">
     <file>res/poweroff_icon.png</file>
   </qresource>

@@ -125,7 +125,7 @@ class Ui_Reg_prodotto_Window(object):
         self.concentrazione_spinBox.setMinimum(1)
         self.concentrazione_spinBox.setMaximum(3000)
         self.concentrazione_spinBox.setSingleStep(1)
-        self.concentrazione_spinBox.setProperty("value", 28)
+        self.concentrazione_spinBox.setProperty("value", 1)
         self.concentrazione_spinBox.setObjectName("concentrazione_spinBox")
         self.data_scad_dateEdit = QtWidgets.QDateEdit(Reg_prodotto_Window)
         self.data_scad_dateEdit.setEnabled(False)
@@ -163,6 +163,20 @@ class Ui_Reg_prodotto_Window(object):
 "}")
         self.data_scad_dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 10, 1), QtCore.QTime(0, 0, 0)))
         self.data_scad_dateEdit.setObjectName("data_scad_dateEdit")
+        self.keyboard_btn = QtWidgets.QPushButton(Reg_prodotto_Window)
+        self.keyboard_btn.setGeometry(QtCore.QRect(370, 150, 81, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.keyboard_btn.setFont(font)
+        self.keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
+        self.keyboard_btn.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.keyboard_btn.setIcon(icon1)
+        self.keyboard_btn.setObjectName("keyboard_btn")
 
         self.retranslateUi(Reg_prodotto_Window)
         self.cancel_btn_.clicked.connect(Reg_prodotto_Window.close)

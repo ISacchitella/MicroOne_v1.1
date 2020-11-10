@@ -1,8 +1,29 @@
 [
  {
+  "nome": "Prova Prodotto1",
+  "concentrazione": 28,
+  "data_scadenza": "01/10/20",
+  "lotto": [
+   "LT14525"
+  ]
+ },
+ {
+  "nome": "ocococcoco",
+  "concentrazione": 28,
+  "data_scadenza": "01/10/20",
+  "lotto": []
+ },
+ {
   "nome": "Prodotto1",
   "concentrazione": 12,
-  "data_scadenza": "05/07/25",
-  "lotto": ["prova"]
+  "data_scadenza": "08/07/29",
+  "lotto": [
+   "LT12121",
+   "imma",
+   "LT-1256",
+   "PTsmdmsmds",
+   "LT-1018",
+   "LT-1015"
+  ]
  }
 ]

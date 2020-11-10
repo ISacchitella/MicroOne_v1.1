@@ -1,6 +1,189 @@
 {
 	"serial_number": "ST-1001",
-	"anagrafica": [],
+	"anagrafica": [
+		{
+			"data": "20:37:47 10/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "19:41:48 10/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "19:40:19 10/11/20",
+			"tempo": "0:00:00",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "19:37:46 10/11/20",
+			"tempo": "0:00:25.714286",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "19:37:14 10/11/20",
+			"tempo": "0:00:25.714286",
+			"stato": "FALLITA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "17:07:12 10/11/20",
+			"tempo": "0:00:12",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "16:11:39 10/11/20",
+			"tempo": "0:06:48",
+			"stato": "COMPLETATA",
+			"ambiente": "Ambiente2",
+			"metri_cubi": 34,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "15:55:56 10/11/20",
+			"tempo": "0:00:12",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "19:23:41 09/11/20",
+			"tempo": "10:00:00",
+			"stato": "FALLITA",
+			"ambiente": "Ambiente4",
+			"metri_cubi": 3000,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "18:48:33 09/11/20",
+			"tempo": "0:00:12",
+			"stato": "COMPLETATA",
+			"ambiente": "Ambiente2",
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "05/07/25",
+				"lotto": [
+					"LT-1015",
+					"prova"
+				]
+			}
+		}
+	],
 	"sistema": {
 		"boot_time": "09:00:09 09/11/20",
 		"os": {
@@ -28,9 +211,9 @@
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 252201291776,
-				"free": 243279175680,
-				"percent": 50.9
+				"used": 268832534528,
+				"free": 226647932928,
+				"percent": 54.3
 			},
 			"disk_partitions": [
 				{
@@ -41,27 +224,27 @@
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 369932,
-				"write_count": 421275,
-				"read_bytes": 8327876096,
-				"write_bytes": 7442454528,
-				"read_time": 302,
-				"write_time": 140
+				"read_count": 1379923,
+				"write_count": 1012311,
+				"read_bytes": 44995629568,
+				"write_bytes": 44663123968,
+				"read_time": 1013,
+				"write_time": 497
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 9159913472,
-				"percent": 46.4,
-				"used": 7943303168,
-				"free": 9159913472
+				"available": 9642741760,
+				"percent": 43.6,
+				"used": 7460474880,
+				"free": 9642741760
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 11050790912,
-				"free": 8602562560,
-				"percent": 56.2,
+				"used": 8739983360,
+				"free": 10913370112,
+				"percent": 44.5,
 				"sin": 0,
 				"sout": 0
 			}
@@ -75,11 +258,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 11370.421874999998,
-				"system": 8531.046875,
-				"idle": 253071.51562499997,
-				"interrupt": 728.265625,
-				"dpc": 269.328125
+				"user": 32882.640625,
+				"system": 24087.484375,
+				"idle": 566123.65625,
+				"interrupt": 1971.4375,
+				"dpc": 698.75
 			}
 		},
 		"users": [
@@ -87,7 +270,7 @@
 				"name": "isacchitella",
 				"terminal": null,
 				"host": null,
-				"started": 1604908837.3013828,
+				"started": 1605025375.6163623,
 				"pid": null
 			}
 		]

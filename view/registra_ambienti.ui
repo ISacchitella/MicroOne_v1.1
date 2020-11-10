@@ -255,6 +255,34 @@ border: 5px solid rgb(0,140,255);
      <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
    </property>
   </widget>
+  <widget class="QPushButton" name="keyboard_btn">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+
+color: rgb(255, 255, 255);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img_resources.qrc">
+     <normaloff>:/keyboard/res/keyboard_icon.png</normaloff>:/keyboard/res/keyboard_icon.png</iconset>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

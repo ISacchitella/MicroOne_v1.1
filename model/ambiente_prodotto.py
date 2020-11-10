@@ -18,7 +18,9 @@ def display_ambiente(ambiente):
 # ---------------------------------------------------------------------------------------
 class Prodotto:
     '''Prodotto'''
-    CONCENTRAZIONE_STANDARD = 28
+    CONCENTRAZIONE_STANDARD = 1
+    MAX_MILLILITRI = 1000
+    MIN_MILLILITRI = 1
 
     def __init__(self, nome: str, concentrazione: int, data_scadenza: datetime.date = None, lotto=[]):
         self.concentrazione = concentrazione
@@ -26,6 +28,14 @@ class Prodotto:
         # non serve lotto e data di scadenza nn obbligatori
         self.lotto = lotto
         self.data_scadenza = data_scadenza
+        self._millilitri = 1
+
+    @property
+    def millilitri(self):
+        return self._millilitri
+    @millilitri.setter
+    def millilitri(self, metri_cubi):
+        self._millilitri = metri_cubi * self.get_concentrazione()
 
     def configura(self, lotto, concentrazione):
         self.concentrazione = concentrazione
@@ -55,4 +65,4 @@ class Prodotto:
                     'concentrazione': self.concentrazione})
 
     def __str__(self):
-        return repr(self)
+        return self.nome + ": " + str(self.concentrazione)

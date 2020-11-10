@@ -231,6 +231,29 @@ border-radius:10px;</string>
      <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
    </property>
   </widget>
+  <widget class="QLabel" name="millilitri_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>280</y>
+     <width>341</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

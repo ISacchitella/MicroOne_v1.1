@@ -89,8 +89,8 @@ background-color: rgb(0, 140, 255);</string>
   <widget class="QPushButton" name="avanti_btn">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>60</y>
+     <x>180</x>
+     <y>70</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -170,6 +170,34 @@ border: 5px solid rgb(0,140,255);
    </property>
    <property name="maximum">
     <number>3000</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="keyboard_btn">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>30</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+
+color: rgb(255, 255, 255);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img_resources.qrc">
+     <normaloff>:/keyboard/res/keyboard_icon.png</normaloff>:/keyboard/res/keyboard_icon.png</iconset>
    </property>
   </widget>
  </widget>

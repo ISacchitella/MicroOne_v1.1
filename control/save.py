@@ -1,6 +1,7 @@
 import json
 import os, platform
 from shutil import move, copy
+from sys import stderr
 
 import psutil
 import string
@@ -77,7 +78,10 @@ def poweroff():
 def display_riepilogo(riepilogo):
     formatted_str = ""
     formatted_str += f"Data del trattamento: {riepilogo['data']} \n"
-    formatted_str += f"Prodotto selezionato: {str(riepilogo['prodotto'])} \n"
+    formatted_str += f"Prodotto selezionato:{riepilogo['prodotto']['nome']}\n"
+    formatted_str += f"Concentrazione: {str(riepilogo['prodotto']['concentrazione'])}\n"
+    formatted_str += f"Data Scadenza Prodotto: {riepilogo['prodotto']['data_scadenza']}\n"
+    formatted_str += f"Lotto: {riepilogo['prodotto']['lotto'][0]}\n"
     formatted_str += f"Ambiente selezionato: {riepilogo['ambiente']} \n"
     formatted_str += f"Metri cubi inseriti: {riepilogo['metri_cubi']} \n"
     return formatted_str
@@ -95,13 +99,15 @@ FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4')
 
 def copy_info():
     disk_partitions = unpack(psutil.disk_partitions())
-    usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
+    try:
+        usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
                            drive["fstype"] in FSTYPE_USB_TYPES and 'removable' in drive["opts"].split(',')))
-    print(usb_drive_path)
+    except:
+        usb_drive_path = None
     if usb_drive_path not in [None, '']:
         copy(get_file_path('info'), usb_drive_path)
     else:
-        print('notfound')
+        print('Error: Nessuna Pen Drive Trovata', file=stderr)
         # raise FileNotFoundError
 
 
@@ -129,13 +135,8 @@ def get_system_info():
     }
     if platform.system() == 'Linux':
         system_info['os']['linux_details'] = platform._syscmd_uname('-a')
-        system_info['sensors'] = {  # non funziona da windows
-            'temperatures': psutil.sensors_temperatures(),
-            'fans': psutil.sensors_fans(),
-            'battery': psutil.sensors_battery()._asdict(),
-        }
     system_info['users'] = psutil.users()
-    # system_info['network'] = {  # TODO
+    # system_info['network'] = {
     #     'net_connections': psutil.net_connections(),
     #     'net_io_counters': psutil.net_io_counters(),
     #     'net_if_addrs': psutil.net_if_addrs(),

@@ -70,6 +70,20 @@ class Ui_Inserisci_Lotto_Window(object):
 "                ")
         self.lotto_textbox.setText("")
         self.lotto_textbox.setObjectName("lotto_textbox")
+        self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Lotto_Window)
+        self.keyboard_btn.setGeometry(QtCore.QRect(120, 100, 81, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.keyboard_btn.setFont(font)
+        self.keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;")
+        self.keyboard_btn.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.keyboard_btn.setIcon(icon1)
+        self.keyboard_btn.setObjectName("keyboard_btn")
 
         self.retranslateUi(Inserisci_Lotto_Window)
         self.cancel_btn_.clicked.connect(Inserisci_Lotto_Window.close)
