@@ -16,6 +16,7 @@ from view.inserisci_lotto_window import Ui_Inserisci_Lotto_Window
 from view.inserisci_metri_cubi_window import Ui_Inserisci_Metri_Cubi_Window
 from view.recap_info_sanifica_window import Ui_recap_info_sanifica_window
 from view.seleziona_ambiente import Ui_Sel_ambiente_Window
+from view.seleziona_prodotto_window import Ui_Seleziona_Prodotto_Window
 from view.timer_window import Ui_Timer_Window
 
 LOGGER_NAME = 'root'
@@ -106,6 +107,33 @@ def move_to_next_window(app, current_window, current_ui, next_window, next_ui):
 
 
 # ------sanifica bindings-------
+def open_seleziona_prodotto(current_window, current_ui, app):
+    # ----Init----
+    temp = make_window(WINDOWS_LIST[app.sanifica_index][1])
+    next_window = temp[0]
+    next_ui = temp[1]
+    # -----Middle-----
+    app.current_date = current_ui.data_oggi_dateTimeEdit.dateTime().toPyDateTime()
+    app.dispositivo.set_system_time(app.current_date)#TODO
+    prodotti = load_prodotti()
+    prodotti_str_list = [str(prodotto) for prodotto in prodotti if
+                         prodotto.data_scadenza == None or prodotto.data_scadenza > app.current_date.date()]
+    prodotti_str_list.insert(0, "")
+    next_ui.prodotti_comboBox.clear()
+    next_ui.prodotti_comboBox.addItems(prodotti_str_list)
+    if len(prodotti_str_list) <= 1 or next_ui.prodotti_comboBox.currentText() == "":
+        app.selected_prodotto = None
+        next_ui.avanti_btn.setDisabled(True)
+    else:
+        app.selected_prodotto = next((prodotto for prodotto in prodotti if
+                                       prodotto.nome ==
+                                       next_ui.prodotti_comboBox.currentText().split(':')[0]))
+        next_ui.avanti_btn.setEnabled(True)
+    next_ui.prodotti_comboBox.currentTextChanged.connect(
+        lambda: seleziona_prodotto(next_ui, app, prodotti))
+    # -----End-------
+    move_to_next_window(app, current_window, current_ui, next_window, next_ui)
+
 def open_lotto(current_window, current_ui, app):
     # ----Init----
     temp = make_window(WINDOWS_LIST[app.sanifica_index][1])
@@ -186,7 +214,7 @@ def open_riepilogo(current_window, current_ui, app):
         next_ui.millilitri_label.setText("Controllare se è presente abbastanza prodotto!")
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
     sessione = OrderedDict({
-        'data': datetime.now().strftime("%H:%M:%S %d/%m/%y"),
+        'data': app.current_date.strftime("%H:%M:%S %d/%m/%y"),
         'tempo': str(app.dispositivo.tempo_sanificazione),
         'stato': Stato.FALLITA.name,
         'ambiente': app.selected_ambiente,
@@ -198,7 +226,7 @@ def open_riepilogo(current_window, current_ui, app):
     # -----End-------
     move_to_next_window(app, current_window, current_ui, next_window, next_ui)
 
-WINDOWS_LIST = [(open_lotto, Ui_Inserisci_Lotto_Window), (open_data_scadenza, Ui_Inserisci_Data_Scadenza_Window),
+WINDOWS_LIST = [(open_seleziona_prodotto,Ui_Seleziona_Prodotto_Window),(open_lotto, Ui_Inserisci_Lotto_Window), (open_data_scadenza, Ui_Inserisci_Data_Scadenza_Window),
                 (open_ambiente, Ui_Sel_ambiente_Window), (open_metri_cubi, Ui_Inserisci_Metri_Cubi_Window),
                 (open_riepilogo, Ui_recap_info_sanifica_window)]
 

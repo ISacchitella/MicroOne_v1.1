@@ -1,19 +1,20 @@
-from datetime import date
+from datetime import date, datetime
 
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
-
-from control.controllers import salva_prodotto, salva_ambiente, make_logger, seleziona_prodotto, make_error_msg, \
-    open_lotto
-from control.save import load_info, save_info, load_prodotti, format_info, copy_info, get_system_info, \
+from PyQt5 import QtCore
+from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
+    open_seleziona_prodotto
+from control.keyboard_controller import Keyboard
+from control.save import load_info, save_info, format_info, copy_info, get_system_info, \
     poweroff
 from model.ambiente_prodotto import MAX_METRI_CUBI
 from model.dispositivo import Dispositivo
 # https://stackoverflow.com/questions/7031962/qdateedit-calendar-popup
+from view.inserisci_data_di_oggi_window import Ui_Inserisci_Data_di_Oggi_Window
 from view.main_window import Ui_MainWindow, QtWidgets
 from view.recap_info_window import Ui_recap_info_window
 from view.registra_ambienti import Ui_Reg_ambiente_Window
 from view.registra_prodotti import Ui_Reg_prodotto_Window
-from view.seleziona_prodotto_window import Ui_Seleziona_Prodotto_Window
 
 
 class Micro_One_App(Ui_MainWindow):
@@ -39,6 +40,7 @@ class Micro_One_App(Ui_MainWindow):
         self.selected_ambiente = None
         self.selected_prodotto = None
         self.selected_metri_cubi = 1
+        self.current_date = datetime.now()
         # Verifica la presenza del dispositivo
         has_serial_number = not (
                 self.info == None or len(self.info) == 0 or 'serial_number' not in self.info or self.info[
@@ -106,26 +108,16 @@ class Micro_One_App(Ui_MainWindow):
 
 
     def open_sanifica_window(self):
-        self.seleziona_prodotto_window = QtWidgets.QWidget()
-        self.seleziona_prodotto_ui = Ui_Seleziona_Prodotto_Window()
-        self.seleziona_prodotto_ui.setupUi(self.seleziona_prodotto_window)
-        prodotti = load_prodotti()
-        prodotti_str_list = [str(prodotto) for prodotto in prodotti if prodotto.data_scadenza ==None or prodotto.data_scadenza > date.today() ]
-        prodotti_str_list.insert(0,"")
-        self.seleziona_prodotto_ui.prodotti_comboBox.clear()
-        self.seleziona_prodotto_ui.prodotti_comboBox.addItems(prodotti_str_list)
-        if len(prodotti_str_list) <= 1 or self.seleziona_prodotto_ui.prodotti_comboBox.currentText()== "":
-            self.selected_prodotto = None
-            self.seleziona_prodotto_ui.avanti_btn.setDisabled(True)
-        else:
-            self.selected_prodotto = next((prodotto for prodotto in prodotti if
-                                           prodotto.nome == self.seleziona_prodotto_ui.prodotti_comboBox.currentText().split(':')[0]))
-            self.seleziona_prodotto_ui.avanti_btn.setEnabled(True)
-        self.seleziona_prodotto_ui.prodotti_comboBox.currentTextChanged.connect(
-            lambda: seleziona_prodotto(self.seleziona_prodotto_ui, self, prodotti))
+        self.data_oggi_window = QtWidgets.QWidget()
+        self.data_oggi_ui = Ui_Inserisci_Data_di_Oggi_Window()
+        self.data_oggi_ui.setupUi(self.data_oggi_window)
+        QDate_temp = QtCore.QDate.currentDate()
+        QTime_temp = QtCore.QTime.currentTime()
+        self.current_date = datetime.combine(QDate_temp.toPyDate(), QTime_temp.toPyTime())
+        self.data_oggi_ui.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QDate_temp, QTime_temp))#TODO
         self.sanifica_index = 0
-        self.seleziona_prodotto_ui.avanti_btn.clicked.connect(lambda: open_lotto(self.seleziona_prodotto_window, self.seleziona_prodotto_ui, self))
-        self.seleziona_prodotto_window.show()
+        self.data_oggi_ui.avanti_btn.clicked.connect(lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
+        self.data_oggi_window.show()
 
     def open_reg_prodotto_window(self):
         self.reg_prodotto_window = QtWidgets.QWidget()
@@ -133,6 +125,7 @@ class Micro_One_App(Ui_MainWindow):
         self.reg_prodotto_ui.setupUi(self.reg_prodotto_window)
         self.reg_prodotto_ui.save_btn.clicked.connect(
             lambda: salva_prodotto(self.reg_prodotto_window, self.reg_prodotto_ui))
+        self.reg_prodotto_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
         self.reg_prodotto_window.show()
 
     def open_reg_ambiente_window(self):
@@ -142,6 +135,7 @@ class Micro_One_App(Ui_MainWindow):
         self.reg_ambiente_ui.metri_cubi_spinBox.setMaximum(MAX_METRI_CUBI)
         self.reg_ambiente_ui.save_btn.clicked.connect(
             lambda: salva_ambiente(self.reg_ambiente_window, self.reg_ambiente_ui))
+        self.reg_ambiente_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
         self.reg_ambiente_window.show()
 
     # def open_sel_ambiente_window(self):
