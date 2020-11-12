@@ -71,7 +71,7 @@ def save_info(info):
 
 
 def poweroff():
-    os.system("shutdown /s /t 1")
+    os.system("sudo poweroff")
     # os.system("shutdown now -h")  # shut down the Pi -h is or -r will reset
 
 
