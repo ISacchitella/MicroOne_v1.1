@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Inserisci_Lotto_Window(object):
     def setupUi(self, Inserisci_Lotto_Window):
         Inserisci_Lotto_Window.setObjectName("Inserisci_Lotto_Window")
-        Inserisci_Lotto_Window.resize(388, 141)
+        Inserisci_Lotto_Window.resize(480, 320)
         Inserisci_Lotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_5 = QtWidgets.QLabel(Inserisci_Lotto_Window)
         self.label_5.setGeometry(QtCore.QRect(-20, -10, 531, 41))

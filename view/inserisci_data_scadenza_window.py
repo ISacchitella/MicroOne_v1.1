@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Inserisci_Data_Scadenza_Window(object):
     def setupUi(self, Inserisci_Data_Scadenza_Window):
         Inserisci_Data_Scadenza_Window.setObjectName("Inserisci_Data_Scadenza_Window")
-        Inserisci_Data_Scadenza_Window.resize(388, 102)
+        Inserisci_Data_Scadenza_Window.resize(480, 320)
         Inserisci_Data_Scadenza_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_5 = QtWidgets.QLabel(Inserisci_Data_Scadenza_Window)
         self.label_5.setGeometry(QtCore.QRect(-20, -10, 531, 41))

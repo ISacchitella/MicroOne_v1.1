@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(486, 327)
+        MainWindow.resize(480, 320)
         MainWindow.setTabletTracking(False)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/logo/res/logo_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)

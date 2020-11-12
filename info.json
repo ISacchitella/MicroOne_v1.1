@@ -1,5 +1,5 @@
 {
-	"serial_number": "",
+	"serial_number": "prova1",
 	"anagrafica": [
 		{
 			"data": "12:13:08 12/11/20",
@@ -205,7 +205,7 @@
 		}
 	],
 	"sistema": {
-		"boot_time": "12:14:14 12/11/20",
+		"boot_time": "12:14:13 12/11/20",
 		"os": {
 			"system": "Windows",
 			"node": "SACCHITELLA-PC",
@@ -233,9 +233,9 @@
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 273706725376,
-				"free": 221773742080,
-				"percent": 55.2
+				"used": 273757601792,
+				"free": 221722865664,
+				"percent": 55.3
 			},
 			"disk_partitions": [
 				{
@@ -246,27 +246,27 @@
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 169300,
-				"write_count": 16568,
-				"read_bytes": 5044600320,
-				"write_bytes": 522556928,
-				"read_time": 194,
-				"write_time": 15
+				"read_count": 514201,
+				"write_count": 109289,
+				"read_bytes": 8105227776,
+				"write_bytes": 1887754240,
+				"read_time": 315,
+				"write_time": 63
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 9514729472,
-				"percent": 44.4,
-				"used": 7588487168,
-				"free": 9514729472
+				"available": 8588517376,
+				"percent": 49.8,
+				"used": 8514699264,
+				"free": 8588517376
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 8631009280,
-				"free": 11022344192,
-				"percent": 43.9,
+				"used": 9980334080,
+				"free": 9673019392,
+				"percent": 50.8,
 				"sin": 0,
 				"sout": 0
 			}
@@ -280,11 +280,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 1461.40625,
-				"system": 635.578125,
-				"idle": 2088.234375,
-				"interrupt": 28.265625,
-				"dpc": 32.296875
+				"user": 5807.296874999999,
+				"system": 3299.1718749999927,
+				"idle": 56654.96875,
+				"interrupt": 238.984375,
+				"dpc": 181.90625
 			}
 		},
 		"users": [

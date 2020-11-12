@@ -157,7 +157,7 @@ if __name__ == "__main__":
     try:
         logger = make_logger()
         app = QtWidgets.QApplication(sys.argv)
-        window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint |Qt.WindowStaysOnTopHint ))
+        window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint))
         ui = Micro_One_App(window)
         sys.exit(app.exec_())
     except Exception as ex:

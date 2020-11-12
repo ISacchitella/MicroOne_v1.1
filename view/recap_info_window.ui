@@ -50,8 +50,8 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>441</width>
-     <height>231</height>
+     <width>480</width>
+     <height>320</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -68,8 +68,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>441</width>
-      <height>231</height>
+      <width>480</width>
+      <height>320</height>
      </rect>
     </property>
     <widget class="QTextEdit" name="recap_info_text_edit">
