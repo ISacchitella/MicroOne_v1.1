@@ -1,6 +1,26 @@
 {
-	"serial_number": "ST-1001",
+	"serial_number": "12121",
 	"anagrafica": [
+		{
+			"data": "12:13:08 12/11/20",
+			"tempo": "0:00:25",
+			"stato": "FALLITA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
 		{
 			"data": "20:37:47 10/11/20",
 			"tempo": "0:00:25",
@@ -185,7 +205,7 @@
 		}
 	],
 	"sistema": {
-		"boot_time": "09:00:09 09/11/20",
+		"boot_time": "12:14:14 12/11/20",
 		"os": {
 			"system": "Windows",
 			"node": "SACCHITELLA-PC",
@@ -207,13 +227,15 @@
 		],
 		"disk": {
 			"available_drives": [
-				"C:"
+				"C:",
+				"I:",
+				"W:"
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 268832534528,
-				"free": 226647932928,
-				"percent": 54.3
+				"used": 273706725376,
+				"free": 221773742080,
+				"percent": 55.2
 			},
 			"disk_partitions": [
 				{
@@ -224,27 +246,27 @@
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 1379923,
-				"write_count": 1012311,
-				"read_bytes": 44995629568,
-				"write_bytes": 44663123968,
-				"read_time": 1013,
-				"write_time": 497
+				"read_count": 169300,
+				"write_count": 16568,
+				"read_bytes": 5044600320,
+				"write_bytes": 522556928,
+				"read_time": 194,
+				"write_time": 15
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 9642741760,
-				"percent": 43.6,
-				"used": 7460474880,
-				"free": 9642741760
+				"available": 9514729472,
+				"percent": 44.4,
+				"used": 7588487168,
+				"free": 9514729472
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 8739983360,
-				"free": 10913370112,
-				"percent": 44.5,
+				"used": 8631009280,
+				"free": 11022344192,
+				"percent": 43.9,
 				"sin": 0,
 				"sout": 0
 			}
@@ -258,11 +280,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 32882.640625,
-				"system": 24087.484375,
-				"idle": 566123.65625,
-				"interrupt": 1971.4375,
-				"dpc": 698.75
+				"user": 1461.40625,
+				"system": 635.578125,
+				"idle": 2088.234375,
+				"interrupt": 28.265625,
+				"dpc": 32.296875
 			}
 		},
 		"users": [
@@ -270,7 +292,7 @@
 				"name": "isacchitella",
 				"terminal": null,
 				"host": null,
-				"started": 1605025375.6163623,
+				"started": 1605179675.9016612,
 				"pid": null
 			}
 		]

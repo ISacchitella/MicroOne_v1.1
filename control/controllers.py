@@ -87,7 +87,7 @@ def seleziona_prodotto(ui, app, prodotti):
 
 
 def make_window(ui_class):
-    next_window = QtWidgets.QWidget()
+    next_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint |Qt.WindowStaysOnTopHint))
     next_ui = ui_class()
     next_ui.setupUi(next_window)
     if hasattr(next_ui, 'keyboard_btn'):
@@ -238,7 +238,7 @@ class Stato(Enum):
 
 
 def sanifica(window, ui, app):
-    timer_window = QtWidgets.QWidget()
+    timer_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint |Qt.WindowStaysOnTopHint))
     timer_ui = Ui_Timer_Window()
     timer_ui.setupUi(timer_window)
     timer_ui.poweroff_btn.clicked.connect(poweroff)

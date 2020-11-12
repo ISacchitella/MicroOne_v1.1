@@ -1,5 +1,6 @@
 from datetime import date, datetime
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
 from PyQt5 import QtCore
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
@@ -59,7 +60,7 @@ class Micro_One_App(Ui_MainWindow):
             self.info['anagrafica'] = []
 
     def setup_serial_number(self):
-        serial_number_dialog = QDialog()
+        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint |Qt.WindowStaysOnTopHint))
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
         serial_number_dialog.setObjectName("serial_number_dialog")
         serial_number_dialog.setStyleSheet("background-color: rgb(255,255,255); \n")
@@ -97,7 +98,7 @@ class Micro_One_App(Ui_MainWindow):
         serial_number_dialog.close()
 
     def open_recap_info_window(self):
-        self.recap_info_window = QtWidgets.QWidget()
+        self.recap_info_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
         self.recap_info_ui = Ui_recap_info_window()
         self.recap_info_ui.setupUi(self.recap_info_window)
         self.recap_info_ui.recap_info_text_edit.setText(format_info(self.info))
@@ -108,7 +109,7 @@ class Micro_One_App(Ui_MainWindow):
 
 
     def open_sanifica_window(self):
-        self.data_oggi_window = QtWidgets.QWidget()
+        self.data_oggi_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
         self.data_oggi_ui = Ui_Inserisci_Data_di_Oggi_Window()
         self.data_oggi_ui.setupUi(self.data_oggi_window)
         QDate_temp = QtCore.QDate.currentDate()
@@ -120,7 +121,7 @@ class Micro_One_App(Ui_MainWindow):
         self.data_oggi_window.show()
 
     def open_reg_prodotto_window(self):
-        self.reg_prodotto_window = QtWidgets.QWidget()
+        self.reg_prodotto_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
         self.reg_prodotto_ui = Ui_Reg_prodotto_Window()
         self.reg_prodotto_ui.setupUi(self.reg_prodotto_window)
         self.reg_prodotto_ui.save_btn.clicked.connect(
@@ -129,7 +130,7 @@ class Micro_One_App(Ui_MainWindow):
         self.reg_prodotto_window.show()
 
     def open_reg_ambiente_window(self):
-        self.reg_ambiente_window = QtWidgets.QWidget()
+        self.reg_ambiente_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
         self.reg_ambiente_ui = Ui_Reg_ambiente_Window()
         self.reg_ambiente_ui.setupUi(self.reg_ambiente_window)
         self.reg_ambiente_ui.metri_cubi_spinBox.setMaximum(MAX_METRI_CUBI)
@@ -156,7 +157,7 @@ if __name__ == "__main__":
     try:
         logger = make_logger()
         app = QtWidgets.QApplication(sys.argv)
-        window = QtWidgets.QMainWindow()
+        window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint |Qt.WindowStaysOnTopHint ))
         ui = Micro_One_App(window)
         sys.exit(app.exec_())
     except Exception as ex:
