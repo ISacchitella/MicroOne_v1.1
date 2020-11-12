@@ -60,11 +60,11 @@ class Micro_One_App(Ui_MainWindow):
             self.info['anagrafica'] = []
 
     def setup_serial_number(self):
-        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint |Qt.WindowStaysOnTopHint))
+        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint |Qt.AlignTop |Qt.AlignLeft))
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
         serial_number_dialog.setObjectName("serial_number_dialog")
         serial_number_dialog.setStyleSheet("background-color: rgb(255,255,255); \n")
-        serial_number_dialog.resize(240, 140)
+        serial_number_dialog.resize(480, 320)
         serial_number_dialog.setWindowTitle("Serial Number")
 
         sn_textbox = QLineEdit(serial_number_dialog)
