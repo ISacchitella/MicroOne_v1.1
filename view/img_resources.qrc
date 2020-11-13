@@ -3,6 +3,18 @@
     <file>res/up_arrow.png</file>
     <file>res/down_arrow.png</file>
   </qresource>
+  <qresource prefix="gear">
+    <file>res/gear.png</file>
+  </qresource>
+  <qresource prefix="an_ambiente">
+    <file>res/Anagrafica ambientale.png</file>
+  </qresource>
+  <qresource prefix="sfondo_microone">
+    <file>res/pagina_MICROONE.png</file>
+  </qresource>
+  <qresource prefix="hand">
+    <file>res/Hand.png</file>
+  </qresource>
   <qresource prefix="keyboard">
     <file>res/keyboard.png</file>
   </qresource>

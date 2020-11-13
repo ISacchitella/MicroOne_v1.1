@@ -19,9 +19,9 @@
   <widget class="QLabel" name="description_label">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>70</y>
-     <width>471</width>
+     <x>30</x>
+     <y>83</y>
+     <width>420</width>
      <height>31</height>
     </rect>
    </property>
@@ -77,13 +77,14 @@ color: rgb(170, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-10</y>
-     <width>481</width>
-     <height>41</height>
+     <y>0</y>
+     <width>480</width>
+     <height>320</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);</string>
+    <string notr="true">background-color: rgb(0, 140, 255);
+image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -128,10 +129,10 @@ color: rgb(170, 0, 0);</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>280</y>
-     <width>91</width>
-     <height>31</height>
+     <x>170</x>
+     <y>0</y>
+     <width>111</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
@@ -155,10 +156,10 @@ color: rgb(170, 0, 0);</string>
   <widget class="QPushButton" name="poweroff_btn">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>260</y>
-     <width>51</width>
-     <height>41</height>
+     <x>10</x>
+     <y>40</y>
+     <width>81</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -169,14 +170,11 @@ color: rgb(170, 0, 0);</string>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(255, 255, 255);
-border-radius:10px;</string>
+border-radius:10px;
+image: url(:/poweroff /res/poweroff_icon.png);</string>
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="icon">
-    <iconset resource="img_resources.qrc">
-     <normaloff>:/poweroff /res/poweroff_icon.png</normaloff>:/poweroff /res/poweroff_icon.png</iconset>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -222,12 +220,20 @@ background-color: rgb(0, 140, 255);</string>
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Trattamento in corso</string>
+    <string>Trattamento in Corso</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
+  <zorder>download_btn</zorder>
+  <zorder>label_5</zorder>
+  <zorder>description_label</zorder>
+  <zorder>timer_label</zorder>
+  <zorder>cancel_btn</zorder>
+  <zorder>poweroff_btn</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

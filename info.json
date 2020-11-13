@@ -288,14 +288,13 @@
 		"disk": {
 			"available_drives": [
 				"C:",
-				"D:",
 				"I:",
 				"W:"
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 274676211712,
-				"free": 220804255744,
+				"used": 274690224128,
+				"free": 220790243328,
 				"percent": 55.4
 			},
 			"disk_partitions": [
@@ -304,36 +303,30 @@
 					"mountpoint": "C:\\",
 					"fstype": "NTFS",
 					"opts": "rw,fixed"
-				},
-				{
-					"device": "D:\\",
-					"mountpoint": "D:\\",
-					"fstype": "NTFS",
-					"opts": "rw,removable"
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 1009516,
-				"write_count": 503187,
-				"read_bytes": 26474705920,
-				"write_bytes": 10546968064,
-				"read_time": 757,
-				"write_time": 203
+				"read_count": 6505910,
+				"write_count": 744458,
+				"read_bytes": 89994255360,
+				"write_bytes": 14567767040,
+				"read_time": 1671,
+				"write_time": 263
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 9187299328,
-				"percent": 46.3,
-				"used": 7915917312,
-				"free": 9187299328
+				"available": 8024625152,
+				"percent": 53.1,
+				"used": 9078591488,
+				"free": 8024625152
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 10735935488,
-				"free": 8917417984,
-				"percent": 54.6,
+				"used": 12631760896,
+				"free": 7021592576,
+				"percent": 64.3,
 				"sin": 0,
 				"sout": 0
 			}
@@ -347,11 +340,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 28065.0,
-				"system": 18278.31250000006,
-				"idle": 314574.89062499994,
-				"interrupt": 1455.75,
-				"dpc": 1312.015625
+				"user": 42516.796875,
+				"system": 29655.68750000006,
+				"idle": 429660.49999999994,
+				"interrupt": 2005.4375,
+				"dpc": 1716.796875
 			}
 		},
 		"users": [

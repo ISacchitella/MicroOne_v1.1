@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
+     <y>50</y>
      <width>441</width>
      <height>231</height>
     </rect>
@@ -89,59 +89,14 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;Prova Text Edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-   </widget>
-  </widget>
-  <widget class="QScrollArea" name="recap_info_scrollarea_2">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>290</y>
-     <width>441</width>
-     <height>231</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="scrollAreaWidgetContents_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>441</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <widget class="QTextEdit" name="recap_info_text_edit_2">
+    <widget class="QScrollArea" name="recap_info_scrollarea_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>361</width>
-       <height>191</height>
+       <x>410</x>
+       <y>150</y>
+       <width>441</width>
+       <height>231</height>
       </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -149,26 +104,71 @@ p, li { white-space: pre-wrap; }
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
      </property>
-     <property name="readOnly">
+     <property name="widgetResizable">
       <bool>true</bool>
      </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+     <widget class="QWidget" name="scrollAreaWidgetContents_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>441</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <widget class="QTextEdit" name="recap_info_text_edit_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>361</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt; font-weight:600; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Prova Text Edit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
   </widget>
   <widget class="QPushButton" name="avanti_btn">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>270</y>
-     <width>71</width>
-     <height>31</height>
+     <x>340</x>
+     <y>240</y>
+     <width>120</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -192,14 +192,15 @@ border-radius:10px;</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>-40</x>
-     <y>-10</y>
-     <width>531</width>
-     <height>41</height>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>320</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);</string>
+    <string notr="true">background-color: rgb(0, 140, 255);
+image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -239,7 +240,7 @@ border-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>280</y>
+     <y>290</y>
      <width>341</width>
      <height>16</height>
     </rect>
@@ -278,6 +279,42 @@ background-color: rgb(0, 140, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>0</y>
+     <width>210</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 140, 255);
+
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Riepilogo Trattamento</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <zorder>label_5</zorder>
+  <zorder>recap_info_scrollarea</zorder>
+  <zorder>cancel_btn_</zorder>
+  <zorder>millilitri_label</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>avanti_btn</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

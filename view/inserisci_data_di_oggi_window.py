@@ -17,8 +17,9 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         Inserisci_Data_di_Oggi_Window.resize(480, 320)
         Inserisci_Data_di_Oggi_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_5 = QtWidgets.QLabel(Inserisci_Data_di_Oggi_Window)
-        self.label_5.setGeometry(QtCore.QRect(-20, -10, 531, 41))
-        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
+        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Inserisci_Data_di_Oggi_Window)
@@ -51,7 +52,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.avanti_btn = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
-        self.avanti_btn.setGeometry(QtCore.QRect(390, 270, 71, 31))
+        self.avanti_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
@@ -65,7 +66,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.avanti_btn.setObjectName("avanti_btn")
         self.data_oggi_dateTimeEdit = QtWidgets.QDateTimeEdit(Inserisci_Data_di_Oggi_Window)
         self.data_oggi_dateTimeEdit.setEnabled(True)
-        self.data_oggi_dateTimeEdit.setGeometry(QtCore.QRect(100, 90, 280, 60))
+        self.data_oggi_dateTimeEdit.setGeometry(QtCore.QRect(100, 40, 280, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(15)
@@ -102,11 +103,12 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 10, 1), QtCore.QTime(0, 0, 0)))
         self.data_oggi_dateTimeEdit.setObjectName("data_oggi_dateTimeEdit")
         self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
-        self.keyboard_btn.setGeometry(QtCore.QRect(200, 160, 81, 31))
+        self.keyboard_btn.setGeometry(QtCore.QRect(10, 235, 120, 70))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.keyboard_btn.setFont(font)
         self.keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"image: url(:/keyboard/res/keyboard.png);\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius:10px;")

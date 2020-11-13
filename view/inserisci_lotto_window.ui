@@ -19,14 +19,15 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>-20</x>
-     <y>-10</y>
-     <width>531</width>
-     <height>41</height>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>320</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);</string>
+    <string notr="true">background-color: rgb(0, 140, 255);
+image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -121,9 +122,9 @@ border-radius:10px;</string>
   <widget class="QLineEdit" name="lotto_textbox">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>90</y>
-     <width>200</width>
+     <x>100</x>
+     <y>40</y>
+     <width>280</width>
      <height>60</height>
     </rect>
    </property>
@@ -149,10 +150,10 @@ border-radius:10px;</string>
   <widget class="QPushButton" name="keyboard_btn">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>160</y>
-     <width>161</width>
-     <height>71</height>
+     <x>10</x>
+     <y>235</y>
+     <width>120</width>
+     <height>70</height>
     </rect>
    </property>
    <property name="font">

@@ -17,7 +17,7 @@ class Ui_Sel_ambiente_Window(object):
         Sel_ambiente_Window.resize(480, 320)
         Sel_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.comboBox = QtWidgets.QComboBox(Sel_ambiente_Window)
-        self.comboBox.setGeometry(QtCore.QRect(80, 120, 371, 60))
+        self.comboBox.setGeometry(QtCore.QRect(87, 40, 376, 60))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -51,8 +51,9 @@ class Ui_Sel_ambiente_Window(object):
         self.comboBox.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.comboBox.setObjectName("comboBox")
         self.label_5 = QtWidgets.QLabel(Sel_ambiente_Window)
-        self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 41))
-        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
+        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Sel_ambiente_Window)
@@ -69,16 +70,17 @@ class Ui_Sel_ambiente_Window(object):
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.nome_label = QtWidgets.QLabel(Sel_ambiente_Window)
-        self.nome_label.setGeometry(QtCore.QRect(10, 120, 61, 41))
+        self.nome_label.setGeometry(QtCore.QRect(17, 40, 60, 60))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.nome_label.setFont(font)
         self.nome_label.setStyleSheet("color: rgb(0, 0, 0);\n"
-"\n"
-"              image: url(:/icons/res/select.png);\n"
-"          ")
+"image: url(:/hand/res/Hand.png);\n"
+"      border: 5px solid rgb(0,140,255);\n"
+"border-radius:30px;\n"
+"     ")
         self.nome_label.setText("")
         self.nome_label.setObjectName("nome_label")
         self.cancel_btn_ = QtWidgets.QPushButton(Sel_ambiente_Window)
@@ -98,9 +100,12 @@ class Ui_Sel_ambiente_Window(object):
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.avanti_btn = QtWidgets.QPushButton(Sel_ambiente_Window)
-        self.avanti_btn.setGeometry(QtCore.QRect(380, 260, 71, 31))
+        self.avanti_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.avanti_btn.setFont(font)
         self.avanti_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "\n"
@@ -114,8 +119,8 @@ class Ui_Sel_ambiente_Window(object):
         self.pushButton.setText("")
         self.pushButton.setFlat(True)
         self.pushButton.setObjectName("pushButton")
-        self.comboBox.raise_()
         self.label_5.raise_()
+        self.comboBox.raise_()
         self.nome_label.raise_()
         self.cancel_btn_.raise_()
         self.avanti_btn.raise_()

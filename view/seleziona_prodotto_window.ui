@@ -19,9 +19,9 @@
   <widget class="QComboBox" name="prodotti_comboBox">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>110</y>
-     <width>371</width>
+     <x>87</x>
+     <y>40</y>
+     <width>376</width>
      <height>60</height>
     </rect>
    </property>
@@ -60,14 +60,15 @@ border: 5px solid rgb(0,140,255);
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>-20</x>
-     <y>-10</y>
-     <width>531</width>
-     <height>41</height>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>320</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);</string>
+    <string notr="true">background-color: rgb(0, 140, 255);
+image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -76,38 +77,46 @@ border: 5px solid rgb(0,140,255);
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>70</y>
-     <width>151</width>
+     <x>195</x>
+     <y>0</y>
+     <width>210</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
+     <family>Segoe UI</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(0, 140, 255);</string>
+    <string notr="true">background-color: rgb(0, 140, 255);
+
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Seleziona Prodotto</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>110</y>
-     <width>41</width>
-     <height>41</height>
+     <x>17</x>
+     <y>40</y>
+     <width>60</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icons/res/select.png);</string>
+    <string notr="true">image: url(:/hand/res/Hand.png);
+      border: 5px solid rgb(0,140,255);
+border-radius:30px;
+     </string>
    </property>
    <property name="text">
     <string/>
@@ -176,15 +185,18 @@ background-color: rgb(0, 140, 255);</string>
   <widget class="QPushButton" name="avanti_btn">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>270</y>
-     <width>71</width>
-     <height>31</height>
+     <x>340</x>
+     <y>240</y>
+     <width>120</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <family>Segoe UI</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -217,6 +229,14 @@ background-color: rgb(0, 140, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
+  <zorder>label_5</zorder>
+  <zorder>prodotti_comboBox</zorder>
+  <zorder>label_2</zorder>
+  <zorder>cancel_btn_1</zorder>
+  <zorder>cancel_btn_</zorder>
+  <zorder>avanti_btn</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

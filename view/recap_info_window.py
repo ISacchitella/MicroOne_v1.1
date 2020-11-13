@@ -14,11 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_recap_info_window(object):
     def setupUi(self, recap_info_window):
         recap_info_window.setObjectName("recap_info_window")
-        recap_info_window.resize(475, 321)
+        recap_info_window.resize(480, 320)
         recap_info_window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.download_btn = QtWidgets.QPushButton(recap_info_window)
         self.download_btn.setEnabled(True)
-        self.download_btn.setGeometry(QtCore.QRect(380, 280, 91, 31))
+        self.download_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
@@ -59,8 +59,9 @@ class Ui_recap_info_window(object):
         self.recap_info_text_edit.setObjectName("recap_info_text_edit")
         self.recap_info_scrollarea.setWidget(self.scrollAreaWidgetContents)
         self.label_5 = QtWidgets.QLabel(recap_info_window)
-        self.label_5.setGeometry(QtCore.QRect(0, 0, 481, 31))
-        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
+        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(recap_info_window)
@@ -87,6 +88,25 @@ class Ui_recap_info_window(object):
         self.pushButton.setText("")
         self.pushButton.setFlat(True)
         self.pushButton.setObjectName("pushButton")
+        self.nome_label = QtWidgets.QLabel(recap_info_window)
+        self.nome_label.setGeometry(QtCore.QRect(195, 0, 210, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.nome_label.setFont(font)
+        self.nome_label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);")
+        self.nome_label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.nome_label.setObjectName("nome_label")
+        self.label_5.raise_()
+        self.download_btn.raise_()
+        self.recap_info_scrollarea.raise_()
+        self.cancel_btn.raise_()
+        self.pushButton.raise_()
+        self.nome_label.raise_()
 
         self.retranslateUi(recap_info_window)
         self.cancel_btn.clicked.connect(recap_info_window.close)
@@ -101,6 +121,7 @@ class Ui_recap_info_window(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\';\">Prova Text Edit</span></p></body></html>"))
+        self.nome_label.setText(_translate("recap_info_window", "Info"))
 import img_resources_rc
 
 
