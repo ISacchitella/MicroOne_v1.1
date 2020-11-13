@@ -124,12 +124,12 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.pushButton.setText("")
         self.pushButton.setFlat(True)
         self.pushButton.setObjectName("pushButton")
+        self.pushButton.raise_()
         self.label_5.raise_()
         self.cancel_btn_.raise_()
         self.avanti_btn.raise_()
         self.data_oggi_dateTimeEdit.raise_()
         self.keyboard_btn.raise_()
-        self.pushButton.raise_()
         self.label.raise_()
 
         self.retranslateUi(Inserisci_Data_di_Oggi_Window)

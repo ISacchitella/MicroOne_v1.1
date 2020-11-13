@@ -413,6 +413,7 @@ background-color: rgb(0, 140, 255);</string>
      <bool>true</bool>
     </property>
    </widget>
+   <zorder>pushButton</zorder>
    <zorder>serial_label</zorder>
    <zorder>label</zorder>
    <zorder>reg_ambiente_btn</zorder>
@@ -423,7 +424,6 @@ background-color: rgb(0, 140, 255);</string>
    <zorder>registra_p_label</zorder>
    <zorder>registra_a_label</zorder>
    <zorder>settings_btn</zorder>
-   <zorder>pushButton</zorder>
    <zorder>label_2</zorder>
   </widget>
  </widget>

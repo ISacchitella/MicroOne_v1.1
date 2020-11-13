@@ -183,6 +183,7 @@ class Ui_MainWindow(object):
         self.pushButton.setText("")
         self.pushButton.setFlat(True)
         self.pushButton.setObjectName("pushButton")
+        self.pushButton.raise_()
         self.serial_label.raise_()
         self.label.raise_()
         self.reg_ambiente_btn.raise_()
@@ -193,7 +194,6 @@ class Ui_MainWindow(object):
         self.registra_p_label.raise_()
         self.registra_a_label.raise_()
         self.settings_btn.raise_()
-        self.pushButton.raise_()
         self.label_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
