@@ -17,7 +17,7 @@ class Ui_Seleziona_Prodotto_Window(object):
         Seleziona_Prodotto_Window.resize(480, 320)
         Seleziona_Prodotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.prodotti_comboBox = QtWidgets.QComboBox(Seleziona_Prodotto_Window)
-        self.prodotti_comboBox.setGeometry(QtCore.QRect(60, 110, 371, 41))
+        self.prodotti_comboBox.setGeometry(QtCore.QRect(60, 110, 371, 60))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.prodotti_comboBox.setFont(font)
@@ -37,7 +37,7 @@ class Ui_Seleziona_Prodotto_Window(object):
 "\n"
 "QComboBox {\n"
 "    color: black;\n"
-"border-radius:15px;\n"
+"border-radius:30px;\n"
 "border: 5px solid rgb(0,140,255);\n"
 "    selection-color: rgb(0, 0, 0);\n"
 "}\n"
@@ -50,7 +50,7 @@ class Ui_Seleziona_Prodotto_Window(object):
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Seleziona_Prodotto_Window)
-        self.label.setGeometry(QtCore.QRect(80, 0, 151, 31))
+        self.label.setGeometry(QtCore.QRect(110, 70, 151, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -65,7 +65,7 @@ class Ui_Seleziona_Prodotto_Window(object):
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.cancel_btn_1 = QtWidgets.QPushButton(Seleziona_Prodotto_Window)
-        self.cancel_btn_1.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        self.cancel_btn_1.setGeometry(QtCore.QRect(390, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -81,7 +81,7 @@ class Ui_Seleziona_Prodotto_Window(object):
         self.cancel_btn_1.setIcon(icon)
         self.cancel_btn_1.setObjectName("cancel_btn_1")
         self.cancel_btn_ = QtWidgets.QPushButton(Seleziona_Prodotto_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 81, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -104,6 +104,13 @@ class Ui_Seleziona_Prodotto_Window(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:10px;")
         self.avanti_btn.setObjectName("avanti_btn")
+        self.pushButton = QtWidgets.QPushButton(Seleziona_Prodotto_Window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Seleziona_Prodotto_Window)
         self.cancel_btn_.clicked.connect(Seleziona_Prodotto_Window.close)

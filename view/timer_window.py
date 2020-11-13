@@ -19,7 +19,8 @@ class Ui_Timer_Window(object):
         self.description_label = QtWidgets.QLabel(Timer_Window)
         self.description_label.setGeometry(QtCore.QRect(0, 70, 471, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.description_label.setFont(font)
@@ -28,8 +29,9 @@ class Ui_Timer_Window(object):
         self.description_label.setAlignment(QtCore.Qt.AlignCenter)
         self.description_label.setObjectName("description_label")
         self.timer_label = QtWidgets.QLabel(Timer_Window)
-        self.timer_label.setGeometry(QtCore.QRect(70, 180, 321, 71))
+        self.timer_label.setGeometry(QtCore.QRect(70, 140, 321, 71))
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(40)
         self.timer_label.setFont(font)
         self.timer_label.setStyleSheet("color: rgb(0, 0, 0);\n"
@@ -44,7 +46,7 @@ class Ui_Timer_Window(object):
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(Timer_Window)
         self.cancel_btn.setEnabled(False)
-        self.cancel_btn.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        self.cancel_btn.setGeometry(QtCore.QRect(390, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -63,9 +65,10 @@ class Ui_Timer_Window(object):
         self.download_btn.setEnabled(False)
         self.download_btn.setGeometry(QtCore.QRect(380, 280, 91, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.download_btn.setFont(font)
         self.download_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
@@ -85,6 +88,26 @@ class Ui_Timer_Window(object):
         icon1.addPixmap(QtGui.QPixmap(":/poweroff /res/poweroff_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.poweroff_btn.setIcon(icon1)
         self.poweroff_btn.setObjectName("poweroff_btn")
+        self.pushButton = QtWidgets.QPushButton(Timer_Window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
+        self.label = QtWidgets.QLabel(Timer_Window)
+        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);")
+        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label.setObjectName("label")
 
         self.retranslateUi(Timer_Window)
         self.cancel_btn.clicked.connect(Timer_Window.close)
@@ -96,6 +119,7 @@ class Ui_Timer_Window(object):
         self.description_label.setText(_translate("Timer_Window", "ALLONTANARSI"))
         self.timer_label.setText(_translate("Timer_Window", "10"))
         self.download_btn.setText(_translate("Timer_Window", "Download"))
+        self.label.setText(_translate("Timer_Window", "Trattamento in corso"))
 import img_resources_rc
 
 

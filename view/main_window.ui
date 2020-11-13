@@ -13,6 +13,17 @@
     <height>320</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
   <property name="tabletTracking">
    <bool>false</bool>
   </property>
@@ -33,16 +44,22 @@
    <widget class="QPushButton" name="reg_ambiente_btn">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>60</y>
-      <width>91</width>
-      <height>91</height>
+      <x>315</x>
+      <y>49</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="maximumSize">
      <size>
-      <width>91</width>
-      <height>91</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -53,7 +70,7 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
       border: 5px solid rgb(0,140,255);
-      border-radius:45px;
+border-radius:50px;
      </string>
     </property>
     <property name="text">
@@ -73,16 +90,16 @@
    <widget class="QPushButton" name="reg_prodotto_btn">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>110</y>
-      <width>91</width>
-      <height>91</height>
+      <x>315</x>
+      <y>179</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="maximumSize">
      <size>
-      <width>91</width>
-      <height>91</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -93,7 +110,7 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
       border: 5px solid rgb(0,140,255);
-      border-radius:45px;
+      border-radius:50px;
      </string>
     </property>
     <property name="text">
@@ -113,10 +130,10 @@
    <widget class="QPushButton" name="poweroff_btn">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>270</y>
-      <width>51</width>
-      <height>41</height>
+      <x>0</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -126,29 +143,27 @@
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
+image: url(:/poweroff /res/poweroff_icon.png);
 background-color: rgb(255, 255, 255);
 border-radius:10px;</string>
     </property>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="img_resources.qrc">
-      <normaloff>:/poweroff /res/poweroff_icon.png</normaloff>:/poweroff /res/poweroff_icon.png</iconset>
-    </property>
    </widget>
    <widget class="QLabel" name="sanifica_label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>210</y>
-      <width>55</width>
+      <x>63</x>
+      <y>244</y>
+      <width>155</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>8</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -160,7 +175,7 @@ border-radius:10px;</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Sanifica</string>
+     <string>Avvio ciclo trattamento</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -172,16 +187,16 @@ border-radius:10px;</string>
    <widget class="QPushButton" name="sanifica_btn">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>110</y>
-      <width>91</width>
-      <height>91</height>
+      <x>65</x>
+      <y>89</y>
+      <width>150</width>
+      <height>150</height>
      </rect>
     </property>
     <property name="maximumSize">
      <size>
-      <width>91</width>
-      <height>91</height>
+      <width>200</width>
+      <height>200</height>
      </size>
     </property>
     <property name="font">
@@ -198,7 +213,7 @@ border-radius:10px;</string>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
       background-color: rgb(255, 255, 255);
-      border-radius:45px;
+      border-radius:75px;
       border: 5px solid rgb(0,140,255);
      </string>
     </property>
@@ -219,15 +234,16 @@ border-radius:10px;</string>
    <widget class="QLabel" name="registra_p_label">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>210</y>
-      <width>121</width>
-      <height>16</height>
+      <x>292</x>
+      <y>279</y>
+      <width>150</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>8</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -239,7 +255,7 @@ border-radius:10px;</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Registra Prodotto</string>
+     <string>Anagrafica Prodotto</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -251,15 +267,16 @@ border-radius:10px;</string>
    <widget class="QLabel" name="registra_a_label">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>170</y>
-      <width>121</width>
-      <height>16</height>
+      <x>292</x>
+      <y>150</y>
+      <width>150</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>8</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -271,7 +288,7 @@ border-radius:10px;</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Registra Ambiente</string>
+     <string>Anagrafica Ambiente</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -299,17 +316,18 @@ border-radius:10px;</string>
    <widget class="QLabel" name="serial_label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>6</y>
-      <width>191</width>
-      <height>20</height>
+      <x>70</x>
+      <y>0</y>
+      <width>211</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>17</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
      </font>
     </property>
     <property name="styleSheet">
@@ -323,9 +341,9 @@ color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="settings_btn">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>390</x>
       <y>0</y>
-      <width>61</width>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>
@@ -343,6 +361,69 @@ color: rgb(0, 0, 0);</string>
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>0</y>
+      <width>210</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 140, 255);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Menù principale</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>171</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/microone_logo/res/Microne Bianco.png);
+background-color: rgb(0, 140, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>serial_label</zorder>
+   <zorder>reg_ambiente_btn</zorder>
+   <zorder>reg_prodotto_btn</zorder>
+   <zorder>poweroff_btn</zorder>
+   <zorder>sanifica_label</zorder>
+   <zorder>sanifica_btn</zorder>
+   <zorder>registra_p_label</zorder>
+   <zorder>registra_a_label</zorder>
+   <zorder>label</zorder>
+   <zorder>settings_btn</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>label_2</zorder>
   </widget>
  </widget>
  <resources>

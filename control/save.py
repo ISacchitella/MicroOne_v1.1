@@ -9,6 +9,7 @@ from collections import OrderedDict
 from datetime import date, datetime
 
 from model.ambiente_prodotto import Ambiente, Prodotto
+from model.dispositivo import IS_RASPBERRY
 
 
 def get_file_path(file_name, extension='.json'):
@@ -71,6 +72,8 @@ def save_info(info):
 
 
 def poweroff():
+    if not IS_RASPBERRY:
+        return
     os.system("sudo poweroff")
     # os.system("shutdown now -h")  # shut down the Pi -h is or -r will reset
 

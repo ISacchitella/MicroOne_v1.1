@@ -118,6 +118,7 @@ class Micro_One_App(Ui_MainWindow):
         self.data_oggi_ui.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QDate_temp, QTime_temp))#TODO
         self.sanifica_index = 0
         self.data_oggi_ui.avanti_btn.clicked.connect(lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
+        self.data_oggi_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
         self.data_oggi_window.show()
 
     def open_reg_prodotto_window(self):

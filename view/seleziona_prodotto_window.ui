@@ -22,7 +22,7 @@
      <x>60</x>
      <y>110</y>
      <width>371</width>
-     <height>41</height>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -47,7 +47,7 @@
 
 QComboBox {
     color: black;
-border-radius:15px;
+border-radius:30px;
 border: 5px solid rgb(0,140,255);
 	selection-color: rgb(0, 0, 0);
 }
@@ -76,8 +76,8 @@ border: 5px solid rgb(0,140,255);
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>0</y>
+     <x>110</x>
+     <y>70</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -116,7 +116,7 @@ background-color: rgb(0, 140, 255);</string>
   <widget class="QPushButton" name="cancel_btn_1">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>390</x>
      <y>0</y>
      <width>71</width>
      <height>31</height>
@@ -146,7 +146,7 @@ background-color: rgb(0, 140, 255);</string>
   <widget class="QPushButton" name="cancel_btn_">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>390</x>
      <y>0</y>
      <width>81</width>
      <height>31</height>
@@ -195,6 +195,26 @@ border-radius:10px;</string>
    </property>
    <property name="text">
     <string>Avanti</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/microone_logo/res/Microne Bianco.png);
+background-color: rgb(0, 140, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>

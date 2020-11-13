@@ -22,17 +22,20 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Inserisci_Data_di_Oggi_Window)
-        self.label.setGeometry(QtCore.QRect(90, 0, 151, 31))
+        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setBold(True)
+        font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet("color: rgb(0, 0, 0);\n"
-"background-color: rgb(0, 140, 255);")
+        self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);")
+        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 81, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -48,9 +51,12 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.avanti_btn = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
-        self.avanti_btn.setGeometry(QtCore.QRect(340, 70, 71, 31))
+        self.avanti_btn.setGeometry(QtCore.QRect(390, 270, 71, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.avanti_btn.setFont(font)
         self.avanti_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "\n"
@@ -59,9 +65,10 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.avanti_btn.setObjectName("avanti_btn")
         self.data_oggi_dateTimeEdit = QtWidgets.QDateTimeEdit(Inserisci_Data_di_Oggi_Window)
         self.data_oggi_dateTimeEdit.setEnabled(True)
-        self.data_oggi_dateTimeEdit.setGeometry(QtCore.QRect(10, 40, 281, 51))
+        self.data_oggi_dateTimeEdit.setGeometry(QtCore.QRect(100, 90, 280, 60))
         font = QtGui.QFont()
-        font.setPointSize(20)
+        font.setFamily("Segoe UI")
+        font.setPointSize(15)
         font.setBold(False)
         font.setWeight(50)
         self.data_oggi_dateTimeEdit.setFont(font)
@@ -86,15 +93,16 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
 "     QDateTimeEdit {\n"
 "     color: rgb(0, 0, 0);\n"
 "    background-color: rgb(255, 255, 255);\n"
-"     border-radius:25px;\n"
+"     border-radius:30px;\n"
 "border: 5px solid rgb(0,140,255);\n"
 "\n"
 "\n"
 "}")
+        self.data_oggi_dateTimeEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 10, 1), QtCore.QTime(0, 0, 0)))
         self.data_oggi_dateTimeEdit.setObjectName("data_oggi_dateTimeEdit")
         self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
-        self.keyboard_btn.setGeometry(QtCore.QRect(330, 30, 81, 31))
+        self.keyboard_btn.setGeometry(QtCore.QRect(200, 160, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.keyboard_btn.setFont(font)
@@ -107,6 +115,20 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.keyboard_btn.setIcon(icon1)
         self.keyboard_btn.setObjectName("keyboard_btn")
+        self.pushButton = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
+        self.label_5.raise_()
+        self.cancel_btn_.raise_()
+        self.avanti_btn.raise_()
+        self.data_oggi_dateTimeEdit.raise_()
+        self.keyboard_btn.raise_()
+        self.pushButton.raise_()
+        self.label.raise_()
 
         self.retranslateUi(Inserisci_Data_di_Oggi_Window)
         self.cancel_btn_.clicked.connect(Inserisci_Data_di_Oggi_Window.close)
@@ -115,7 +137,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
     def retranslateUi(self, Inserisci_Data_di_Oggi_Window):
         _translate = QtCore.QCoreApplication.translate
         Inserisci_Data_di_Oggi_Window.setWindowTitle(_translate("Inserisci_Data_di_Oggi_Window", "Data Scadenza"))
-        self.label.setText(_translate("Inserisci_Data_di_Oggi_Window", "Inserisci Data di Oggi"))
+        self.label.setText(_translate("Inserisci_Data_di_Oggi_Window", "Inserisci Data e Ora"))
         self.avanti_btn.setText(_translate("Inserisci_Data_di_Oggi_Window", "Avanti"))
 import img_resources_rc
 

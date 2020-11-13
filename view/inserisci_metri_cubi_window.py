@@ -17,22 +17,25 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         Inserisci_Metri_Cubi_Window.resize(480, 320)
         Inserisci_Metri_Cubi_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_5 = QtWidgets.QLabel(Inserisci_Metri_Cubi_Window)
-        self.label_5.setGeometry(QtCore.QRect(-20, -10, 531, 41))
+        self.label_5.setGeometry(QtCore.QRect(-30, 0, 531, 31))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Inserisci_Metri_Cubi_Window)
-        self.label.setGeometry(QtCore.QRect(90, 0, 151, 31))
+        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setBold(True)
+        font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet("color: rgb(0, 0, 0);\n"
-"background-color: rgb(0, 140, 255);")
+        self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+"\n"
+"color: rgb(255, 255, 255);")
+        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 81, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -48,9 +51,12 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.avanti_btn = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.avanti_btn.setGeometry(QtCore.QRect(180, 70, 71, 31))
+        self.avanti_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.avanti_btn.setFont(font)
         self.avanti_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "\n"
@@ -58,9 +64,10 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
 "border-radius:10px;")
         self.avanti_btn.setObjectName("avanti_btn")
         self.metri_cubi_spinBox = QtWidgets.QSpinBox(Inserisci_Metri_Cubi_Window)
-        self.metri_cubi_spinBox.setGeometry(QtCore.QRect(10, 40, 151, 61))
+        self.metri_cubi_spinBox.setGeometry(QtCore.QRect(140, 90, 200, 60))
         font = QtGui.QFont()
-        font.setPointSize(20)
+        font.setFamily("Segoe UI")
+        font.setPointSize(15)
         font.setBold(False)
         font.setWeight(50)
         self.metri_cubi_spinBox.setFont(font)
@@ -83,7 +90,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
 "\n"
 "        QSpinBox {\n"
 "        color: rgb(0, 0, 0);\n"
-"        border-radius:25px;\n"
+"        border-radius:30px;\n"
 "    background-color: rgb(255, 255, 255);\n"
 "border: 5px solid rgb(0,140,255);\n"
 "\n"
@@ -97,19 +104,39 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.metri_cubi_spinBox.setMaximum(3000)
         self.metri_cubi_spinBox.setObjectName("metri_cubi_spinBox")
         self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.keyboard_btn.setGeometry(QtCore.QRect(160, 30, 81, 31))
+        self.keyboard_btn.setGeometry(QtCore.QRect(80, 190, 161, 71))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.keyboard_btn.setFont(font)
         self.keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"image: url(:/keyboard/res/keyboard.png);\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius:10px;")
         self.keyboard_btn.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.keyboard_btn.setIcon(icon1)
         self.keyboard_btn.setObjectName("keyboard_btn")
+        self.pushButton = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
+        self.pushButton_2.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton_2.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton_2.setText("")
+        self.pushButton_2.setFlat(True)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.label_5.raise_()
+        self.avanti_btn.raise_()
+        self.metri_cubi_spinBox.raise_()
+        self.keyboard_btn.raise_()
+        self.pushButton.raise_()
+        self.pushButton_2.raise_()
+        self.cancel_btn_.raise_()
+        self.label.raise_()
 
         self.retranslateUi(Inserisci_Metri_Cubi_Window)
         self.cancel_btn_.clicked.connect(Inserisci_Metri_Cubi_Window.close)

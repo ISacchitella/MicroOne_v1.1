@@ -18,7 +18,7 @@ class Ui_Reg_ambiente_Window(object):
         Reg_ambiente_Window.setAutoFillBackground(False)
         Reg_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.nome_label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.nome_label.setGeometry(QtCore.QRect(340, 60, 31, 21))
+        self.nome_label.setGeometry(QtCore.QRect(350, 60, 31, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -30,20 +30,23 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_label.setText("")
         self.nome_label.setObjectName("nome_label")
         self.metri_cubi_label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.metri_cubi_label.setGeometry(QtCore.QRect(200, 160, 81, 30))
+        self.metri_cubi_label.setGeometry(QtCore.QRect(142, 170, 196, 20))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
         font.setBold(False)
         font.setWeight(50)
         self.metri_cubi_label.setFont(font)
         self.metri_cubi_label.setStyleSheet("color: rgb(0, 0, 0);")
+        self.metri_cubi_label.setAlignment(QtCore.Qt.AlignCenter)
         self.metri_cubi_label.setObjectName("metri_cubi_label")
         self.save_btn = QtWidgets.QPushButton(Reg_ambiente_Window)
         self.save_btn.setGeometry(QtCore.QRect(400, 280, 71, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.save_btn.setFont(font)
         self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "                    color: rgb(255, 255, 255);\n"
@@ -51,9 +54,10 @@ class Ui_Reg_ambiente_Window(object):
 "                ")
         self.save_btn.setObjectName("save_btn")
         self.metri_cubi_spinBox = QtWidgets.QSpinBox(Reg_ambiente_Window)
-        self.metri_cubi_spinBox.setGeometry(QtCore.QRect(170, 210, 151, 61))
+        self.metri_cubi_spinBox.setGeometry(QtCore.QRect(170, 210, 151, 60))
         font = QtGui.QFont()
-        font.setPointSize(20)
+        font.setFamily("Segoe UI")
+        font.setPointSize(15)
         self.metri_cubi_spinBox.setFont(font)
         self.metri_cubi_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.metri_cubi_spinBox.setStyleSheet("QSpinBox::down-button {\n"
@@ -75,7 +79,7 @@ class Ui_Reg_ambiente_Window(object):
 "                \n"
 "    background-color: rgb(255, 255, 255);\n"
 "border: 5px solid rgb(0,140,255);\n"
-"                    border-radius:25px;\n"
+"                    border-radius:30px;\n"
 "\n"
 "\n"
 "                    }\n"
@@ -89,26 +93,30 @@ class Ui_Reg_ambiente_Window(object):
         self.metri_cubi_spinBox.setProperty("value", 1)
         self.metri_cubi_spinBox.setObjectName("metri_cubi_spinBox")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_ambiente_Window)
-        self.nome_textbox.setGeometry(QtCore.QRect(60, 110, 371, 41))
+        self.nome_textbox.setGeometry(QtCore.QRect(52, 90, 376, 60))
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(15)
         self.nome_textbox.setFont(font)
         self.nome_textbox.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.nome_textbox.setStyleSheet("border-radius:10px;\n"
+        self.nome_textbox.setStyleSheet("border-radius:30px;\n"
 "                    background-color: rgb(0, 0, 0);\n"
 "                    background-color: rgb(255, 255, 255);\n"
 "                    border: 5px solid rgb(0,140,255);\n"
 "                ")
         self.nome_textbox.setText("")
+        self.nome_textbox.setAlignment(QtCore.Qt.AlignCenter)
         self.nome_textbox.setObjectName("nome_textbox")
         self.label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.label.setGeometry(QtCore.QRect(130, 60, 191, 20))
+        self.label.setGeometry(QtCore.QRect(142, 60, 196, 20))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
         font.setBold(False)
         font.setWeight(50)
         self.label.setFont(font)
         self.label.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.label_5 = QtWidgets.QLabel(Reg_ambiente_Window)
         self.label_5.setGeometry(QtCore.QRect(0, -10, 481, 41))
@@ -116,7 +124,7 @@ class Ui_Reg_ambiente_Window(object):
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_ambiente_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -132,7 +140,7 @@ class Ui_Reg_ambiente_Window(object):
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.keyboard_btn = QtWidgets.QPushButton(Reg_ambiente_Window)
-        self.keyboard_btn.setGeometry(QtCore.QRect(40, 170, 81, 31))
+        self.keyboard_btn.setGeometry(QtCore.QRect(0, 260, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.keyboard_btn.setFont(font)
@@ -145,6 +153,13 @@ class Ui_Reg_ambiente_Window(object):
         icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.keyboard_btn.setIcon(icon1)
         self.keyboard_btn.setObjectName("keyboard_btn")
+        self.pushButton = QtWidgets.QPushButton(Reg_ambiente_Window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Reg_ambiente_Window)
         self.cancel_btn_.clicked.connect(Reg_ambiente_Window.close)

@@ -20,9 +20,10 @@ class Ui_recap_info_window(object):
         self.download_btn.setEnabled(True)
         self.download_btn.setGeometry(QtCore.QRect(380, 280, 91, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.download_btn.setFont(font)
         self.download_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
@@ -30,22 +31,23 @@ class Ui_recap_info_window(object):
 "             ")
         self.download_btn.setObjectName("download_btn")
         self.recap_info_scrollarea = QtWidgets.QScrollArea(recap_info_window)
-        self.recap_info_scrollarea.setGeometry(QtCore.QRect(20, 20, 480, 320))
+        self.recap_info_scrollarea.setGeometry(QtCore.QRect(20, 60, 361, 151))
         self.recap_info_scrollarea.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.recap_info_scrollarea.setFrameShadow(QtWidgets.QFrame.Plain)
         self.recap_info_scrollarea.setWidgetResizable(True)
         self.recap_info_scrollarea.setObjectName("recap_info_scrollarea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 480, 320))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 361, 151))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.recap_info_text_edit = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.recap_info_text_edit.setGeometry(QtCore.QRect(20, 40, 361, 191))
+        self.recap_info_text_edit.setGeometry(QtCore.QRect(20, 20, 371, 161))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.recap_info_text_edit.sizePolicy().hasHeightForWidth())
         self.recap_info_text_edit.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
@@ -63,7 +65,7 @@ class Ui_recap_info_window(object):
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(recap_info_window)
         self.cancel_btn.setEnabled(True)
-        self.cancel_btn.setGeometry(QtCore.QRect(0, 0, 71, 31))
+        self.cancel_btn.setGeometry(QtCore.QRect(390, 0, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -78,6 +80,13 @@ class Ui_recap_info_window(object):
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancel_btn.setIcon(icon)
         self.cancel_btn.setObjectName("cancel_btn")
+        self.pushButton = QtWidgets.QPushButton(recap_info_window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(recap_info_window)
         self.cancel_btn.clicked.connect(recap_info_window.close)
@@ -90,8 +99,8 @@ class Ui_recap_info_window(object):
         self.recap_info_text_edit.setHtml(_translate("recap_info_window", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Prova Text Edit</p></body></html>"))
+"</style></head><body style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\';\">Prova Text Edit</span></p></body></html>"))
 import img_resources_rc
 
 

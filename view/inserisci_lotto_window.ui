@@ -35,31 +35,36 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>195</x>
      <y>0</y>
-     <width>151</width>
+     <width>210</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI</family>
      <pointsize>10</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(0, 140, 255);</string>
+    <string notr="true">background-color: rgb(0, 140, 255);
+
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Inserisci Lotto</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="cancel_btn_">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>390</x>
      <y>0</y>
      <width>81</width>
      <height>31</height>
@@ -89,15 +94,18 @@ background-color: rgb(0, 140, 255);</string>
   <widget class="QPushButton" name="avanti_btn">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>100</y>
-     <width>71</width>
-     <height>31</height>
+     <x>340</x>
+     <y>240</y>
+     <width>120</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <family>Segoe UI</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -113,10 +121,10 @@ border-radius:10px;</string>
   <widget class="QLineEdit" name="lotto_textbox">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>371</width>
-     <height>41</height>
+     <x>140</x>
+     <y>90</y>
+     <width>200</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -128,7 +136,7 @@ border-radius:10px;</string>
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-radius:10px;
+    <string notr="true">border-radius:30px;
                     background-color: rgb(0, 0, 0);
                     background-color: rgb(255, 255, 255);
                     border: 5px solid rgb(0,140,255);
@@ -142,9 +150,9 @@ border-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>100</y>
-     <width>81</width>
-     <height>31</height>
+     <y>160</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -154,6 +162,7 @@ border-radius:10px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
+image: url(:/keyboard/res/keyboard.png);
 
 color: rgb(255, 255, 255);
 border-radius:10px;</string>
@@ -162,10 +171,37 @@ border-radius:10px;</string>
     <string/>
    </property>
    <property name="icon">
-    <iconset resource="img_resources.qrc">
+    <iconset>
      <normaloff>:/keyboard/res/keyboard_icon.png</normaloff>:/keyboard/res/keyboard_icon.png</iconset>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/microone_logo/res/Microne Bianco.png);
+background-color: rgb(0, 140, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_5</zorder>
+  <zorder>cancel_btn_</zorder>
+  <zorder>avanti_btn</zorder>
+  <zorder>lotto_textbox</zorder>
+  <zorder>keyboard_btn</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

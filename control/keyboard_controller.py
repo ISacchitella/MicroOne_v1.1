@@ -2,7 +2,7 @@ from model.dispositivo import IS_RASPBERRY
 from os import system
 
 class Keyboard():
-    OPEN_COMMAND = "matchbox-keyboard"
+    OPEN_COMMAND = "onboard"
     @classmethod
     def open_keyboard(cls):
         print("keyboard OPENED")

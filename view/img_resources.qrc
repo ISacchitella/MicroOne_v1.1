@@ -4,7 +4,7 @@
     <file>res/down_arrow.png</file>
   </qresource>
   <qresource prefix="keyboard">
-    <file>res/keyboard_icon.png</file>
+    <file>res/keyboard.png</file>
   </qresource>
   <qresource prefix="poweroff ">
     <file>res/poweroff_icon.png</file>
@@ -21,6 +21,9 @@
   </qresource>
   <qresource prefix="cancel">
     <file>res/cancel.png</file>
+  </qresource>
+  <qresource prefix="microone_logo">
+    <file>res/Microne Bianco.png</file>
   </qresource>
   <qresource prefix="settings">
     <file>res/settings.png</file>

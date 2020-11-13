@@ -34,6 +34,7 @@ class Ui_recap_info_sanifica_window(object):
         sizePolicy.setHeightForWidth(self.recap_info_text_edit.sizePolicy().hasHeightForWidth())
         self.recap_info_text_edit.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
@@ -74,7 +75,10 @@ class Ui_recap_info_sanifica_window(object):
         self.avanti_btn = QtWidgets.QPushButton(recap_info_sanifica_window)
         self.avanti_btn.setGeometry(QtCore.QRect(380, 270, 71, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
         self.avanti_btn.setFont(font)
         self.avanti_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
 "\n"
@@ -87,7 +91,7 @@ class Ui_recap_info_sanifica_window(object):
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(recap_info_sanifica_window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(0, 0, 81, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -112,6 +116,13 @@ class Ui_recap_info_sanifica_window(object):
         self.millilitri_label.setStyleSheet("color: rgb(170, 0, 0);")
         self.millilitri_label.setText("")
         self.millilitri_label.setObjectName("millilitri_label")
+        self.pushButton = QtWidgets.QPushButton(recap_info_sanifica_window)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
+        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
+"background-color: rgb(0, 140, 255);")
+        self.pushButton.setText("")
+        self.pushButton.setFlat(True)
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(recap_info_sanifica_window)
         self.cancel_btn_.clicked.connect(recap_info_sanifica_window.close)
@@ -123,14 +134,14 @@ class Ui_recap_info_sanifica_window(object):
         self.recap_info_text_edit.setHtml(_translate("recap_info_sanifica_window", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Prova Text Edit</p></body></html>"))
+"</style></head><body style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\';\">Prova Text Edit</span></p></body></html>"))
         self.recap_info_text_edit_2.setHtml(_translate("recap_info_sanifica_window", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Prova Text Edit</p></body></html>"))
-        self.avanti_btn.setText(_translate("recap_info_sanifica_window", "Sanifica"))
+        self.avanti_btn.setText(_translate("recap_info_sanifica_window", "Avvia"))
 import img_resources_rc
 
 

@@ -1,6 +1,66 @@
 {
-	"serial_number": "prova1",
+	"serial_number": "MONE-111",
 	"anagrafica": [
+		{
+			"data": "11:53:31 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "11:50:07 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "11:47:34 13/11/20",
+			"tempo": "5:33:25",
+			"stato": "FALLITA",
+			"ambiente": "Ambiente2",
+			"metri_cubi": 778,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
 		{
 			"data": "12:13:08 12/11/20",
 			"tempo": "0:00:25",
@@ -228,14 +288,15 @@
 		"disk": {
 			"available_drives": [
 				"C:",
+				"D:",
 				"I:",
 				"W:"
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 273757601792,
-				"free": 221722865664,
-				"percent": 55.3
+				"used": 274676211712,
+				"free": 220804255744,
+				"percent": 55.4
 			},
 			"disk_partitions": [
 				{
@@ -243,30 +304,36 @@
 					"mountpoint": "C:\\",
 					"fstype": "NTFS",
 					"opts": "rw,fixed"
+				},
+				{
+					"device": "D:\\",
+					"mountpoint": "D:\\",
+					"fstype": "NTFS",
+					"opts": "rw,removable"
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 514201,
-				"write_count": 109289,
-				"read_bytes": 8105227776,
-				"write_bytes": 1887754240,
-				"read_time": 315,
-				"write_time": 63
+				"read_count": 1009516,
+				"write_count": 503187,
+				"read_bytes": 26474705920,
+				"write_bytes": 10546968064,
+				"read_time": 757,
+				"write_time": 203
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 8588517376,
-				"percent": 49.8,
-				"used": 8514699264,
-				"free": 8588517376
+				"available": 9187299328,
+				"percent": 46.3,
+				"used": 7915917312,
+				"free": 9187299328
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 9980334080,
-				"free": 9673019392,
-				"percent": 50.8,
+				"used": 10735935488,
+				"free": 8917417984,
+				"percent": 54.6,
 				"sin": 0,
 				"sout": 0
 			}
@@ -280,11 +347,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 5807.296874999999,
-				"system": 3299.1718749999927,
-				"idle": 56654.96875,
-				"interrupt": 238.984375,
-				"dpc": 181.90625
+				"user": 28065.0,
+				"system": 18278.31250000006,
+				"idle": 314574.89062499994,
+				"interrupt": 1455.75,
+				"dpc": 1312.015625
 			}
 		},
 		"users": [
@@ -292,7 +359,7 @@
 				"name": "isacchitella",
 				"terminal": null,
 				"host": null,
-				"started": 1605179675.9016612,
+				"started": 1605217721.4927452,
 				"pid": null
 			}
 		]
