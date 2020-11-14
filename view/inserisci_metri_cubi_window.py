@@ -36,7 +36,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 81, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(410, 0, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -50,6 +50,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancel_btn_.setIcon(icon)
+        self.cancel_btn_.setFlat(True)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.avanti_btn = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
         self.avanti_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
@@ -72,6 +73,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.metri_cubi_spinBox.setFont(font)
+        self.metri_cubi_spinBox.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.metri_cubi_spinBox.setStyleSheet("QSpinBox::down-button {\n"
 "\n"
 "        image: url(:/arrows/res/down_arrow.png);\n"
@@ -116,22 +118,6 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
 "border-radius:10px;")
         self.keyboard_btn.setText("")
         self.keyboard_btn.setObjectName("keyboard_btn")
-        self.pushButton = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
-        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
-"background-color: rgb(0, 140, 255);")
-        self.pushButton.setText("")
-        self.pushButton.setFlat(True)
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
-        self.pushButton_2.setGeometry(QtCore.QRect(0, 0, 171, 28))
-        self.pushButton_2.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
-"background-color: rgb(0, 140, 255);")
-        self.pushButton_2.setText("")
-        self.pushButton_2.setFlat(True)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton.raise_()
-        self.pushButton_2.raise_()
         self.label_5.raise_()
         self.avanti_btn.raise_()
         self.metri_cubi_spinBox.raise_()

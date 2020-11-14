@@ -6,9 +6,11 @@ from datetime import timedelta
 from model.ambiente_prodotto import Prodotto
 
 IS_RASPBERRY = sys.platform.startswith('linux')
+
 class Dispositivo:
 
     VALORE_STANDARD_FABBRICA=28
+
 
     def __init__(self, serial_number: str):
         self.serial_number = serial_number

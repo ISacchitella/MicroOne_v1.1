@@ -1,6 +1,126 @@
 {
-	"serial_number": "MONE-111",
+	"serial_number": "",
 	"anagrafica": [
+		{
+			"data": "08:51:36 14/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "23:25:43 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "23:24:17 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "23:22:25 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "23:18:15 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
+		{
+			"data": "23:13:54 13/11/20",
+			"tempo": "0:00:25",
+			"stato": "COMPLETATA",
+			"ambiente": "Ambiente3",
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "Prodotto1",
+				"concentrazione": 12,
+				"data_scadenza": "08/07/29",
+				"lotto": [
+					"LT12121",
+					"imma",
+					"LT-1256",
+					"PTsmdmsmds",
+					"LT-1018",
+					"LT-1015"
+				]
+			}
+		},
 		{
 			"data": "11:53:31 13/11/20",
 			"tempo": "0:00:25",
@@ -293,8 +413,8 @@
 			],
 			"disk_usage": {
 				"total": 495480467456,
-				"used": 274690224128,
-				"free": 220790243328,
+				"used": 274403926016,
+				"free": 221076541440,
 				"percent": 55.4
 			},
 			"disk_partitions": [
@@ -306,27 +426,27 @@
 				}
 			],
 			"disk_io_counters": {
-				"read_count": 6505910,
-				"write_count": 744458,
-				"read_bytes": 89994255360,
-				"write_bytes": 14567767040,
-				"read_time": 1671,
-				"write_time": 263
+				"read_count": 6937780,
+				"write_count": 933977,
+				"read_bytes": 102636465664,
+				"write_bytes": 19345377792,
+				"read_time": 1960,
+				"write_time": 345
 			}
 		},
 		"memory": {
 			"virtual_memory": {
 				"total": 17103216640,
-				"available": 8024625152,
-				"percent": 53.1,
-				"used": 9078591488,
-				"free": 8024625152
+				"available": 10402074624,
+				"percent": 39.2,
+				"used": 6701142016,
+				"free": 10402074624
 			},
 			"swap_memory": {
 				"total": 19653353472,
-				"used": 12631760896,
-				"free": 7021592576,
-				"percent": 64.3,
+				"used": 7637422080,
+				"free": 12015931392,
+				"percent": 38.9,
 				"sin": 0,
 				"sout": 0
 			}
@@ -340,11 +460,11 @@
 				"max": 1992.0
 			},
 			"cpu_times": {
-				"user": 42516.796875,
-				"system": 29655.68750000006,
-				"idle": 429660.49999999994,
-				"interrupt": 2005.4375,
-				"dpc": 1716.796875
+				"user": 62669.390625,
+				"system": 39482.92187499988,
+				"idle": 528279.921875,
+				"interrupt": 3657.578125,
+				"dpc": 2317.34375
 			}
 		},
 		"users": [
@@ -352,7 +472,7 @@
 				"name": "isacchitella",
 				"terminal": null,
 				"host": null,
-				"started": 1605217721.4927452,
+				"started": 1605306500.1593332,
 				"pid": null
 			}
 		]

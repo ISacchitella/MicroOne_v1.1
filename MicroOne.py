@@ -1,15 +1,18 @@
 from datetime import date, datetime
 
 from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont, QIcon, QPixmap
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
 from PyQt5 import QtCore
+from PyQt5.uic.properties import QtGui
+
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
     open_seleziona_prodotto
 from control.keyboard_controller import Keyboard
 from control.save import load_info, save_info, format_info, copy_info, get_system_info, \
     poweroff
 from model.ambiente_prodotto import MAX_METRI_CUBI
-from model.dispositivo import Dispositivo
+from model.dispositivo import Dispositivo, IS_RASPBERRY
 # https://stackoverflow.com/questions/7031962/qdateedit-calendar-popup
 from view.inserisci_data_di_oggi_window import Ui_Inserisci_Data_di_Oggi_Window
 from view.main_window import Ui_MainWindow, QtWidgets
@@ -60,38 +63,69 @@ class Micro_One_App(Ui_MainWindow):
             self.info['anagrafica'] = []
 
     def setup_serial_number(self):
-        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint |Qt.AlignTop |Qt.AlignLeft))
+        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.AlignTop | Qt.AlignLeft))
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
         serial_number_dialog.setObjectName("serial_number_dialog")
         serial_number_dialog.setStyleSheet("background-color: rgb(255,255,255); \n")
         serial_number_dialog.resize(480, 320)
         serial_number_dialog.setWindowTitle("Serial Number")
+        label_blu = QLabel(serial_number_dialog)
+        label_blu.resize(480, 320)
+        label_blu.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+                                "image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
 
         sn_textbox = QLineEdit(serial_number_dialog)
-        sn_textbox.move(10, 30)
-        sn_textbox.resize(220, 40)
-        sn_textbox.setStyleSheet("color: rgb(0,0,0); \n"
-                                 "border-radius: 10px; \n"
+        sn_textbox.move(100, 40)  # TEXTBOX per inserire serial number
+        sn_textbox.resize(280, 60)
+        sn_textbox.setFocusPolicy(Qt.StrongFocus)
+        sn_textbox.setStyleSheet("background-color: rgb(0, 0, 0); \n"
+                                 "border-radius:30px; \n"
+                                 "background-color: rgb(255, 255, 255); \n"
                                  "border: 5px solid rgb(0,140,255); \n")
         # button
         sn_button = QPushButton('Salva', serial_number_dialog)
-        sn_button.move(150, 80)
-        sn_button.resize(75, 34)
+        sn_button.move(340, 240)
+        sn_button.resize(120, 60)
         sn_button.setStyleSheet("background-color: rgb(0, 140, 255); \n"
-                                "color: rgb(0,0,0); \n"
-                                "border-radius: 10px; \n"
-                                "border: 5px solid rgb(0,140,255); \n")
+                                "color: rgb(255, 255, 255); \n"
+                                "border-radius: 10px; \n")
 
-        sn_label = QLabel("Inserisci seriale dispositivo", serial_number_dialog)
+        sn_label = QLabel("Inserisci Seriale Dispositivo", serial_number_dialog)
         sn_label.setBuddy(sn_textbox)
-        sn_label.setStyleSheet("color: rgb(0,0,0); \n"
-                               "font-size: 15px; \n")
+        sn_label.move(195, 0)
+        sn_label.resize(210, 31)
+        sn_label.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
+        sn_label.setStyleSheet("background-color: rgb(0, 140, 255); \n"
+                               "color: rgb(255, 255, 255); \n")
+        font = QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        sn_label.setFont(font)
 
+        # TASTIERA
+        keyboard_btn = QPushButton(serial_number_dialog)
+        keyboard_btn.setEnabled(True)
+        keyboard_btn.move(10, 235)
+        keyboard_btn.resize(120, 70)
+        keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+                                   "image: url(:/keyboard/res/keyboard.png);\n"
 
+                                   "color: rgb(255, 255, 255);\n"
+                                   "border-radius:10px;")
+        keyboard_btn.setObjectName("keyboard_btn")
+        keyboard_btn.clicked.connect(lambda:self.open_keyboard_serial_number_dialog())
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
+
         serial_number_dialog.exec()
 
-    # ------------Bindings---------------------
+        # ------------Bindings---------------------
+    def open_keyboard_serial_number_dialog(cls):
+        print("keyboard OPENED")
+        if not IS_RASPBERRY:
+            return
+        system(Keyboard.OPEN_COMMAND)
 
     def salva_seriale(self, serial_number_dialog, sn_textbox):
         self.dispositivo = Dispositivo(sn_textbox.text())
@@ -107,7 +141,6 @@ class Micro_One_App(Ui_MainWindow):
         save_info(self.info)
         self.recap_info_window.show()
 
-
     def open_sanifica_window(self):
         self.data_oggi_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
         self.data_oggi_ui = Ui_Inserisci_Data_di_Oggi_Window()
@@ -115,9 +148,10 @@ class Micro_One_App(Ui_MainWindow):
         QDate_temp = QtCore.QDate.currentDate()
         QTime_temp = QtCore.QTime.currentTime()
         self.current_date = datetime.combine(QDate_temp.toPyDate(), QTime_temp.toPyTime())
-        self.data_oggi_ui.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QDate_temp, QTime_temp))#TODO
+        self.data_oggi_ui.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QDate_temp, QTime_temp))  # TODO
         self.sanifica_index = 0
-        self.data_oggi_ui.avanti_btn.clicked.connect(lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
+        self.data_oggi_ui.avanti_btn.clicked.connect(
+            lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
         self.data_oggi_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
         self.data_oggi_window.show()
 
@@ -155,6 +189,7 @@ class Micro_One_App(Ui_MainWindow):
 
 if __name__ == "__main__":
     import sys
+
     try:
         logger = make_logger()
         app = QtWidgets.QApplication(sys.argv)

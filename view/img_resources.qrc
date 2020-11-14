@@ -3,6 +3,9 @@
     <file>res/up_arrow.png</file>
     <file>res/down_arrow.png</file>
   </qresource>
+  <qresource prefix="wind">
+    <file>res/wind.png</file>
+  </qresource>
   <qresource prefix="gear">
     <file>res/gear.png</file>
   </qresource>

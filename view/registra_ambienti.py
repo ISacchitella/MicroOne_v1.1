@@ -64,6 +64,7 @@ class Ui_Reg_ambiente_Window(object):
         font.setPointSize(15)
         self.metri_cubi_spinBox.setFont(font)
         self.metri_cubi_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.metri_cubi_spinBox.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.metri_cubi_spinBox.setStyleSheet("QSpinBox::down-button {\n"
 "\n"
 "                    image: url(:/arrows/res/down_arrow.png);\n"
@@ -131,7 +132,7 @@ class Ui_Reg_ambiente_Window(object):
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_ambiente_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 71, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(410, 0, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -145,6 +146,7 @@ class Ui_Reg_ambiente_Window(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancel_btn_.setIcon(icon)
+        self.cancel_btn_.setFlat(True)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.keyboard_btn = QtWidgets.QPushButton(Reg_ambiente_Window)
         self.keyboard_btn.setGeometry(QtCore.QRect(10, 235, 120, 70))
@@ -161,13 +163,6 @@ class Ui_Reg_ambiente_Window(object):
         icon1.addPixmap(QtGui.QPixmap(":/keyboard/res/keyboard_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.keyboard_btn.setIcon(icon1)
         self.keyboard_btn.setObjectName("keyboard_btn")
-        self.pushButton = QtWidgets.QPushButton(Reg_ambiente_Window)
-        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
-        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
-"background-color: rgb(0, 140, 255);")
-        self.pushButton.setText("")
-        self.pushButton.setFlat(True)
-        self.pushButton.setObjectName("pushButton")
         self.concentrazione_label_2 = QtWidgets.QLabel(Reg_ambiente_Window)
         self.concentrazione_label_2.setGeometry(QtCore.QRect(354, 110, 31, 41))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
@@ -192,7 +187,6 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_textbox.raise_()
         self.cancel_btn_.raise_()
         self.keyboard_btn.raise_()
-        self.pushButton.raise_()
         self.label.raise_()
         self.concentrazione_label_2.raise_()
 

@@ -2,6 +2,7 @@ import logging
 from collections import OrderedDict
 from datetime import timedelta, datetime
 from enum import Enum
+from time import sleep
 
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import Qt
@@ -11,6 +12,7 @@ from control.save import load_ambienti, save_ambienti, load_prodotti, save_prodo
     copy_info, poweroff, display_riepilogo
 from model.ambiente_prodotto import Ambiente, check_metri_cubi, Prodotto, TEMPO_ALLONTANAMENTO, display_ambiente, \
     MAX_METRI_CUBI
+from model.dispositivo import Dispositivo
 from view.inserisci_data_scadenza_window import Ui_Inserisci_Data_Scadenza_Window
 from view.inserisci_lotto_window import Ui_Inserisci_Lotto_Window
 from view.inserisci_metri_cubi_window import Ui_Inserisci_Metri_Cubi_Window
@@ -270,6 +272,8 @@ def timeout_allontanarsi(window, ui, app):
         app.dispositivo.sanifica()
 
 
+
+
 def timeout_sanificazione(window, ui, app):
     ui.tempo_sanificazione -= ONE_SECOND
     ui.timer_label.setText(str(ui.tempo_sanificazione))
@@ -282,3 +286,18 @@ def timeout_sanificazione(window, ui, app):
         ui.cancel_btn.setEnabled(True)
         ui.download_btn.setEnabled(True)
         ui.download_btn.clicked.connect(copy_info)
+        ui.timer.disconnect()
+        sleep(10)
+        ui.description_label.setText("Decontaminazione in corso")
+        ui.decontaminazione_sec = timedelta(hours=1)
+        ui.timer_label.setText(str(ui.decontaminazione_sec))
+        ui.timer.timeout.connect(lambda: timeout_decontaminazione(window, ui, app))
+        ui.timer.start(1000)
+        ui.timer.startTimer(ui.decontaminazione_sec.total_seconds(), timerType=Qt.VeryCoarseTimer)
+
+def timeout_decontaminazione(window, ui, app):
+    ui.decontaminazione_sec -= ONE_SECOND
+    ui.timer_label.setText(str(ui.decontaminazione_sec))
+    if ui.decontaminazione_sec.total_seconds() <= 0:
+        ui.timer.stop()
+        ui.description_label.setText("Decontaminazione completata!")

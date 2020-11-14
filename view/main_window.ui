@@ -154,10 +154,10 @@ border-radius:10px;</string>
    <widget class="QLabel" name="sanifica_label">
     <property name="geometry">
      <rect>
-      <x>63</x>
+      <x>57</x>
       <y>244</y>
-      <width>155</width>
-      <height>16</height>
+      <width>161</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
@@ -175,7 +175,7 @@ border-radius:10px;</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Avvio ciclo trattamento</string>
+     <string>Avvio Ciclo Trattamento</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -222,12 +222,12 @@ border-radius:10px;</string>
     </property>
     <property name="icon">
      <iconset resource="img_resources.qrc">
-      <normaloff>:/icons/res/sanifica_icon.png</normaloff>:/icons/res/sanifica_icon.png</iconset>
+      <normaloff>:/wind/res/wind.png</normaloff>:/wind/res/wind.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>32</width>
-      <height>32</height>
+      <width>64</width>
+      <height>64</height>
      </size>
     </property>
    </widget>
@@ -342,9 +342,9 @@ color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="settings_btn">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>410</x>
       <y>0</y>
-      <width>81</width>
+      <width>51</width>
       <height>31</height>
      </rect>
     </property>
@@ -393,27 +393,6 @@ color: rgb(255, 255, 255);</string>
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>171</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/microone_logo/res/Microne Bianco.png);
-background-color: rgb(0, 140, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <zorder>pushButton</zorder>
    <zorder>serial_label</zorder>
    <zorder>label</zorder>
    <zorder>reg_ambiente_btn</zorder>

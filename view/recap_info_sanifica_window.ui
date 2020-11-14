@@ -209,9 +209,9 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
   <widget class="QPushButton" name="cancel_btn_">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>410</x>
      <y>0</y>
-     <width>81</width>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
@@ -235,6 +235,9 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
     <iconset resource="img_resources.qrc">
      <normaloff>:/cancel/res/cancel.png</normaloff>:/cancel/res/cancel.png</iconset>
    </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="millilitri_label">
    <property name="geometry">
@@ -257,26 +260,6 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
    </property>
    <property name="text">
     <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>171</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/microone_logo/res/Microne Bianco.png);
-background-color: rgb(0, 140, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -312,7 +295,6 @@ color: rgb(255, 255, 255);</string>
   <zorder>recap_info_scrollarea</zorder>
   <zorder>cancel_btn_</zorder>
   <zorder>millilitri_label</zorder>
-  <zorder>pushButton</zorder>
   <zorder>avanti_btn</zorder>
   <zorder>label</zorder>
  </widget>

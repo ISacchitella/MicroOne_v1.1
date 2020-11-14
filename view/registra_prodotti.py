@@ -77,7 +77,7 @@ class Ui_Reg_prodotto_Window(object):
         self.label.setText("")
         self.label.setObjectName("label")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_prodotto_Window)
-        self.cancel_btn_.setGeometry(QtCore.QRect(390, 0, 71, 31))
+        self.cancel_btn_.setGeometry(QtCore.QRect(410, 0, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
@@ -91,6 +91,7 @@ class Ui_Reg_prodotto_Window(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancel_btn_.setIcon(icon)
+        self.cancel_btn_.setFlat(True)
         self.cancel_btn_.setObjectName("cancel_btn_")
         self.concentrazione_label = QtWidgets.QLabel(Reg_prodotto_Window)
         self.concentrazione_label.setGeometry(QtCore.QRect(330, 110, 130, 60))
@@ -114,6 +115,7 @@ class Ui_Reg_prodotto_Window(object):
         font.setPointSize(20)
         self.concentrazione_spinBox.setFont(font)
         self.concentrazione_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.concentrazione_spinBox.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.concentrazione_spinBox.setStyleSheet("QSpinBox::down-button {\n"
 "\n"
 "                    image: url(:/arrows/res/down_arrow.png);\n"
@@ -194,13 +196,6 @@ class Ui_Reg_prodotto_Window(object):
 "border-radius:10px;")
         self.keyboard_btn.setText("")
         self.keyboard_btn.setObjectName("keyboard_btn")
-        self.pushButton = QtWidgets.QPushButton(Reg_prodotto_Window)
-        self.pushButton.setGeometry(QtCore.QRect(0, 0, 171, 28))
-        self.pushButton.setStyleSheet("image: url(:/microone_logo/res/Microne Bianco.png);\n"
-"background-color: rgb(0, 140, 255);")
-        self.pushButton.setText("")
-        self.pushButton.setFlat(True)
-        self.pushButton.setObjectName("pushButton")
         self.concentrazione_label_2 = QtWidgets.QLabel(Reg_prodotto_Window)
         self.concentrazione_label_2.setGeometry(QtCore.QRect(396, 110, 31, 41))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
@@ -227,7 +222,6 @@ class Ui_Reg_prodotto_Window(object):
         self.concentrazione_label.raise_()
         self.concentrazione_spinBox.raise_()
         self.keyboard_btn.raise_()
-        self.pushButton.raise_()
         self.nome_label.raise_()
         self.concentrazione_label_2.raise_()
 
