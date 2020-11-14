@@ -43,7 +43,7 @@ class Ui_Sel_ambiente_Window(object):
 "QComboBox {\n"
 "    color: black;\n"
 "border-radius:30px;\n"
-"border: 5px solid rgb(0,140,255);\n"
+"border: 5px solid rgb(0, 134, 255);\n"
 "    selection-color: rgb(0, 0, 0);\n"
 "}\n"
 "")
@@ -64,7 +64,7 @@ class Ui_Sel_ambiente_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);")
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
@@ -78,7 +78,7 @@ class Ui_Sel_ambiente_Window(object):
         self.nome_label.setFont(font)
         self.nome_label.setStyleSheet("color: rgb(0, 0, 0);\n"
 "image: url(:/hand/res/Hand.png);\n"
-"      border: 5px solid rgb(0,140,255);\n"
+"      border: 5px solid rgb(0, 134, 255);\n"
 "border-radius:30px;\n"
 "     ")
         self.nome_label.setText("")
@@ -108,7 +108,7 @@ class Ui_Sel_ambiente_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.avanti_btn.setFont(font)
-        self.avanti_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.avanti_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius:10px;")

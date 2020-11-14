@@ -28,7 +28,7 @@ class Ui_Reg_ambiente_Window(object):
 "\n"
 "                \n"
 "image: url(:/an_ambiente/res/Anagrafica ambientale.png);\n"
-"      border: 5px solid rgb(0,140,255);\n"
+"      border: 5px solid rgb(0, 134, 255);\n"
 "border-radius:30px;\n"
 "     ")
         self.nome_label.setText("")
@@ -41,7 +41,7 @@ class Ui_Reg_ambiente_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.metri_cubi_label.setFont(font)
-        self.metri_cubi_label.setStyleSheet("color: rgb(0, 140, 255);")
+        self.metri_cubi_label.setStyleSheet("color: rgb(0, 134, 255);")
         self.metri_cubi_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.metri_cubi_label.setObjectName("metri_cubi_label")
         self.save_btn = QtWidgets.QPushButton(Reg_ambiente_Window)
@@ -52,7 +52,7 @@ class Ui_Reg_ambiente_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.save_btn.setFont(font)
-        self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.save_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "                    color: rgb(255, 255, 255);\n"
 "                    border-radius:10px;\n"
 "                ")
@@ -83,7 +83,7 @@ class Ui_Reg_ambiente_Window(object):
 "                    color: rgb(0, 0, 0);\n"
 "                \n"
 "    background-color: rgb(255, 255, 255);\n"
-"border: 5px solid rgb(0,140,255);\n"
+"border: 5px solid rgb(0, 134, 255);\n"
 "                    border-radius:30px;\n"
 "\n"
 "\n"
@@ -107,7 +107,7 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_textbox.setStyleSheet("border-radius:30px;\n"
 "                    background-color: rgb(0, 0, 0);\n"
 "                    background-color: rgb(255, 255, 255);\n"
-"                    border: 5px solid rgb(0,140,255);\n"
+"                    border: 5px solid rgb(0, 134, 255);\n"
 "                ")
         self.nome_textbox.setText("")
         self.nome_textbox.setAlignment(QtCore.Qt.AlignCenter)
@@ -120,7 +120,7 @@ class Ui_Reg_ambiente_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);")
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
@@ -176,7 +176,7 @@ class Ui_Reg_ambiente_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.concentrazione_label_2.setFont(font)
-        self.concentrazione_label_2.setStyleSheet("color: rgb(0, 140, 255);")
+        self.concentrazione_label_2.setStyleSheet("color: rgb(0, 134, 255);")
         self.concentrazione_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.concentrazione_label_2.setObjectName("concentrazione_label_2")
         self.label_5.raise_()

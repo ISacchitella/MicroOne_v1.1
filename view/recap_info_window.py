@@ -25,7 +25,7 @@ class Ui_recap_info_window(object):
         font.setBold(True)
         font.setWeight(75)
         self.download_btn.setFont(font)
-        self.download_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.download_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
 "                 border-radius:10px;\n"
 "             ")
@@ -90,7 +90,7 @@ class Ui_recap_info_window(object):
         font.setBold(True)
         font.setWeight(75)
         self.nome_label.setFont(font)
-        self.nome_label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.nome_label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);")
         self.nome_label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)

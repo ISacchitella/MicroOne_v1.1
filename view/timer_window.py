@@ -96,7 +96,7 @@ class Ui_Timer_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);")
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)

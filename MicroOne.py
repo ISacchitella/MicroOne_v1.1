@@ -1,6 +1,7 @@
 from datetime import date, datetime
+from os import system
 
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QEvent
 from PyQt5.QtGui import QFont, QIcon, QPixmap
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
 from PyQt5 import QtCore
@@ -115,7 +116,7 @@ class Micro_One_App(Ui_MainWindow):
                                    "color: rgb(255, 255, 255);\n"
                                    "border-radius:10px;")
         keyboard_btn.setObjectName("keyboard_btn")
-        keyboard_btn.clicked.connect(lambda:self.open_keyboard_serial_number_dialog())
+        keyboard_btn.clicked.connect(lambda:self.open_keyboard_serial_number_dialog(QEvent.KeyPress, QEvent.KeyRelease))
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
 
         serial_number_dialog.exec()

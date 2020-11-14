@@ -24,7 +24,7 @@ class Ui_Reg_prodotto_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.nome_label.setFont(font)
-        self.nome_label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.nome_label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);")
         self.nome_label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
@@ -37,7 +37,7 @@ class Ui_Reg_prodotto_Window(object):
         self.nome_textbox.setStyleSheet("border-radius:30px;\n"
 "background-color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
-"border: 5px solid rgb(0,140,255);\n"
+"border: 5px solid rgb(0, 134, 255);\n"
 "")
         self.nome_textbox.setObjectName("nome_textbox")
         self.data_scad_label = QtWidgets.QLabel(Reg_prodotto_Window)
@@ -57,7 +57,7 @@ class Ui_Reg_prodotto_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.save_btn.setFont(font)
-        self.save_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.save_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius:10px;")
         self.save_btn.setObjectName("save_btn")
@@ -71,7 +71,7 @@ class Ui_Reg_prodotto_Window(object):
         self.label.setGeometry(QtCore.QRect(20, 40, 60, 60))
         self.label.setStyleSheet("image: url(:/icons/res/prodotto_icon.png);\n"
 "background-color: rgb(255, 255, 255);\n"
-"      border: 5px solid rgb(0,140,255);\n"
+"      border: 5px solid rgb(0, 134, 255);\n"
 "      border-radius:30px;\n"
 "     ")
         self.label.setText("")
@@ -106,7 +106,7 @@ class Ui_Reg_prodotto_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.concentrazione_label.setFont(font)
-        self.concentrazione_label.setStyleSheet("color: rgb(0, 140, 255);")
+        self.concentrazione_label.setStyleSheet("color: rgb(0, 134, 255);")
         self.concentrazione_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.concentrazione_label.setObjectName("concentrazione_label")
         self.concentrazione_spinBox = QtWidgets.QSpinBox(Reg_prodotto_Window)
@@ -134,7 +134,7 @@ class Ui_Reg_prodotto_Window(object):
 "                    color: rgb(0, 0, 0);\n"
 "                \n"
 "    background-color: rgb(255, 255, 255);\n"
-"border: 5px solid rgb(0,140,255);\n"
+"border: 5px solid rgb(0, 134, 255);\n"
 "                    border-radius:30px;\n"
 "\n"
 "\n"
@@ -209,7 +209,7 @@ class Ui_Reg_prodotto_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.concentrazione_label_2.setFont(font)
-        self.concentrazione_label_2.setStyleSheet("color: rgb(0, 140, 255);")
+        self.concentrazione_label_2.setStyleSheet("color: rgb(0, 134, 255);")
         self.concentrazione_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.concentrazione_label_2.setObjectName("concentrazione_label_2")
         self.data_scad_dateEdit.raise_()

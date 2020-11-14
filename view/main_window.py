@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         font.setPointSize(15)
         self.reg_ambiente_btn.setFont(font)
         self.reg_ambiente_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"      border: 5px solid rgb(0,140,255);\n"
+"      border: 5px solid rgb(0, 134, 255);\n"
 "border-radius:50px;\n"
 "     ")
         self.reg_ambiente_btn.setText("")
@@ -60,7 +60,7 @@ class Ui_MainWindow(object):
         font.setPointSize(15)
         self.reg_prodotto_btn.setFont(font)
         self.reg_prodotto_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"      border: 5px solid rgb(0,140,255);\n"
+"      border: 5px solid rgb(0, 134, 255);\n"
 "      border-radius:50px;\n"
 "     ")
         self.reg_prodotto_btn.setText("")
@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
         self.poweroff_btn.setText("")
         self.poweroff_btn.setObjectName("poweroff_btn")
         self.sanifica_label = QtWidgets.QLabel(self.centralwidget)
-        self.sanifica_label.setGeometry(QtCore.QRect(63, 244, 155, 16))
+        self.sanifica_label.setGeometry(QtCore.QRect(57, 244, 161, 20))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(9)
@@ -103,13 +103,13 @@ class Ui_MainWindow(object):
         self.sanifica_btn.setStyleSheet("color: rgb(0, 0, 0);\n"
 "      background-color: rgb(255, 255, 255);\n"
 "      border-radius:75px;\n"
-"      border: 5px solid rgb(0,140,255);\n"
+"      border: 5px solid rgb(0, 134, 255);\n"
 "     ")
         self.sanifica_btn.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icons/res/sanifica_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/wind/res/wind.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.sanifica_btn.setIcon(icon3)
-        self.sanifica_btn.setIconSize(QtCore.QSize(32, 32))
+        self.sanifica_btn.setIconSize(QtCore.QSize(64, 64))
         self.sanifica_btn.setObjectName("sanifica_btn")
         self.registra_p_label = QtWidgets.QLabel(self.centralwidget)
         self.registra_p_label.setGeometry(QtCore.QRect(292, 279, 150, 21))
@@ -172,7 +172,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.label_2.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.label_2.setStyleSheet("background-color: rgb(0, 134, 255);\n"
 "color: rgb(255, 255, 255);")
         self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
@@ -195,7 +195,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MicroOne"))
-        self.sanifica_label.setText(_translate("MainWindow", "Avvio ciclo trattamento"))
+        self.sanifica_label.setText(_translate("MainWindow", "Avvio Ciclo Trattamento"))
         self.sanifica_btn.setToolTip(_translate("MainWindow", "Clicca per avviare la sanificazione"))
         self.registra_p_label.setText(_translate("MainWindow", "Anagrafica Prodotto"))
         self.registra_a_label.setText(_translate("MainWindow", "Anagrafica Ambiente"))
