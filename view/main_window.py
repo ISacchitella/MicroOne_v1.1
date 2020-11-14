@@ -140,7 +140,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_m_window/res/pagina_MICROONE_m_window.png.png);")
         self.label.setText("")
         self.label.setObjectName("label")
         self.serial_label = QtWidgets.QLabel(self.centralwidget)
@@ -156,26 +156,13 @@ class Ui_MainWindow(object):
         self.serial_label.setObjectName("serial_label")
         self.settings_btn = QtWidgets.QPushButton(self.centralwidget)
         self.settings_btn.setGeometry(QtCore.QRect(410, 0, 51, 31))
-        self.settings_btn.setStyleSheet("background-color: rgb(0, 140, 255);")
+        self.settings_btn.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.settings_btn.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap(":/gear/res/gear.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.settings_btn.setIcon(icon4)
         self.settings_btn.setFlat(True)
         self.settings_btn.setObjectName("settings_btn")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.label_2.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"color: rgb(255, 255, 255);")
-        self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_2.setObjectName("label_2")
         self.serial_label.raise_()
         self.label.raise_()
         self.reg_ambiente_btn.raise_()
@@ -186,7 +173,6 @@ class Ui_MainWindow(object):
         self.registra_p_label.raise_()
         self.registra_a_label.raise_()
         self.settings_btn.raise_()
-        self.label_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -200,7 +186,6 @@ class Ui_MainWindow(object):
         self.registra_p_label.setText(_translate("MainWindow", "Anagrafica Prodotto"))
         self.registra_a_label.setText(_translate("MainWindow", "Anagrafica Ambiente"))
         self.serial_label.setText(_translate("MainWindow", "MicroOne-"))
-        self.label_2.setText(_translate("MainWindow", "Menù Principale"))
 import img_resources_rc
 
 

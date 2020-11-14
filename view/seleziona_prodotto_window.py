@@ -47,22 +47,9 @@ class Ui_Seleziona_Prodotto_Window(object):
         self.label_5 = QtWidgets.QLabel(Seleziona_Prodotto_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_sel_prodotto/res/pagina_MICROONE_selezione_prodotto.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
-        self.label = QtWidgets.QLabel(Seleziona_Prodotto_Window)
-        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Seleziona_Prodotto_Window)
         self.label_2.setGeometry(QtCore.QRect(17, 40, 60, 60))
         self.label_2.setStyleSheet("image: url(:/hand/res/Hand.png);\n"
@@ -94,10 +81,11 @@ class Ui_Seleziona_Prodotto_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn_.setText("")
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setFlat(True)
@@ -115,13 +103,12 @@ class Ui_Seleziona_Prodotto_Window(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:10px;")
         self.avanti_btn.setObjectName("avanti_btn")
+        self.cancel_btn_1.raise_()
         self.label_5.raise_()
         self.prodotti_comboBox.raise_()
         self.label_2.raise_()
-        self.cancel_btn_1.raise_()
         self.cancel_btn_.raise_()
         self.avanti_btn.raise_()
-        self.label.raise_()
 
         self.retranslateUi(Seleziona_Prodotto_Window)
         self.cancel_btn_.clicked.connect(Seleziona_Prodotto_Window.close)
@@ -130,7 +117,6 @@ class Ui_Seleziona_Prodotto_Window(object):
     def retranslateUi(self, Seleziona_Prodotto_Window):
         _translate = QtCore.QCoreApplication.translate
         Seleziona_Prodotto_Window.setWindowTitle(_translate("Seleziona_Prodotto_Window", "Prodotto"))
-        self.label.setText(_translate("Seleziona_Prodotto_Window", "Seleziona Prodotto"))
         self.avanti_btn.setText(_translate("Seleziona_Prodotto_Window", "Avanti"))
 import img_resources_rc
 

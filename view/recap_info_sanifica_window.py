@@ -88,7 +88,7 @@ class Ui_recap_info_sanifica_window(object):
         self.label_5 = QtWidgets.QLabel(recap_info_sanifica_window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_recap_sanifica/res/pagina_MICROONE_riepilogo_trattamento.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(recap_info_sanifica_window)
@@ -98,10 +98,11 @@ class Ui_recap_info_sanifica_window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -118,25 +119,11 @@ class Ui_recap_info_sanifica_window(object):
         self.millilitri_label.setStyleSheet("color: rgb(170, 0, 0);")
         self.millilitri_label.setText("")
         self.millilitri_label.setObjectName("millilitri_label")
-        self.label = QtWidgets.QLabel(recap_info_sanifica_window)
-        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
         self.label_5.raise_()
         self.recap_info_scrollarea.raise_()
         self.cancel_btn_.raise_()
         self.millilitri_label.raise_()
         self.avanti_btn.raise_()
-        self.label.raise_()
 
         self.retranslateUi(recap_info_sanifica_window)
         self.cancel_btn_.clicked.connect(recap_info_sanifica_window.close)
@@ -156,7 +143,6 @@ class Ui_recap_info_sanifica_window(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Prova Text Edit</p></body></html>"))
         self.avanti_btn.setText(_translate("recap_info_sanifica_window", "Avvia"))
-        self.label.setText(_translate("recap_info_sanifica_window", "Riepilogo Trattamento"))
 import img_resources_rc
 
 

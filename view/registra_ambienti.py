@@ -112,23 +112,10 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_textbox.setText("")
         self.nome_textbox.setAlignment(QtCore.Qt.AlignCenter)
         self.nome_textbox.setObjectName("nome_textbox")
-        self.label = QtWidgets.QLabel(Reg_ambiente_Window)
-        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
         self.label_5 = QtWidgets.QLabel(Reg_ambiente_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_registra_ambiente/res/pagina_MICROONE_ins_nome_amb.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_ambiente_Window)
@@ -138,10 +125,11 @@ class Ui_Reg_ambiente_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"                    color: rgb(255, 255, 255);\n"
-"                    border-radius:10px;\n"
-"                ")
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"                 color: rgb(255, 255, 255);\n"
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -187,7 +175,6 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_textbox.raise_()
         self.cancel_btn_.raise_()
         self.keyboard_btn.raise_()
-        self.label.raise_()
         self.concentrazione_label_2.raise_()
 
         self.retranslateUi(Reg_ambiente_Window)
@@ -199,7 +186,6 @@ class Ui_Reg_ambiente_Window(object):
         Reg_ambiente_Window.setWindowTitle(_translate("Reg_ambiente_Window", "Registra Ambiente"))
         self.metri_cubi_label.setText(_translate("Reg_ambiente_Window", "m"))
         self.save_btn.setText(_translate("Reg_ambiente_Window", "Salva"))
-        self.label.setText(_translate("Reg_ambiente_Window", "Inserisci Nome Ambiente"))
         self.concentrazione_label_2.setText(_translate("Reg_ambiente_Window", "3"))
 import img_resources_rc
 

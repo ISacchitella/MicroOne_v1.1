@@ -16,19 +16,6 @@ class Ui_Reg_prodotto_Window(object):
         Reg_prodotto_Window.setObjectName("Reg_prodotto_Window")
         Reg_prodotto_Window.resize(480, 320)
         Reg_prodotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.nome_label = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.nome_label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.nome_label.setFont(font)
-        self.nome_label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.nome_label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.nome_label.setObjectName("nome_label")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_prodotto_Window)
         self.nome_textbox.setGeometry(QtCore.QRect(90, 40, 376, 60))
         font = QtGui.QFont()
@@ -64,7 +51,7 @@ class Ui_Reg_prodotto_Window(object):
         self.label_5 = QtWidgets.QLabel(Reg_prodotto_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_registra_prodotto/res/pagina_MICROONE_ins_nome_prod.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Reg_prodotto_Window)
@@ -83,10 +70,11 @@ class Ui_Reg_prodotto_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -222,7 +210,6 @@ class Ui_Reg_prodotto_Window(object):
         self.concentrazione_label.raise_()
         self.concentrazione_spinBox.raise_()
         self.keyboard_btn.raise_()
-        self.nome_label.raise_()
         self.concentrazione_label_2.raise_()
 
         self.retranslateUi(Reg_prodotto_Window)
@@ -232,7 +219,6 @@ class Ui_Reg_prodotto_Window(object):
     def retranslateUi(self, Reg_prodotto_Window):
         _translate = QtCore.QCoreApplication.translate
         Reg_prodotto_Window.setWindowTitle(_translate("Reg_prodotto_Window", "Registra Prodotto"))
-        self.nome_label.setText(_translate("Reg_prodotto_Window", "Inserisci Nome Prodotto"))
         self.data_scad_label.setText(_translate("Reg_prodotto_Window", "Inserisci data di scadenza"))
         self.save_btn.setText(_translate("Reg_prodotto_Window", "Salva"))
         self.concentrazione_label.setText(_translate("Reg_prodotto_Window", "ml/m"))

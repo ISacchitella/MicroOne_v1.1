@@ -63,6 +63,11 @@ class Micro_One_App(Ui_MainWindow):
         if 'anagrafica' not in self.info.keys():
             self.info['anagrafica'] = []
 
+    def keyPressEvent(self, event):
+        print(event.key)
+        print("Key Pressed Correctly!")
+
+
     def setup_serial_number(self):
         serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.AlignTop | Qt.AlignLeft))
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
@@ -116,7 +121,7 @@ class Micro_One_App(Ui_MainWindow):
                                    "color: rgb(255, 255, 255);\n"
                                    "border-radius:10px;")
         keyboard_btn.setObjectName("keyboard_btn")
-        keyboard_btn.clicked.connect(lambda:self.open_keyboard_serial_number_dialog(QEvent.KeyPress, QEvent.KeyRelease))
+        keyboard_btn.clicked.connect(lambda : self.open_keyboard_serial_number_dialog())
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
 
         serial_number_dialog.exec()
@@ -188,9 +193,10 @@ class Micro_One_App(Ui_MainWindow):
     #     self.sel_ambiente_window.show()
 
 
+
+
 if __name__ == "__main__":
     import sys
-
     try:
         logger = make_logger()
         app = QtWidgets.QApplication(sys.argv)

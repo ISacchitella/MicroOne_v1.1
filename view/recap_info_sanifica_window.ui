@@ -200,7 +200,7 @@ border-radius:10px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 140, 255);
-image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
+image: url(:/sfondo_recap_sanifica/res/pagina_MICROONE_riepilogo_trattamento.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -223,10 +223,11 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);
+    <string notr="true">background-color: rgb(0, 134, 255);
+background-color: rgb(255, 255, 255);
                  color: rgb(255, 255, 255);
-                 border-radius:10px;
-             </string>
+             
+background-color: rgb(0, 134, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -262,41 +263,11 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>195</x>
-     <y>0</y>
-     <width>210</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 134, 255);
-
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Riepilogo Trattamento</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
-  </widget>
   <zorder>label_5</zorder>
   <zorder>recap_info_scrollarea</zorder>
   <zorder>cancel_btn_</zorder>
   <zorder>millilitri_label</zorder>
   <zorder>avanti_btn</zorder>
-  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

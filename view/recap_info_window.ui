@@ -129,7 +129,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 140, 255);
-image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
+image: url(:/sfondo_recap_info/res/pagina_MICROONE_info.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -155,10 +155,11 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 140, 255);
+    <string notr="true">background-color: rgb(0, 134, 255);
+background-color: rgb(255, 255, 255);
                  color: rgb(255, 255, 255);
-                 border-radius:10px;
-             </string>
+             
+background-color: rgb(0, 134, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -171,40 +172,10 @@ image: url(:/sfondo_microone/res/pagina_MICROONE.png);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="nome_label">
-   <property name="geometry">
-    <rect>
-     <x>195</x>
-     <y>0</y>
-     <width>210</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 134, 255);
-
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Info</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
-  </widget>
   <zorder>label_5</zorder>
   <zorder>download_btn</zorder>
   <zorder>recap_info_scrollarea</zorder>
   <zorder>cancel_btn</zorder>
-  <zorder>nome_label</zorder>
  </widget>
  <resources>
   <include location="img_resources.qrc"/>

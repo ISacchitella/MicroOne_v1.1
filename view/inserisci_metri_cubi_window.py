@@ -19,22 +19,9 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.label_5 = QtWidgets.QLabel(Inserisci_Metri_Cubi_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfonod_metri_cubi/res/pagina_MICROONE_ins_metri_cubi.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
-        self.label = QtWidgets.QLabel(Inserisci_Metri_Cubi_Window)
-        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
         self.cancel_btn_.setGeometry(QtCore.QRect(410, 0, 51, 31))
         font = QtGui.QFont()
@@ -42,10 +29,11 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -123,7 +111,6 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.metri_cubi_spinBox.raise_()
         self.keyboard_btn.raise_()
         self.cancel_btn_.raise_()
-        self.label.raise_()
 
         self.retranslateUi(Inserisci_Metri_Cubi_Window)
         self.cancel_btn_.clicked.connect(Inserisci_Metri_Cubi_Window.close)
@@ -132,7 +119,6 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
     def retranslateUi(self, Inserisci_Metri_Cubi_Window):
         _translate = QtCore.QCoreApplication.translate
         Inserisci_Metri_Cubi_Window.setWindowTitle(_translate("Inserisci_Metri_Cubi_Window", "Metri Cubi"))
-        self.label.setText(_translate("Inserisci_Metri_Cubi_Window", "Inserisci Metri Cubi"))
         self.avanti_btn.setText(_translate("Inserisci_Metri_Cubi_Window", "Riepilogo"))
 import img_resources_rc
 

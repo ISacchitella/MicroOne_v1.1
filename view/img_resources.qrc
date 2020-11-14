@@ -3,6 +3,42 @@
     <file>res/up_arrow.png</file>
     <file>res/down_arrow.png</file>
   </qresource>
+  <qresource prefix="sfondo_timer">
+    <file>res/pagina_MICROONE_trattamento_in_corso.png</file>
+  </qresource>
+  <qresource prefix="sfondo_sel_prodotto">
+    <file>res/pagina_MICROONE_selezione_prodotto.png</file>
+  </qresource>
+  <qresource prefix="sfondo_sel_ambiente">
+    <file>res/pagina_MICROONE_selezione_amb.png</file>
+  </qresource>
+  <qresource prefix="sfondo_registra_prodotto">
+    <file>res/pagina_MICROONE_ins_nome_prod.png</file>
+  </qresource>
+  <qresource prefix="sfondo_registra_ambiente">
+    <file>res/pagina_MICROONE_ins_nome_amb.png</file>
+  </qresource>
+  <qresource prefix="sfondo_recap_info">
+    <file>res/pagina_MICROONE_info.png</file>
+  </qresource>
+  <qresource prefix="sfondo_recap_sanifica">
+    <file>res/pagina_MICROONE_riepilogo_trattamento.png</file>
+  </qresource>
+  <qresource prefix="sfonod_metri_cubi">
+    <file>res/pagina_MICROONE_ins_metri_cubi.png</file>
+  </qresource>
+  <qresource prefix="sfondo_m_window">
+    <file>res/pagina_MICROONE_m_window.png.png</file>
+  </qresource>
+  <qresource prefix="sfondo_lotto">
+    <file>res/pagina_MICROONE_ins_lotto.png</file>
+  </qresource>
+  <qresource prefix="sfondo_data_scadenza">
+    <file>res/pagina_MICROONE_ins_data_scad.png</file>
+  </qresource>
+  <qresource prefix="sfondo_data_ora">
+    <file>res/pagina_MICROONE_inserisci_data_ora.png</file>
+  </qresource>
   <qresource prefix="wind">
     <file>res/wind.png</file>
   </qresource>

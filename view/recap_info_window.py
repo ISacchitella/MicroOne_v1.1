@@ -61,7 +61,7 @@ class Ui_recap_info_window(object):
         self.label_5 = QtWidgets.QLabel(recap_info_window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_recap_info/res/pagina_MICROONE_info.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(recap_info_window)
@@ -72,34 +72,21 @@ class Ui_recap_info_window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn.setFont(font)
-        self.cancel_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.cancel_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancel_btn.setIcon(icon)
         self.cancel_btn.setFlat(True)
         self.cancel_btn.setObjectName("cancel_btn")
-        self.nome_label = QtWidgets.QLabel(recap_info_window)
-        self.nome_label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.nome_label.setFont(font)
-        self.nome_label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.nome_label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.nome_label.setObjectName("nome_label")
         self.label_5.raise_()
         self.download_btn.raise_()
         self.recap_info_scrollarea.raise_()
         self.cancel_btn.raise_()
-        self.nome_label.raise_()
 
         self.retranslateUi(recap_info_window)
         self.cancel_btn.clicked.connect(recap_info_window.close)
@@ -114,7 +101,6 @@ class Ui_recap_info_window(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\';\">Prova Text Edit</span></p></body></html>"))
-        self.nome_label.setText(_translate("recap_info_window", "Info"))
 import img_resources_rc
 
 

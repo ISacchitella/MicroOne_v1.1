@@ -42,7 +42,7 @@ class Ui_Timer_Window(object):
         self.label_5 = QtWidgets.QLabel(Timer_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+"image: url(:/sfondo_timer/res/pagina_MICROONE_trattamento_in_corso.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(Timer_Window)
@@ -53,10 +53,11 @@ class Ui_Timer_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn.setFont(font)
-        self.cancel_btn.setStyleSheet("background-color: rgb(0, 140, 255);\n"
+        self.cancel_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
-"                 border-radius:10px;\n"
-"             ")
+"             \n"
+"background-color: rgb(0, 134, 255);")
         self.cancel_btn.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -88,26 +89,12 @@ class Ui_Timer_Window(object):
 "image: url(:/poweroff /res/poweroff_icon.png);")
         self.poweroff_btn.setText("")
         self.poweroff_btn.setObjectName("poweroff_btn")
-        self.label = QtWidgets.QLabel(Timer_Window)
-        self.label.setGeometry(QtCore.QRect(195, 0, 210, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setStyleSheet("background-color: rgb(0, 134, 255);\n"
-"\n"
-"color: rgb(255, 255, 255);")
-        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
         self.download_btn.raise_()
         self.label_5.raise_()
         self.description_label.raise_()
         self.timer_label.raise_()
         self.cancel_btn.raise_()
         self.poweroff_btn.raise_()
-        self.label.raise_()
 
         self.retranslateUi(Timer_Window)
         self.cancel_btn.clicked.connect(Timer_Window.close)
@@ -119,7 +106,6 @@ class Ui_Timer_Window(object):
         self.description_label.setText(_translate("Timer_Window", "ALLONTANARSI"))
         self.timer_label.setText(_translate("Timer_Window", "10"))
         self.download_btn.setText(_translate("Timer_Window", "Download"))
-        self.label.setText(_translate("Timer_Window", "Trattamento in Corso"))
 import img_resources_rc
 
 
