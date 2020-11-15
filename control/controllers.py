@@ -213,9 +213,11 @@ def open_riepilogo(current_window, current_ui, app):
     app.selected_prodotto.millilitri = app.selected_metri_cubi
     if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
         next_ui.millilitri_label.setText("ATTENZIONE: Verifica la quantità residua di prodotto nella bottiglia.")
-        #'mL necessari per il trattamento sono: ' + str(app.selected_prodotto.millilitri)
+        # 'mL necessari per il trattamento sono: ' + str(app.selected_prodotto.millilitri)
+        # next_ui.avanti_btn.setDisabled(True)
     else:
         next_ui.millilitri_label.setText("ATTENZIONE: Verifica la quantità residua di prodotto nella bottiglia.")
+        ##next_ui.avanti_btn.setDisabled(True)
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
     sessione = OrderedDict({
         'data': app.current_date.strftime("%H:%M:%S %d/%m/%y"),
