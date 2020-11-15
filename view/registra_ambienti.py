@@ -61,7 +61,7 @@ class Ui_Reg_ambiente_Window(object):
         self.metri_cubi_spinBox.setGeometry(QtCore.QRect(161, 110, 158, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(15)
+        font.setPointSize(17)
         self.metri_cubi_spinBox.setFont(font)
         self.metri_cubi_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.metri_cubi_spinBox.setFocusPolicy(QtCore.Qt.StrongFocus)
@@ -101,7 +101,7 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_textbox.setGeometry(QtCore.QRect(87, 40, 376, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(15)
+        font.setPointSize(17)
         self.nome_textbox.setFont(font)
         self.nome_textbox.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.nome_textbox.setStyleSheet("border-radius:30px;\n"

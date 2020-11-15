@@ -33,7 +33,8 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
+     <family>Segoe UI</family>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="styleSheet">

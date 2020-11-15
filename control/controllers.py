@@ -77,7 +77,6 @@ def seleziona_ambiente(ui, app):
     app.selected_ambiente = ui.comboBox.currentText().split(':')[0]
 
 
-
 def seleziona_prodotto(ui, app, prodotti):
     if ui.prodotti_comboBox.currentText() == "":
         app.selected_prodotto = None
@@ -116,7 +115,7 @@ def open_seleziona_prodotto(current_window, current_ui, app):
     next_ui = temp[1]
     # -----Middle-----
     app.current_date = current_ui.data_oggi_dateTimeEdit.dateTime().toPyDateTime()
-    app.dispositivo.set_system_time(app.current_date)#TODO
+    app.dispositivo.set_system_time(app.current_date)  # TODO
     prodotti = load_prodotti()
     prodotti_str_list = [str(prodotto) for prodotto in prodotti if
                          prodotto.data_scadenza == None or prodotto.data_scadenza > app.current_date.date()]
@@ -128,13 +127,14 @@ def open_seleziona_prodotto(current_window, current_ui, app):
         next_ui.avanti_btn.setDisabled(True)
     else:
         app.selected_prodotto = next((prodotto for prodotto in prodotti if
-                                       prodotto.nome ==
-                                       next_ui.prodotti_comboBox.currentText().split(':')[0]))
+                                      prodotto.nome ==
+                                      next_ui.prodotti_comboBox.currentText().split(':')[0]))
         next_ui.avanti_btn.setEnabled(True)
     next_ui.prodotti_comboBox.currentTextChanged.connect(
         lambda: seleziona_prodotto(next_ui, app, prodotti))
     # -----End-------
     move_to_next_window(app, current_window, current_ui, next_window, next_ui)
+
 
 def open_lotto(current_window, current_ui, app):
     # ----Init----
@@ -202,6 +202,7 @@ def open_metri_cubi(current_window, current_ui, app):
     # -----End-------
     move_to_next_window(app, current_window, current_ui, next_window, next_ui)
 
+
 def open_riepilogo(current_window, current_ui, app):
     # ----Init----
     temp = make_window(WINDOWS_LIST[app.sanifica_index][1])
@@ -211,9 +212,10 @@ def open_riepilogo(current_window, current_ui, app):
     app.selected_metri_cubi = current_ui.metri_cubi_spinBox.value()
     app.selected_prodotto.millilitri = app.selected_metri_cubi
     if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
-        next_ui.millilitri_label.setText('mL necessari per il trattamento sono: ' + str(app.selected_prodotto.millilitri))
+        next_ui.millilitri_label.setText("ATTENZIONE: Verifica la quantità residua di prodotto nella bottiglia.")
+        #'mL necessari per il trattamento sono: ' + str(app.selected_prodotto.millilitri)
     else:
-        next_ui.millilitri_label.setText("Controllare se è presente abbastanza prodotto!")
+        next_ui.millilitri_label.setText("ATTENZIONE: Verifica la quantità residua di prodotto nella bottiglia.")
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
     sessione = OrderedDict({
         'data': app.current_date.strftime("%H:%M:%S %d/%m/%y"),
@@ -228,7 +230,9 @@ def open_riepilogo(current_window, current_ui, app):
     # -----End-------
     move_to_next_window(app, current_window, current_ui, next_window, next_ui)
 
-WINDOWS_LIST = [(open_seleziona_prodotto,Ui_Seleziona_Prodotto_Window),(open_lotto, Ui_Inserisci_Lotto_Window), (open_data_scadenza, Ui_Inserisci_Data_Scadenza_Window),
+
+WINDOWS_LIST = [(open_seleziona_prodotto, Ui_Seleziona_Prodotto_Window), (open_lotto, Ui_Inserisci_Lotto_Window),
+                (open_data_scadenza, Ui_Inserisci_Data_Scadenza_Window),
                 (open_ambiente, Ui_Sel_ambiente_Window), (open_metri_cubi, Ui_Inserisci_Metri_Cubi_Window),
                 (open_riepilogo, Ui_recap_info_sanifica_window)]
 
@@ -264,14 +268,13 @@ def timeout_allontanarsi(window, ui, app):
         ui.timer.disconnect()  # TODO aumentare o diminuire scritta timer
         ui.description_label.setText("Sanificazione in corso...")
         ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
-                                           "font-size: 15px; \n")
+                                           "font-size: 20px; \n")
         ui.timer_label.setText(str(ui.tempo_sanificazione))
+        ui.timer_label.setStyleSheet("color: rgb(85,170,0);")
         ui.timer.timeout.connect(lambda: timeout_sanificazione(window, ui, app))
         ui.timer.start(1000)
         ui.timer.startTimer(ui.tempo_sanificazione.total_seconds(), timerType=Qt.VeryCoarseTimer)
         app.dispositivo.sanifica()
-
-
 
 
 def timeout_sanificazione(window, ui, app):
@@ -288,12 +291,16 @@ def timeout_sanificazione(window, ui, app):
         ui.download_btn.clicked.connect(copy_info)
         ui.timer.disconnect()
         sleep(10)
-        ui.description_label.setText("Decontaminazione in corso")
+        ui.description_label.setText("Decontaminazione in corso...")
+        ui.description_label.setStyleSheet("color: rgb(170, 0, 0);\n"
+                                           "font-size: 20px;")
         ui.decontaminazione_sec = timedelta(hours=1)
         ui.timer_label.setText(str(ui.decontaminazione_sec))
+        ui.timer_label.setStyleSheet("color: rgb(170, 0, 0);")
         ui.timer.timeout.connect(lambda: timeout_decontaminazione(window, ui, app))
         ui.timer.start(1000)
         ui.timer.startTimer(ui.decontaminazione_sec.total_seconds(), timerType=Qt.VeryCoarseTimer)
+
 
 def timeout_decontaminazione(window, ui, app):
     ui.decontaminazione_sec -= ONE_SECOND
@@ -301,3 +308,5 @@ def timeout_decontaminazione(window, ui, app):
     if ui.decontaminazione_sec.total_seconds() <= 0:
         ui.timer.stop()
         ui.description_label.setText("Decontaminazione completata!")
+        ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
+                                           "font-size: 20px;")

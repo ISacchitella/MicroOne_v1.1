@@ -52,7 +52,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.data_oggi_dateTimeEdit.setGeometry(QtCore.QRect(100, 40, 280, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(15)
+        font.setPointSize(17)
         font.setBold(False)
         font.setWeight(50)
         self.data_oggi_dateTimeEdit.setFont(font)

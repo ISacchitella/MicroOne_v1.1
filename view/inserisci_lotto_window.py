@@ -56,7 +56,7 @@ class Ui_Inserisci_Lotto_Window(object):
         self.lotto_textbox = QtWidgets.QLineEdit(Inserisci_Lotto_Window)
         self.lotto_textbox.setGeometry(QtCore.QRect(100, 40, 280, 60))
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setPointSize(17)
         self.lotto_textbox.setFont(font)
         self.lotto_textbox.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.lotto_textbox.setStyleSheet("border-radius:30px;\n"

@@ -57,7 +57,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.metri_cubi_spinBox.setGeometry(QtCore.QRect(100, 40, 280, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(15)
+        font.setPointSize(17)
         font.setBold(False)
         font.setWeight(50)
         self.metri_cubi_spinBox.setFont(font)

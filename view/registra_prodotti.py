@@ -19,7 +19,7 @@ class Ui_Reg_prodotto_Window(object):
         self.nome_textbox = QtWidgets.QLineEdit(Reg_prodotto_Window)
         self.nome_textbox.setGeometry(QtCore.QRect(90, 40, 376, 60))
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setPointSize(17)
         self.nome_textbox.setFont(font)
         self.nome_textbox.setStyleSheet("border-radius:30px;\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -100,7 +100,7 @@ class Ui_Reg_prodotto_Window(object):
         self.concentrazione_spinBox = QtWidgets.QSpinBox(Reg_prodotto_Window)
         self.concentrazione_spinBox.setGeometry(QtCore.QRect(161, 110, 158, 60))
         font = QtGui.QFont()
-        font.setPointSize(20)
+        font.setPointSize(17)
         self.concentrazione_spinBox.setFont(font)
         self.concentrazione_spinBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.concentrazione_spinBox.setFocusPolicy(QtCore.Qt.StrongFocus)

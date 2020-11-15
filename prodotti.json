@@ -1,29 +1,39 @@
 [
  {
-  "nome": "Prova Prodotto1",
-  "concentrazione": 28,
-  "data_scadenza": "01/10/20",
-  "lotto": [
-   "LT14525"
-  ]
- },
- {
-  "nome": "ocococcoco",
-  "concentrazione": 28,
-  "data_scadenza": "01/10/20",
+  "nome": "P31-Trattamento di Disinfezione Standard",
+  "concentrazione": 1,
+  "data_scadenza": "30/12/40",
   "lotto": []
  },
  {
-  "nome": "Prodotto1",
-  "concentrazione": 12,
-  "data_scadenza": "08/07/29",
+  "nome": "PEROX-Trattamento di Alta Disinfezione",
+  "concentrazione": 3,
+  "data_scadenza": "30/12/40",
+  "lotto": []
+ },
+ {
+  "nome": "P31-Trattamento d'urto",
+  "concentrazione": 5,
+  "data_scadenza": "30/12/40",
+  "lotto": []
+ },
+ {
+  "nome": "P31-Trattamento di Alta Disinfezione",
+  "concentrazione": 3,
+  "data_scadenza": "30/12/40",
+  "lotto": []
+ },
+ {
+  "nome": "PEROX-Trattamento d'urto",
+  "concentrazione": 5,
+  "data_scadenza": "30/12/40",
+  "lotto": []
+ },
+ {
+  "nome": "PEROX-Trattamento di Disinfezione Standard",
+  "concentrazione": 1,
+  "data_scadenza": "30/12/40",
   "lotto": [
-   "LT12121",
-   "imma",
-   "LT-1256",
-   "PTsmdmsmds",
-   "LT-1018",
-   "LT-1015"
   ]
  }
 ]

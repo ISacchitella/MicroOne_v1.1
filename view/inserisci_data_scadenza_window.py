@@ -52,7 +52,7 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
         self.data_scad_dateEdit.setGeometry(QtCore.QRect(100, 40, 280, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(15)
+        font.setPointSize(17)
         font.setBold(False)
         font.setWeight(50)
         self.data_scad_dateEdit.setFont(font)

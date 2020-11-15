@@ -114,7 +114,7 @@ border-radius:30px;
    <property name="font">
     <font>
      <family>Segoe UI</family>
-     <pointsize>15</pointsize>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="cursor">
@@ -183,7 +183,7 @@ border: 5px solid rgb(0, 134, 255);
    <property name="font">
     <font>
      <family>Segoe UI</family>
-     <pointsize>15</pointsize>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="layoutDirection">

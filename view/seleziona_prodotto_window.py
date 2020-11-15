@@ -19,7 +19,8 @@ class Ui_Seleziona_Prodotto_Window(object):
         self.prodotti_comboBox = QtWidgets.QComboBox(Seleziona_Prodotto_Window)
         self.prodotti_comboBox.setGeometry(QtCore.QRect(87, 40, 376, 60))
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setFamily("Segoe UI")
+        font.setPointSize(17)
         self.prodotti_comboBox.setFont(font)
         self.prodotti_comboBox.setStyleSheet("QComboBox::down-arrow {\n"
 "\n"

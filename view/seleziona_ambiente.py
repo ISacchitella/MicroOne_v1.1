@@ -24,7 +24,8 @@ class Ui_Sel_ambiente_Window(object):
         sizePolicy.setHeightForWidth(self.comboBox.sizePolicy().hasHeightForWidth())
         self.comboBox.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setFamily("Segoe UI")
+        font.setPointSize(17)
         self.comboBox.setFont(font)
         self.comboBox.setStyleSheet("QComboBox::down-arrow {\n"
 "\n"

@@ -1,12 +1,9 @@
 from datetime import date, datetime
 from os import system
-
-from PyQt5.QtCore import Qt, QEvent
+from PyQt5.QtCore import Qt, QEvent, QDate, QTime, QDateTime
 from PyQt5.QtGui import QFont, QIcon, QPixmap
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
-from PyQt5 import QtCore
-from PyQt5.uic.properties import QtGui
-
+from multiprocessing import Process
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
     open_seleziona_prodotto
 from control.keyboard_controller import Keyboard
@@ -63,10 +60,6 @@ class Micro_One_App(Ui_MainWindow):
         if 'anagrafica' not in self.info.keys():
             self.info['anagrafica'] = []
 
-    def keyPressEvent(self, event):
-        print(event.key)
-        print("Key Pressed Correctly!")
-
 
     def setup_serial_number(self):
         serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.AlignTop | Qt.AlignLeft))
@@ -96,19 +89,11 @@ class Micro_One_App(Ui_MainWindow):
                                 "color: rgb(255, 255, 255); \n"
                                 "border-radius: 10px; \n")
 
-        sn_label = QLabel("Inserisci Seriale Dispositivo", serial_number_dialog)
-        sn_label.setBuddy(sn_textbox)
-        sn_label.move(195, 0)
-        sn_label.resize(210, 31)
-        sn_label.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
-        sn_label.setStyleSheet("background-color: rgb(0, 140, 255); \n"
-                               "color: rgb(255, 255, 255); \n")
         font = QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        sn_label.setFont(font)
 
         # TASTIERA
         keyboard_btn = QPushButton(serial_number_dialog)
@@ -121,17 +106,12 @@ class Micro_One_App(Ui_MainWindow):
                                    "color: rgb(255, 255, 255);\n"
                                    "border-radius:10px;")
         keyboard_btn.setObjectName("keyboard_btn")
-        keyboard_btn.clicked.connect(lambda : self.open_keyboard_serial_number_dialog())
+        keyboard_btn.clicked.connect(Keyboard.open_keyboard)
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
 
         serial_number_dialog.exec()
 
         # ------------Bindings---------------------
-    def open_keyboard_serial_number_dialog(cls):
-        print("keyboard OPENED")
-        if not IS_RASPBERRY:
-            return
-        system(Keyboard.OPEN_COMMAND)
 
     def salva_seriale(self, serial_number_dialog, sn_textbox):
         self.dispositivo = Dispositivo(sn_textbox.text())
@@ -151,10 +131,10 @@ class Micro_One_App(Ui_MainWindow):
         self.data_oggi_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
         self.data_oggi_ui = Ui_Inserisci_Data_di_Oggi_Window()
         self.data_oggi_ui.setupUi(self.data_oggi_window)
-        QDate_temp = QtCore.QDate.currentDate()
-        QTime_temp = QtCore.QTime.currentTime()
+        QDate_temp = QDate.currentDate()
+        QTime_temp = QTime.currentTime()
         self.current_date = datetime.combine(QDate_temp.toPyDate(), QTime_temp.toPyTime())
-        self.data_oggi_ui.data_oggi_dateTimeEdit.setDateTime(QtCore.QDateTime(QDate_temp, QTime_temp))  # TODO
+        self.data_oggi_ui.data_oggi_dateTimeEdit.setDateTime(QDateTime(QDate_temp, QTime_temp))  # TODO
         self.sanifica_index = 0
         self.data_oggi_ui.avanti_btn.clicked.connect(
             lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
@@ -192,16 +172,13 @@ class Micro_One_App(Ui_MainWindow):
     #         lambda: seleziona_ambiente(self.sel_ambiente_window, self.sel_ambiente_ui, self))
     #     self.sel_ambiente_window.show()
 
-
-
-
-if __name__ == "__main__":
+def main():
     import sys
-    try:
-        logger = make_logger()
-        app = QtWidgets.QApplication(sys.argv)
-        window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint))
-        ui = Micro_One_App(window)
-        sys.exit(app.exec_())
-    except Exception as ex:
-        logger.exception(make_error_msg(ex))
+    app = QtWidgets.QApplication(sys.argv)
+    window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint))
+    ui = Micro_One_App(window)
+    sys.exit(app.exec_())
+if __name__ == "__main__":
+    app = Process(target=main, args=())
+    app.start()
+
