@@ -22,33 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567945a4-b155-44df-b0a0-ac2fe047e519" name="Default Changelist" comment="Grafica modificata-versione 2- 14 Novembre 2020">
+    <list default="true" id="567945a4-b155-44df-b0a0-ac2fe047e519" name="Default Changelist" comment="Versione 15 novembre 2020">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroOne.py" beforeDir="false" afterPath="$PROJECT_DIR$/MicroOne.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ambienti.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambienti.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/keyboard_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/keyboard_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_resources_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/img_resources_rc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/save.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/save.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prodotti.json" beforeDir="false" afterPath="$PROJECT_DIR$/prodotti.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_data_di_oggi_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_data_di_oggi_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_data_di_oggi_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_data_di_oggi_window.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_data_scadenza_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_data_scadenza_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_data_scadenza_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_data_scadenza_window.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_lotto_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_lotto_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_lotto_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_lotto_window.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_metri_cubi_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_metri_cubi_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inserisci_metri_cubi_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/inserisci_metri_cubi_window.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registra_ambienti.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/registra_ambienti.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registra_ambienti.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/registra_ambienti.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registra_prodotti.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/registra_prodotti.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registra_prodotti.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/registra_prodotti.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/res/pagina_MICROONE.png" beforeDir="false" afterPath="$PROJECT_DIR$/view/res/pagina_MICROONE.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/seleziona_ambiente.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/seleziona_ambiente.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/seleziona_ambiente.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/seleziona_ambiente.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/seleziona_prodotto_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/seleziona_prodotto_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/seleziona_prodotto_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/view/seleziona_prodotto_window.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -389,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605356065721</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Versione 15 novembre 2020">
+      <created>1605468598106</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605468598106</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -422,7 +408,8 @@
     <MESSAGE value="Primo test 14 Novembre 2020" />
     <MESSAGE value="KeyPress &amp; KeyRelease" />
     <MESSAGE value="Grafica modificata-versione 2- 14 Novembre 2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grafica modificata-versione 2- 14 Novembre 2020" />
+    <MESSAGE value="Versione 15 novembre 2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versione 15 novembre 2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1506" y="-66" width="1159" height="1028" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605382832129">
@@ -447,35 +434,35 @@
     </state>
     <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.-355.1920.1040@0.0.1920.1040" timestamp="1604344788523" />
     <state x="-1181" y="62" key="FileChooserDialogImpl/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605037223276" />
-    <state width="1882" height="243" key="GridCell.Tab.0.bottom" timestamp="1605468515541">
+    <state width="1882" height="317" key="GridCell.Tab.0.bottom" timestamp="1605471663298">
       <screen x="-1920" y="-78" width="1920" height="1040" />
     </state>
-    <state width="1882" height="243" key="GridCell.Tab.0.bottom/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605468515541" />
-    <state width="1882" height="319" key="GridCell.Tab.0.bottom/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605382199712" />
+    <state width="1882" height="317" key="GridCell.Tab.0.bottom/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605471663298" />
+    <state width="1436" height="243" key="GridCell.Tab.0.bottom/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605469430856" />
     <state width="1882" height="319" key="GridCell.Tab.0.bottom/62.0.1474.864/-1920.7.1920.1040@-1920.7.1920.1040" timestamp="1605357558972" />
     <state width="1436" height="319" key="GridCell.Tab.0.bottom/62.0.1474.864/-1920.7.1920.1040@62.0.1474.864" timestamp="1605182483298" />
     <state width="1436" height="244" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1605167528578" />
-    <state width="1882" height="243" key="GridCell.Tab.0.center" timestamp="1605468515541">
+    <state width="1882" height="317" key="GridCell.Tab.0.center" timestamp="1605471663298">
       <screen x="-1920" y="-78" width="1920" height="1040" />
     </state>
-    <state width="1882" height="243" key="GridCell.Tab.0.center/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605468515541" />
-    <state width="1882" height="319" key="GridCell.Tab.0.center/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605382199712" />
+    <state width="1882" height="317" key="GridCell.Tab.0.center/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605471663298" />
+    <state width="1436" height="243" key="GridCell.Tab.0.center/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605469430855" />
     <state width="1882" height="319" key="GridCell.Tab.0.center/62.0.1474.864/-1920.7.1920.1040@-1920.7.1920.1040" timestamp="1605357558972" />
     <state width="1436" height="319" key="GridCell.Tab.0.center/62.0.1474.864/-1920.7.1920.1040@62.0.1474.864" timestamp="1605182483298" />
     <state width="1436" height="244" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1605167528577" />
-    <state width="1882" height="243" key="GridCell.Tab.0.left" timestamp="1605468515541">
+    <state width="1882" height="317" key="GridCell.Tab.0.left" timestamp="1605471663298">
       <screen x="-1920" y="-78" width="1920" height="1040" />
     </state>
-    <state width="1882" height="243" key="GridCell.Tab.0.left/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605468515541" />
-    <state width="1882" height="319" key="GridCell.Tab.0.left/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605382199712" />
+    <state width="1882" height="317" key="GridCell.Tab.0.left/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605471663298" />
+    <state width="1436" height="243" key="GridCell.Tab.0.left/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605469430855" />
     <state width="1882" height="319" key="GridCell.Tab.0.left/62.0.1474.864/-1920.7.1920.1040@-1920.7.1920.1040" timestamp="1605357558971" />
     <state width="1436" height="319" key="GridCell.Tab.0.left/62.0.1474.864/-1920.7.1920.1040@62.0.1474.864" timestamp="1605182483298" />
     <state width="1436" height="244" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1605167528577" />
-    <state width="1882" height="243" key="GridCell.Tab.0.right" timestamp="1605468515541">
+    <state width="1882" height="317" key="GridCell.Tab.0.right" timestamp="1605471663298">
       <screen x="-1920" y="-78" width="1920" height="1040" />
     </state>
-    <state width="1882" height="243" key="GridCell.Tab.0.right/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605468515541" />
-    <state width="1882" height="319" key="GridCell.Tab.0.right/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605382199712" />
+    <state width="1882" height="317" key="GridCell.Tab.0.right/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605471663298" />
+    <state width="1436" height="243" key="GridCell.Tab.0.right/62.0.1474.864/-1920.-78.1920.1040@62.0.1474.864" timestamp="1605469430855" />
     <state width="1882" height="319" key="GridCell.Tab.0.right/62.0.1474.864/-1920.7.1920.1040@-1920.7.1920.1040" timestamp="1605357558972" />
     <state width="1436" height="319" key="GridCell.Tab.0.right/62.0.1474.864/-1920.7.1920.1040@62.0.1474.864" timestamp="1605182483298" />
     <state width="1436" height="244" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1605167528578" />
@@ -556,10 +543,10 @@
       <screen x="-1920" y="-78" width="1920" height="1040" />
     </state>
     <state x="-1395" y="-78" key="VCS.ChangeListViewerDialog/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605030569689" />
-    <state x="-1668" y="62" key="Vcs.Push.Dialog.v2" timestamp="1605356082143">
-      <screen x="-1920" y="7" width="1920" height="1040" />
+    <state x="-1668" y="-23" key="Vcs.Push.Dialog.v2" timestamp="1605468621507">
+      <screen x="-1920" y="-78" width="1920" height="1040" />
     </state>
-    <state x="-1668" y="-23" key="Vcs.Push.Dialog.v2/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605124692338" />
+    <state x="-1668" y="-23" key="Vcs.Push.Dialog.v2/62.0.1474.864/-1920.-78.1920.1040@-1920.-78.1920.1040" timestamp="1605468621507" />
     <state x="-1668" y="62" key="Vcs.Push.Dialog.v2/62.0.1474.864/-1920.7.1920.1040@-1920.7.1920.1040" timestamp="1605356082143" />
     <state x="-1828" y="14" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605382755528">
       <screen x="-1920" y="-78" width="1920" height="1040" />

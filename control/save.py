@@ -117,34 +117,34 @@ def copy_info():
 def get_system_info():
     system_info = OrderedDict()
     system_info['boot_time'] = datetime.fromtimestamp(psutil.boot_time()).strftime("%H:%M:%S %d/%m/%y")
-    system_info['os'] = platform.uname()._asdict()
-    system_info['os']['architecture'] = platform.architecture()
-    system_info['measures'] = ['bytes', 'mega bits (MB)', 'seconds', 'Mhz', 'celsius']
-    system_info['disk'] = {
-        'available_drives': ['%s:' % d for d in string.ascii_uppercase if os.path.exists('%s:' % d)],
-        'disk_usage': psutil.disk_usage('/')._asdict(),
-        'disk_partitions': psutil.disk_partitions(),
-        'disk_io_counters': psutil.disk_io_counters()._asdict()  # perdisk=True
-    }
-    system_info['memory'] = {
-        'virtual_memory': psutil.virtual_memory()._asdict(),
-        'swap_memory': psutil.swap_memory()._asdict()
-    }
-    system_info['cpu'] = {
-        "total_cores": psutil.cpu_count(logical=True),
-        "physical_cores": psutil.cpu_count(logical=False),
-        'frequency': psutil.cpu_freq()._asdict(),
-        'cpu_times': psutil.cpu_times()._asdict()
-    }
-    if platform.system() == 'Linux':
-        system_info['os']['linux_details'] = platform._syscmd_uname('-a')
-    system_info['users'] = psutil.users()
-    # system_info['network'] = {
-    #     'net_connections': psutil.net_connections(),
-    #     'net_io_counters': psutil.net_io_counters(),
-    #     'net_if_addrs': psutil.net_if_addrs(),
-    #     'net_if_stats': psutil.net_if_stats(),
+    # system_info['os'] = platform.uname()._asdict()
+    # system_info['os']['architecture'] = platform.architecture()
+    # system_info['measures'] = ['bytes', 'mega bits (MB)', 'seconds', 'Mhz', 'celsius']
+    # system_info['disk'] = {
+    #     'available_drives': ['%s:' % d for d in string.ascii_uppercase if os.path.exists('%s:' % d)],
+    #     'disk_usage': psutil.disk_usage('/')._asdict(),
+    #     'disk_partitions': psutil.disk_partitions(),
+    #     'disk_io_counters': psutil.disk_io_counters()._asdict()  # perdisk=True
     # }
+    # system_info['memory'] = {
+    #     'virtual_memory': psutil.virtual_memory()._asdict(),
+    #     'swap_memory': psutil.swap_memory()._asdict()
+    # }
+    # system_info['cpu'] = {
+    #     "total_cores": psutil.cpu_count(logical=True),
+    #     "physical_cores": psutil.cpu_count(logical=False),
+    #     'frequency': psutil.cpu_freq()._asdict(),
+    #     'cpu_times': psutil.cpu_times()._asdict()
+    # }
+    # if platform.system() == 'Linux':
+    #     system_info['os']['linux_details'] = platform._syscmd_uname('-a')
+    # system_info['users'] = psutil.users()
+    # # system_info['network'] = {
+    # #     'net_connections': psutil.net_connections(),
+    # #     'net_io_counters': psutil.net_io_counters(),
+    # #     'net_if_addrs': psutil.net_if_addrs(),
+    # #     'net_if_stats': psutil.net_if_stats(),
+    # # }
     return unpack(system_info)
 
 
