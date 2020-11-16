@@ -6,8 +6,11 @@ from multiprocessing import Process
 class Keyboard():
     OPEN_COMMAND = "dbus-send --type=method_call --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.Show"
 
+
     @classmethod
-    def open_keyboard(cls):
+    def open_keyboard(cls, focus_func):
+        if focus_func != None:
+            focus_func()
         keyboard = Process(target=Keyboard.exec_command, args=())
         keyboard.start()
 

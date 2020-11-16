@@ -3,6 +3,39 @@
 	"versione": "v1.1",
 	"anagrafica": [
 		{
+			"data": "20:48:24 16/11/20",
+			"tempo": "0:00:12",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 2,
+			"prodotto": {
+				"nome": "P31-Tratt. di Alta Disinfezione",
+				"concentrazione": 3,
+				"data_scadenza": "01/10/30",
+				"lotto": [
+					"opop",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"data": "20:37:26 16/11/20",
+			"tempo": "0:00:02",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "P31-Tratt.di Disinfezione Standard",
+				"concentrazione": 1,
+				"data_scadenza": "11/11/30",
+				"lotto": [
+					"lll",
+					""
+				]
+			}
+		},
+		{
 			"data": "11:04:13 16/11/20",
 			"tempo": "0:00:02",
 			"stato": "FALLITA",
@@ -174,6 +207,6 @@
 		}
 	],
 	"sistema": {
-		"boot_time": "12:14:13 12/11/20"
+		"boot_time": "13:14:50 16/11/20"
 	}
 }

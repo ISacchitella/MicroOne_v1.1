@@ -1,0 +1,6 @@
+Software utilizzati nello sviluppo e nell'implementazione dell'applicativo MicroOve v1.1:
+
+1.QT Designer versione 5.15.1 (GNU GPL)---qt.io/licensing
+2.PyQt5
+3.Compilatore usato PyCharm 2020.2.3 (JetBrains)
+

@@ -63,7 +63,7 @@ class Micro_One_App(Ui_MainWindow):
             self.info['anagrafica'] = []
 
     def setup_serial_number(self):
-        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.AlignTop | Qt.AlignLeft))
+        serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
         serial_number_dialog.setObjectName("serial_number_dialog")
         serial_number_dialog.setStyleSheet("background-color: rgb(255,255,255); \n")
@@ -109,7 +109,7 @@ class Micro_One_App(Ui_MainWindow):
                                    "color: rgb(255, 255, 255);\n"
                                    "border-radius:10px;")
         keyboard_btn.setObjectName("keyboard_btn")
-        keyboard_btn.clicked.connect(Keyboard.open_keyboard)
+        keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(sn_textbox.setFocus))
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
 
         serial_number_dialog.exec()
@@ -121,7 +121,7 @@ class Micro_One_App(Ui_MainWindow):
         serial_number_dialog.close()
 
     def open_recap_info_window(self):
-        self.recap_info_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
+        self.recap_info_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.recap_info_ui = Ui_recap_info_window()
         self.recap_info_ui.setupUi(self.recap_info_window)
         self.recap_info_ui.recap_info_text_edit.setText(format_info(self.info))
@@ -131,7 +131,7 @@ class Micro_One_App(Ui_MainWindow):
         self.recap_info_window.show()
 
     def open_sanifica_window(self):
-        self.data_oggi_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
+        self.data_oggi_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.data_oggi_ui = Ui_Inserisci_Data_di_Oggi_Window()
         self.data_oggi_ui.setupUi(self.data_oggi_window)
         QDate_temp = QDate.currentDate()
@@ -141,26 +141,26 @@ class Micro_One_App(Ui_MainWindow):
         self.sanifica_index = 0
         self.data_oggi_ui.avanti_btn.clicked.connect(
             lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
-        self.data_oggi_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
+        self.data_oggi_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(self.data_oggi_ui.data_oggi_dateTimeEdit.setFocus))
         self.data_oggi_window.show()
 
     def open_reg_prodotto_window(self):
-        self.reg_prodotto_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
+        self.reg_prodotto_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.reg_prodotto_ui = Ui_Reg_prodotto_Window()
         self.reg_prodotto_ui.setupUi(self.reg_prodotto_window)
         self.reg_prodotto_ui.save_btn.clicked.connect(
             lambda: salva_prodotto(self.reg_prodotto_window, self.reg_prodotto_ui))
-        self.reg_prodotto_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
+        self.reg_prodotto_ui.keyboard_btn.clicked.connect(lambda : Keyboard.open_keyboard(self.reg_prodotto_ui.nome_textbox.setFocus))
         self.reg_prodotto_window.show()
 
     def open_reg_ambiente_window(self):
-        self.reg_ambiente_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
+        self.reg_ambiente_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.reg_ambiente_ui = Ui_Reg_ambiente_Window()
         self.reg_ambiente_ui.setupUi(self.reg_ambiente_window)
         self.reg_ambiente_ui.metri_cubi_spinBox.setMaximum(MAX_METRI_CUBI)
         self.reg_ambiente_ui.save_btn.clicked.connect(
             lambda: salva_ambiente(self.reg_ambiente_window, self.reg_ambiente_ui))
-        self.reg_ambiente_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
+        self.reg_ambiente_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(self.reg_ambiente_ui.nome_textbox.setFocus))
         self.reg_ambiente_window.show()
 
     # def open_sel_ambiente_window(self):
@@ -179,7 +179,7 @@ class Micro_One_App(Ui_MainWindow):
 def main():
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint))
+    window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
     ui = Micro_One_App(window)
     sys.exit(app.exec_())
 

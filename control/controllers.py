@@ -88,15 +88,13 @@ def seleziona_prodotto(ui, app, prodotti):
 
 
 def make_window(ui_class):
-    next_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
+    next_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
     next_ui = ui_class()
     next_ui.setupUi(next_window)
-    if hasattr(next_ui, 'keyboard_btn'):
-        next_ui.keyboard_btn.clicked.connect(Keyboard.open_keyboard)
     return [next_window, next_ui]
 
 
-def move_to_next_window(app, current_window, current_ui, next_window, next_ui):
+def move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus = None):
     app.sanifica_index += 1
     if app.sanifica_index >= len(WINDOWS_LIST):
         app.sanifica_index = 0
@@ -104,6 +102,8 @@ def move_to_next_window(app, current_window, current_ui, next_window, next_ui):
     else:
         next_ui.avanti_btn.clicked.connect(lambda: WINDOWS_LIST[app.sanifica_index][0](next_window, next_ui, app))
     current_window.close()
+    if hasattr(next_ui, 'keyboard_btn'):
+        next_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(focus))
     next_window.show()
 
 
@@ -145,7 +145,7 @@ def open_lotto(current_window, current_ui, app):
     if app.selected_prodotto.lotto != None and len(app.selected_prodotto.lotto) != 0:
         next_ui.lotto_textbox.setText(app.selected_prodotto.lotto[0])
     # -----End-------
-    move_to_next_window(app, current_window, current_ui, next_window, next_ui)
+    move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=next_ui.lotto_textbox.setFocus)
 
 
 def open_data_scadenza(current_window, current_ui, app):
@@ -161,7 +161,7 @@ def open_data_scadenza(current_window, current_ui, app):
         scadenza = app.selected_prodotto.data_scadenza
         next_ui.data_scad_dateEdit.setDate(QtCore.QDate(scadenza.year, scadenza.month, scadenza.day))
     # -----End-------
-    move_to_next_window(app, current_window, current_ui, next_window, next_ui)
+    move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=next_ui.data_scad_dateEdit.setFocus)
 
 
 def open_ambiente(current_window, current_ui, app):
@@ -200,7 +200,7 @@ def open_metri_cubi(current_window, current_ui, app):
         app.selected_metri_cubi = ambiente_selezionato.metri_cubi
     next_ui.metri_cubi_spinBox.setValue(app.selected_metri_cubi)
     # -----End-------
-    move_to_next_window(app, current_window, current_ui, next_window, next_ui)
+    move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=next_ui.metri_cubi_spinBox.setFocus)
 
 
 def open_riepilogo(current_window, current_ui, app):
@@ -248,7 +248,7 @@ class Stato(Enum):
 
 
 def sanifica(window, ui, app):
-    timer_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint))
+    timer_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
     timer_ui = Ui_Timer_Window()
     timer_ui.setupUi(timer_window)
     timer_ui.poweroff_btn.clicked.connect(poweroff)
@@ -290,14 +290,14 @@ def timeout_sanificazione(window, ui, app):
         ui.description_label.setText("Trattamento completato!")
         app.info['anagrafica'][0]['stato'] = Stato.COMPLETATA.name
         save_info(app.info)
-        ui.cancel_btn.setEnabled(True)
+        ui.cancel_btn.setEnabled(False)
         ui.download_btn.setEnabled(True)
         ui.download_btn.clicked.connect(copy_info)
         ui.timer.disconnect()
         sleep(10)
         ui.description_label.setText("Decontaminazione in corso...")
         ui.description_label.setStyleSheet("color: rgb(170, 0, 0);\n"
-                                           "font-size: 20px;")
+                                           "font-size: 19px;")
         ui.decontaminazione_sec = timedelta(hours=1)
         ui.timer_label.setText(str(ui.decontaminazione_sec))
         ui.timer_label.setStyleSheet("color: rgb(170, 0, 0);")
@@ -311,6 +311,7 @@ def timeout_decontaminazione(window, ui, app):
     ui.timer_label.setText(str(ui.decontaminazione_sec))
     if ui.decontaminazione_sec.total_seconds() <= 0:
         ui.timer.stop()
+        ui.cancel_btn.setDisabled(True)
         ui.description_label.setText("Decontaminazione completata!")
         ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
                                            "font-size: 20px;")
