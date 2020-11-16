@@ -4,12 +4,14 @@ from PyQt5.QtCore import Qt, QEvent, QDate, QTime, QDateTime
 from PyQt5.QtGui import QFont, QIcon, QPixmap
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
 from multiprocessing import Process
+
+
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
     open_seleziona_prodotto
 from control.keyboard_controller import Keyboard
 from control.save import load_info, save_info, format_info, copy_info, get_system_info, \
     poweroff
-from model.ambiente_prodotto import MAX_METRI_CUBI
+from model.ambiente_prodotto import MAX_METRI_CUBI, Prodotto
 from model.dispositivo import Dispositivo, IS_RASPBERRY
 # https://stackoverflow.com/questions/7031962/qdateedit-calendar-popup
 from view.inserisci_data_di_oggi_window import Ui_Inserisci_Data_di_Oggi_Window
@@ -60,7 +62,6 @@ class Micro_One_App(Ui_MainWindow):
         if 'anagrafica' not in self.info.keys():
             self.info['anagrafica'] = []
 
-
     def setup_serial_number(self):
         serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.AlignTop | Qt.AlignLeft))
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
@@ -80,7 +81,9 @@ class Micro_One_App(Ui_MainWindow):
         sn_textbox.setStyleSheet("background-color: rgb(0, 0, 0); \n"
                                  "border-radius:30px; \n"
                                  "background-color: rgb(255, 255, 255); \n"
-                                 "border: 5px solid rgb(0,140,255); \n")
+                                 "border: 5px solid rgb(0,140,255); \n"
+                                 "font-size: 17px; \n")
+        sn_textbox.setAlignment(Qt.AlignCenter)
         # button
         sn_button = QPushButton('Salva', serial_number_dialog)
         sn_button.move(340, 240)
@@ -172,13 +175,15 @@ class Micro_One_App(Ui_MainWindow):
     #         lambda: seleziona_ambiente(self.sel_ambiente_window, self.sel_ambiente_ui, self))
     #     self.sel_ambiente_window.show()
 
+
 def main():
     import sys
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow(flags=(Qt.Dialog | Qt.FramelessWindowHint))
     ui = Micro_One_App(window)
     sys.exit(app.exec_())
+
+
 if __name__ == "__main__":
     app = Process(target=main, args=())
     app.start()
-

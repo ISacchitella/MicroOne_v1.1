@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Reg_ambiente_Window(object):
     def setupUi(self, Reg_ambiente_Window):
         Reg_ambiente_Window.setObjectName("Reg_ambiente_Window")
-        Reg_ambiente_Window.resize(480, 320)
+        Reg_ambiente_Window.resize(480, 315)
         Reg_ambiente_Window.setAutoFillBackground(False)
         Reg_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.nome_label = QtWidgets.QLabel(Reg_ambiente_Window)

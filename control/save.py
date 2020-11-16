@@ -1,5 +1,5 @@
 import json
-import os, platform
+import os
 from shutil import move, copy
 from sys import stderr
 

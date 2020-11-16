@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Inserisci_Data_Scadenza_Window(object):
     def setupUi(self, Inserisci_Data_Scadenza_Window):
         Inserisci_Data_Scadenza_Window.setObjectName("Inserisci_Data_Scadenza_Window")
-        Inserisci_Data_Scadenza_Window.resize(480, 320)
+        Inserisci_Data_Scadenza_Window.resize(480, 315)
         Inserisci_Data_Scadenza_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Data_Scadenza_Window)
         self.cancel_btn_.setGeometry(QtCore.QRect(410, 0, 51, 31))

@@ -49,10 +49,10 @@
     <widget class="QTextEdit" name="recap_info_text_edit">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>40</y>
+       <x>10</x>
+       <y>0</y>
        <width>361</width>
-       <height>191</height>
+       <height>161</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -160,6 +160,32 @@ p, li { white-space: pre-wrap; }
       </widget>
      </widget>
     </widget>
+    <widget class="QLabel" name="millilitri_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>300</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QPushButton" name="avanti_btn">
@@ -240,33 +266,9 @@ background-color: rgb(0, 134, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="millilitri_label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>290</y>
-     <width>341</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(170, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <zorder>label_5</zorder>
   <zorder>recap_info_scrollarea</zorder>
   <zorder>cancel_btn_</zorder>
-  <zorder>millilitri_label</zorder>
   <zorder>avanti_btn</zorder>
  </widget>
  <resources>

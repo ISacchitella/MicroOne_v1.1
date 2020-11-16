@@ -212,12 +212,14 @@ def open_riepilogo(current_window, current_ui, app):
     app.selected_metri_cubi = current_ui.metri_cubi_spinBox.value()
     app.selected_prodotto.millilitri = app.selected_metri_cubi
     if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
-        next_ui.millilitri_label.setText("ATTENZIONE: Verifica la quantità residua di prodotto nella bottiglia.")
-        # 'mL necessari per il trattamento sono: ' + str(app.selected_prodotto.millilitri)
-        # next_ui.avanti_btn.setDisabled(True)
+        next_ui.millilitri_label.setText("Sono necessari "+str(app.selected_prodotto.millilitri)+" mL di prodotto. \n"
+                                        "Verificare il serbatoio!")
+
     else:
-        next_ui.millilitri_label.setText("ATTENZIONE: Verifica la quantità residua di prodotto nella bottiglia.")
-        ##next_ui.avanti_btn.setDisabled(True)
+        next_ui.millilitri_label.setText("Non è possibile eseguire il trattamento!")
+        next_ui.avanti_btn.setDisabled(True)
+
+
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
     sessione = OrderedDict({
         'data': app.current_date.strftime("%H:%M:%S %d/%m/%y"),

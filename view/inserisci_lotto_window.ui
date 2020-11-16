@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>320</height>
+    <height>315</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -118,8 +118,8 @@ border-radius:10px;</string>
                     border: 5px solid rgb(0, 134, 255);
                 </string>
    </property>
-   <property name="text">
-    <string/>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="keyboard_btn">

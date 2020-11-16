@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_recap_info_window(object):
     def setupUi(self, recap_info_window):
         recap_info_window.setObjectName("recap_info_window")
-        recap_info_window.resize(480, 320)
+        recap_info_window.resize(480, 321)
         recap_info_window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.download_btn = QtWidgets.QPushButton(recap_info_window)
         self.download_btn.setEnabled(True)

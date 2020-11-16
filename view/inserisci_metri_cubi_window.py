@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Inserisci_Metri_Cubi_Window(object):
     def setupUi(self, Inserisci_Metri_Cubi_Window):
         Inserisci_Metri_Cubi_Window.setObjectName("Inserisci_Metri_Cubi_Window")
-        Inserisci_Metri_Cubi_Window.resize(480, 320)
+        Inserisci_Metri_Cubi_Window.resize(480, 315)
         Inserisci_Metri_Cubi_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_5 = QtWidgets.QLabel(Inserisci_Metri_Cubi_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))

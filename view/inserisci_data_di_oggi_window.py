@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Inserisci_Data_di_Oggi_Window(object):
     def setupUi(self, Inserisci_Data_di_Oggi_Window):
         Inserisci_Data_di_Oggi_Window.setObjectName("Inserisci_Data_di_Oggi_Window")
-        Inserisci_Data_di_Oggi_Window.resize(480, 320)
+        Inserisci_Data_di_Oggi_Window.resize(480, 315)
         Inserisci_Data_di_Oggi_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Data_di_Oggi_Window)
         self.cancel_btn_.setGeometry(QtCore.QRect(410, 0, 51, 31))
@@ -105,6 +105,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.label.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label.setStyleSheet("image: url(:/sfondo_data_ora/res/pagina_MICROONE_inserisci_data_ora.png);")
         self.label.setText("")
+        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label.setObjectName("label")
         self.label.raise_()
         self.cancel_btn_.raise_()

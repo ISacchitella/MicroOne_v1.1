@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Reg_prodotto_Window(object):
     def setupUi(self, Reg_prodotto_Window):
         Reg_prodotto_Window.setObjectName("Reg_prodotto_Window")
-        Reg_prodotto_Window.resize(480, 320)
+        Reg_prodotto_Window.resize(480, 315)
         Reg_prodotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.nome_textbox = QtWidgets.QLineEdit(Reg_prodotto_Window)
         self.nome_textbox.setGeometry(QtCore.QRect(90, 40, 376, 60))
@@ -26,6 +26,7 @@ class Ui_Reg_prodotto_Window(object):
 "background-color: rgb(255, 255, 255);\n"
 "border: 5px solid rgb(0, 134, 255);\n"
 "")
+        self.nome_textbox.setAlignment(QtCore.Qt.AlignCenter)
         self.nome_textbox.setObjectName("nome_textbox")
         self.data_scad_label = QtWidgets.QLabel(Reg_prodotto_Window)
         self.data_scad_label.setGeometry(QtCore.QRect(130, 0, 281, 20))

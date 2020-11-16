@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Inserisci_Lotto_Window(object):
     def setupUi(self, Inserisci_Lotto_Window):
         Inserisci_Lotto_Window.setObjectName("Inserisci_Lotto_Window")
-        Inserisci_Lotto_Window.resize(480, 320)
+        Inserisci_Lotto_Window.resize(480, 315)
         Inserisci_Lotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_5 = QtWidgets.QLabel(Inserisci_Lotto_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
@@ -64,7 +64,7 @@ class Ui_Inserisci_Lotto_Window(object):
 "                    background-color: rgb(255, 255, 255);\n"
 "                    border: 5px solid rgb(0, 134, 255);\n"
 "                ")
-        self.lotto_textbox.setText("")
+        self.lotto_textbox.setAlignment(QtCore.Qt.AlignCenter)
         self.lotto_textbox.setObjectName("lotto_textbox")
         self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Lotto_Window)
         self.keyboard_btn.setGeometry(QtCore.QRect(10, 235, 120, 70))
