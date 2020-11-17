@@ -58,7 +58,7 @@ class Micro_One_App(Ui_MainWindow):
             save_info(self.info)
         self.serial_label.setText("MicroOne-" + self.dispositivo.serial_number)
         if 'versione' not in self.info.keys():
-            self.info['versione'] = "v1.1"
+            self.info['versione'] = "v1.0"
         if 'anagrafica' not in self.info.keys():
             self.info['anagrafica'] = []
 
