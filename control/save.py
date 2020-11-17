@@ -1,5 +1,6 @@
 import json
 import os
+from pprint import pprint
 from shutil import move, copy
 from sys import stderr
 
@@ -101,19 +102,20 @@ def format_info(info):
     return formatted_str
 
 
-FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4')
+FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4', 'ext4', 'fuseblk')
 
 
 def copy_info():
     disk_partitions = unpack(psutil.disk_partitions())
+    pprint(disk_partitions)
     try:
         usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
-                           drive["fstype"] in FSTYPE_USB_TYPES and 'removable' in drive["opts"].split(',')))
+                           drive["fstype"] in FSTYPE_USB_TYPES and any(x in ['removable', 'relatime'] for x in drive["opts"].split(','))))
     except:
         usb_drive_path = None
     if usb_drive_path not in [None, '']:
         copy(get_file_path('info'), usb_drive_path)
-        os.rename(usb_drive_path + "info.json",usb_drive_path + 'info.txt')
+        #os.rename(usb_drive_path + "info.json",usb_drive_path + 'info.txt')
     else:
         print('Error: Nessuna Pen Drive Trovata', file=stderr)
         # raise FileNotFoundError
