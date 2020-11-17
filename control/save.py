@@ -77,7 +77,11 @@ def poweroff():
     os.system("sudo poweroff")
     # os.system("shutdown now -h")  # shut down the Pi -h is or -r will reset
 
-
+def close_timer(window, stop, arresta=None):
+    stop()
+    if arresta != None:
+        arresta()
+    window.close()
 def display_riepilogo(riepilogo):
     formatted_str = ""
     formatted_str += f"Data del trattamento: {riepilogo['data']} \n"
@@ -109,6 +113,7 @@ def copy_info():
         usb_drive_path = None
     if usb_drive_path not in [None, '']:
         copy(get_file_path('info'), usb_drive_path)
+        os.rename(usb_drive_path + "info.json",usb_drive_path + 'info.txt')
     else:
         print('Error: Nessuna Pen Drive Trovata', file=stderr)
         # raise FileNotFoundError

@@ -1,5 +1,39 @@
 {
 	"serial_number": "",
 	"versione": "v1.0",
-	"anagrafica": []
+	"anagrafica": [
+		{
+			"data": "22:05:34 17/11/20",
+			"tempo": "0:00:06",
+			"stato": "COMPLETATA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "PEROX-Tratt.di Alta Disinfezione",
+				"concentrazione": 3,
+				"data_scadenza": "01/12/30",
+				"lotto": [
+					"---"
+				]
+			}
+		},
+		{
+			"data": "22:04:54 17/11/20",
+			"tempo": "0:00:10",
+			"stato": "FALLITA",
+			"ambiente": null,
+			"metri_cubi": 1,
+			"prodotto": {
+				"nome": "P31-Tratt. d'urto",
+				"concentrazione": 5,
+				"data_scadenza": "01/12/30",
+				"lotto": [
+					"---"
+				]
+			}
+		}
+	],
+	"sistema": {
+		"boot_time": "13:14:50 16/11/20"
+	}
 }

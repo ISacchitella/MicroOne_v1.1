@@ -17,7 +17,7 @@ class Ui_Timer_Window(object):
         Timer_Window.resize(480, 320)
         Timer_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.description_label = QtWidgets.QLabel(Timer_Window)
-        self.description_label.setGeometry(QtCore.QRect(30, 83, 420, 31))
+        self.description_label.setGeometry(QtCore.QRect(30, 85, 420, 31))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
@@ -78,26 +78,25 @@ class Ui_Timer_Window(object):
 "                 border-radius:10px;\n"
 "             ")
         self.download_btn.setObjectName("download_btn")
-        self.poweroff_btn = QtWidgets.QPushButton(Timer_Window)
-        self.poweroff_btn.setGeometry(QtCore.QRect(10, 40, 81, 61))
+        self.close_btn = QtWidgets.QPushButton(Timer_Window)
+        self.close_btn.setGeometry(QtCore.QRect(20, 40, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.poweroff_btn.setFont(font)
-        self.poweroff_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.close_btn.setFont(font)
+        self.close_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:10px;\n"
 "image: url(:/poweroff /res/poweroff_icon.png);")
-        self.poweroff_btn.setText("")
-        self.poweroff_btn.setObjectName("poweroff_btn")
+        self.close_btn.setText("")
+        self.close_btn.setObjectName("close_btn")
         self.download_btn.raise_()
         self.label_5.raise_()
         self.description_label.raise_()
         self.timer_label.raise_()
         self.cancel_btn.raise_()
-        self.poweroff_btn.raise_()
+        self.close_btn.raise_()
 
         self.retranslateUi(Timer_Window)
-        self.cancel_btn.clicked.connect(Timer_Window.close)
         QtCore.QMetaObject.connectSlotsByName(Timer_Window)
 
     def retranslateUi(self, Timer_Window):

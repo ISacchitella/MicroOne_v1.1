@@ -67,7 +67,7 @@ class Micro_One_App(Ui_MainWindow):
         serial_number_dialog.setModal(True)  # impedisce alla finestra principale di interferire
         serial_number_dialog.setObjectName("serial_number_dialog")
         serial_number_dialog.setStyleSheet("background-color: rgb(255,255,255); \n")
-        serial_number_dialog.resize(480, 320)
+        serial_number_dialog.resize(480, 315)
         serial_number_dialog.setWindowTitle("Serial Number")
         label_blu = QLabel(serial_number_dialog)
         label_blu.resize(480, 320)
@@ -109,16 +109,17 @@ class Micro_One_App(Ui_MainWindow):
                                    "color: rgb(255, 255, 255);\n"
                                    "border-radius:10px;")
         keyboard_btn.setObjectName("keyboard_btn")
-        keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(sn_textbox.setFocus))
+        keyboard_btn.setFocus()#TODO
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
-
+        keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(sn_textbox.setFocus))
         serial_number_dialog.exec()
 
         # ------------Bindings---------------------
 
     def salva_seriale(self, serial_number_dialog, sn_textbox):
         self.dispositivo = Dispositivo(sn_textbox.text())
-        serial_number_dialog.close()
+        if sn_textbox.text() != '':
+            serial_number_dialog.close()
 
     def open_recap_info_window(self):
         self.recap_info_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
@@ -148,9 +149,8 @@ class Micro_One_App(Ui_MainWindow):
         self.reg_prodotto_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.reg_prodotto_ui = Ui_Reg_prodotto_Window()
         self.reg_prodotto_ui.setupUi(self.reg_prodotto_window)
-        self.reg_prodotto_ui.save_btn.clicked.connect(
-            lambda: salva_prodotto(self.reg_prodotto_window, self.reg_prodotto_ui))
-        self.reg_prodotto_ui.keyboard_btn.clicked.connect(lambda : Keyboard.open_keyboard(self.reg_prodotto_ui.nome_textbox.setFocus))
+        self.reg_prodotto_ui.save_btn.clicked.connect(lambda: salva_prodotto(self.reg_prodotto_window, self.reg_prodotto_ui))
+        self.reg_prodotto_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard_salva_prodotti(self.reg_prodotto_ui))
         self.reg_prodotto_window.show()
 
     def open_reg_ambiente_window(self):
@@ -160,7 +160,7 @@ class Micro_One_App(Ui_MainWindow):
         self.reg_ambiente_ui.metri_cubi_spinBox.setMaximum(MAX_METRI_CUBI)
         self.reg_ambiente_ui.save_btn.clicked.connect(
             lambda: salva_ambiente(self.reg_ambiente_window, self.reg_ambiente_ui))
-        self.reg_ambiente_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(self.reg_ambiente_ui.nome_textbox.setFocus))
+        self.reg_ambiente_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard_salva_ambienti(self.reg_ambiente_ui))
         self.reg_ambiente_window.show()
 
     # def open_sel_ambiente_window(self):

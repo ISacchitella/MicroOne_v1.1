@@ -9,10 +9,11 @@ from PyQt5.QtCore import Qt
 
 from control.keyboard_controller import Keyboard
 from control.save import load_ambienti, save_ambienti, load_prodotti, save_prodotti, save_info, get_system_info, \
-    copy_info, poweroff, display_riepilogo
+    copy_info, poweroff, display_riepilogo, close_timer
+from model import dispositivo
 from model.ambiente_prodotto import Ambiente, check_metri_cubi, Prodotto, TEMPO_ALLONTANAMENTO, display_ambiente, \
     MAX_METRI_CUBI
-from model.dispositivo import Dispositivo
+from model.dispositivo import Dispositivo, IS_RASPBERRY
 from view.inserisci_data_scadenza_window import Ui_Inserisci_Data_Scadenza_Window
 from view.inserisci_lotto_window import Ui_Inserisci_Lotto_Window
 from view.inserisci_metri_cubi_window import Ui_Inserisci_Metri_Cubi_Window
@@ -212,7 +213,7 @@ def open_riepilogo(current_window, current_ui, app):
     app.selected_metri_cubi = current_ui.metri_cubi_spinBox.value()
     app.selected_prodotto.millilitri = app.selected_metri_cubi
     if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
-        next_ui.millilitri_label.setText("Sono necessari "+str(app.selected_prodotto.millilitri)+" mL di prodotto. \n"
+        next_ui.millilitri_label.setText("Sono necessari "+str(app.selected_prodotto.millilitri)+" ml di prodotto. \n"
                                         "Verificare il serbatoio!")
 
     else:
@@ -247,11 +248,12 @@ class Stato(Enum):
     COMPLETATA = 1
 
 
+
 def sanifica(window, ui, app):
     timer_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
     timer_ui = Ui_Timer_Window()
     timer_ui.setupUi(timer_window)
-    timer_ui.poweroff_btn.clicked.connect(poweroff)
+    timer_ui.close_btn.clicked.connect(lambda: close_timer(timer_window, timer_ui.timer.stop))
     timer_ui.allontanarsi_sec = TEMPO_ALLONTANAMENTO
     timer_ui.tempo_sanificazione = app.dispositivo.tempo_sanificazione
     app.info['sistema'] = get_system_info()
@@ -275,6 +277,7 @@ def timeout_allontanarsi(window, ui, app):
                                            "font-size: 20px; \n")
         ui.timer_label.setText(str(ui.tempo_sanificazione))
         ui.timer_label.setStyleSheet("color: rgb(85,170,0);")
+        ui.close_btn.clicked.connect(lambda: close_timer(window, ui.timer.stop, arresta=app.dispositivo.arresta))
         ui.timer.timeout.connect(lambda: timeout_sanificazione(window, ui, app))
         ui.timer.start(1000)
         ui.timer.startTimer(ui.tempo_sanificazione.total_seconds(), timerType=Qt.VeryCoarseTimer)
@@ -285,8 +288,11 @@ def timeout_sanificazione(window, ui, app):
     ui.tempo_sanificazione -= ONE_SECOND
     ui.timer_label.setText(str(ui.tempo_sanificazione))
     if ui.tempo_sanificazione.total_seconds() <= 0:
+        ui.timer_label.setText('0')
         app.dispositivo.arresta()
         ui.timer.stop()
+        ui.close_btn.disconnect()
+        ui.close_btn.clicked.connect(lambda: close_timer(window, ui.timer.stop, arresta = None))
         ui.description_label.setText("Trattamento completato!")
         app.info['anagrafica'][0]['stato'] = Stato.COMPLETATA.name
         save_info(app.info)
@@ -297,7 +303,7 @@ def timeout_sanificazione(window, ui, app):
         sleep(10)
         ui.description_label.setText("Decontaminazione in corso...")
         ui.description_label.setStyleSheet("color: rgb(170, 0, 0);\n"
-                                           "font-size: 19px;")
+                                           "font-size: 18px;")
         ui.decontaminazione_sec = timedelta(hours=1)
         ui.timer_label.setText(str(ui.decontaminazione_sec))
         ui.timer_label.setStyleSheet("color: rgb(170, 0, 0);")

@@ -348,9 +348,9 @@ border-radius:10px;</string>
   <widget class="QLabel" name="concentrazione_label_2">
    <property name="geometry">
     <rect>
-     <x>396</x>
+     <x>380</x>
      <y>110</y>
-     <width>31</width>
+     <width>30</width>
      <height>41</height>
     </rect>
    </property>

@@ -186,7 +186,7 @@ class Ui_Reg_prodotto_Window(object):
         self.keyboard_btn.setText("")
         self.keyboard_btn.setObjectName("keyboard_btn")
         self.concentrazione_label_2 = QtWidgets.QLabel(Reg_prodotto_Window)
-        self.concentrazione_label_2.setGeometry(QtCore.QRect(396, 110, 31, 41))
+        self.concentrazione_label_2.setGeometry(QtCore.QRect(380, 110, 30, 41))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
