@@ -107,7 +107,7 @@ FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4', 'e
 
 def copy_info():
     disk_partitions = unpack(psutil.disk_partitions())
-    pprint(disk_partitions)
+    #pprint(disk_partitions)
     try:
         usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
                            drive["fstype"] in FSTYPE_USB_TYPES and any(x in ['removable', 'relatime'] for x in drive["opts"].split(','))))
