@@ -25,7 +25,7 @@ class Ui_recap_info_window(object):
         font.setBold(True)
         font.setWeight(75)
         self.download_btn.setFont(font)
-        self.download_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.download_btn.setStyleSheet("background-color: rgb(255, 0, 0);\n"
 "                 color: rgb(255, 255, 255);\n"
 "                 border-radius:10px;\n"
 "             ")
@@ -83,10 +83,21 @@ class Ui_recap_info_window(object):
         self.cancel_btn.setIcon(icon)
         self.cancel_btn.setFlat(True)
         self.cancel_btn.setObjectName("cancel_btn")
+        self.usb_download_check = QtWidgets.QLabel(recap_info_window)
+        self.usb_download_check.setGeometry(QtCore.QRect(30, 240, 271, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(-1)
+        self.usb_download_check.setFont(font)
+        self.usb_download_check.setStyleSheet("color: rgb(255, 0, 127);\n"
+"font-size: 20px;")
+        self.usb_download_check.setText("")
+        self.usb_download_check.setObjectName("usb_download_check")
         self.label_5.raise_()
         self.download_btn.raise_()
         self.recap_info_scrollarea.raise_()
         self.cancel_btn.raise_()
+        self.usb_download_check.raise_()
 
         self.retranslateUi(recap_info_window)
         self.cancel_btn.clicked.connect(recap_info_window.close)

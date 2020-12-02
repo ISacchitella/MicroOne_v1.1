@@ -24,7 +24,7 @@ class Ui_Reg_prodotto_Window(object):
         self.nome_textbox.setStyleSheet("border-radius:30px;\n"
 "background-color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
-"border: 5px solid rgb(0, 134, 255);\n"
+"border: 5px solid rgb(255,0,0);\n"
 "")
         self.nome_textbox.setAlignment(QtCore.Qt.AlignCenter)
         self.nome_textbox.setObjectName("nome_textbox")
@@ -38,6 +38,7 @@ class Ui_Reg_prodotto_Window(object):
         self.data_scad_label.setStyleSheet("color: rgb(0, 0, 0);")
         self.data_scad_label.setObjectName("data_scad_label")
         self.save_btn = QtWidgets.QPushButton(Reg_prodotto_Window)
+        self.save_btn.setEnabled(False)
         self.save_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
@@ -99,6 +100,7 @@ class Ui_Reg_prodotto_Window(object):
         self.concentrazione_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.concentrazione_label.setObjectName("concentrazione_label")
         self.concentrazione_spinBox = QtWidgets.QSpinBox(Reg_prodotto_Window)
+        self.concentrazione_spinBox.setEnabled(False)
         self.concentrazione_spinBox.setGeometry(QtCore.QRect(161, 110, 158, 60))
         font = QtGui.QFont()
         font.setPointSize(17)

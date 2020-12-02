@@ -1,10 +1,11 @@
 from datetime import date, datetime
 from os import system
+from time import sleep
+
 from PyQt5.QtCore import Qt, QEvent, QDate, QTime, QDateTime
 from PyQt5.QtGui import QFont, QIcon, QPixmap
 from PyQt5.QtWidgets import QDialog, QLineEdit, QPushButton, QLabel
 from multiprocessing import Process
-
 
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
     open_seleziona_prodotto
@@ -109,7 +110,7 @@ class Micro_One_App(Ui_MainWindow):
                                    "color: rgb(255, 255, 255);\n"
                                    "border-radius:10px;")
         keyboard_btn.setObjectName("keyboard_btn")
-        keyboard_btn.setFocus()#TODO
+        keyboard_btn.setFocus()  # TODO
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))
         keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(sn_textbox.setFocus))
         serial_number_dialog.exec()
@@ -127,7 +128,8 @@ class Micro_One_App(Ui_MainWindow):
         self.recap_info_ui.setupUi(self.recap_info_window)
         self.recap_info_ui.recap_info_text_edit.setText(format_info(self.info))
         self.info['sistema'] = get_system_info()
-        self.recap_info_ui.download_btn.clicked.connect(copy_info)
+        self.recap_info_ui.download_btn.clicked.connect(
+            lambda: copy_info(self.recap_info_ui.usb_download_check, self.recap_info_ui.download_btn))
         save_info(self.info)
         self.recap_info_window.show()
 
@@ -142,25 +144,31 @@ class Micro_One_App(Ui_MainWindow):
         self.sanifica_index = 0
         self.data_oggi_ui.avanti_btn.clicked.connect(
             lambda: open_seleziona_prodotto(self.data_oggi_window, self.data_oggi_ui, self))
-        self.data_oggi_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard(self.data_oggi_ui.data_oggi_dateTimeEdit.setFocus))
+        self.data_oggi_ui.keyboard_btn.clicked.connect(
+            lambda: Keyboard.open_keyboard(self.data_oggi_ui.data_oggi_dateTimeEdit.setFocus))
         self.data_oggi_window.show()
 
     def open_reg_prodotto_window(self):
-        self.reg_prodotto_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
+        self.reg_prodotto_window = QtWidgets.QWidget(
+            flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.reg_prodotto_ui = Ui_Reg_prodotto_Window()
         self.reg_prodotto_ui.setupUi(self.reg_prodotto_window)
-        self.reg_prodotto_ui.save_btn.clicked.connect(lambda: salva_prodotto(self.reg_prodotto_window, self.reg_prodotto_ui))
-        self.reg_prodotto_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard_salva_prodotti(self.reg_prodotto_ui))
+        self.reg_prodotto_ui.save_btn.clicked.connect(
+            lambda: salva_prodotto(self.reg_prodotto_window, self.reg_prodotto_ui))
+        self.reg_prodotto_ui.keyboard_btn.clicked.connect(
+            lambda: Keyboard.open_keyboard_salva_prodotti(self.reg_prodotto_ui))
         self.reg_prodotto_window.show()
 
     def open_reg_ambiente_window(self):
-        self.reg_ambiente_window = QtWidgets.QWidget(flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
+        self.reg_ambiente_window = QtWidgets.QWidget(
+            flags=(Qt.Widget | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
         self.reg_ambiente_ui = Ui_Reg_ambiente_Window()
         self.reg_ambiente_ui.setupUi(self.reg_ambiente_window)
         self.reg_ambiente_ui.metri_cubi_spinBox.setMaximum(MAX_METRI_CUBI)
         self.reg_ambiente_ui.save_btn.clicked.connect(
             lambda: salva_ambiente(self.reg_ambiente_window, self.reg_ambiente_ui))
-        self.reg_ambiente_ui.keyboard_btn.clicked.connect(lambda: Keyboard.open_keyboard_salva_ambienti(self.reg_ambiente_ui))
+        self.reg_ambiente_ui.keyboard_btn.clicked.connect(
+            lambda: Keyboard.open_keyboard_salva_ambienti(self.reg_ambiente_ui))
         self.reg_ambiente_window.show()
 
     # def open_sel_ambiente_window(self):

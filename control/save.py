@@ -3,7 +3,9 @@ import os
 from pprint import pprint
 from shutil import move, copy
 from sys import stderr
-
+from time import sleep
+from PyQt5 import QtCore
+from PyQt5.QtCore import Qt
 import psutil
 import string
 from collections import OrderedDict
@@ -11,12 +13,15 @@ from datetime import date, datetime
 
 from model.ambiente_prodotto import Ambiente, Prodotto
 from model.dispositivo import IS_RASPBERRY
+from view import recap_info_window
+
+INFO = "logMicroOne"
 
 
 def get_file_path(file_name, extension='.json'):
     path = os.path.join(os.path.abspath(os.getcwd()), file_name + extension)
     if not os.path.exists(path):
-        inizializer = {'info': {}, 'prodotti': [], 'ambienti': []}
+        inizializer = {INFO: {}, 'prodotti': [], 'ambienti': []}
         json.dump(inizializer[file_name], open(path, 'w+'), indent=1)
     return path
 
@@ -54,12 +59,13 @@ def load_prodotti():
             data_scadenza = date(int(data_scadenza_l[2]) + 2000, int(data_scadenza_l[1]), int(data_scadenza_l[0]))
         else:
             data_scadenza = None
-        prodotti.append(Prodotto(prodotto['nome'], prodotto['concentrazione'], data_scadenza = data_scadenza, lotto=prodotto['lotto']))
+        prodotti.append(Prodotto(prodotto['nome'], prodotto['concentrazione'], data_scadenza=data_scadenza,
+                                 lotto=prodotto['lotto']))
     return prodotti
 
 
 def load_info():
-    info = json.load(open(get_file_path('info')))
+    info = json.load(open(get_file_path(INFO)))
     if not isinstance(info, dict):
         return OrderedDict()
     elif len(info) == 0:
@@ -69,7 +75,7 @@ def load_info():
 
 
 def save_info(info):
-    json.dump(info, open(get_file_path('info'), 'w'), indent='\t')
+    json.dump(info, open(get_file_path(INFO), 'w'), indent='\t')
 
 
 def poweroff():
@@ -78,11 +84,14 @@ def poweroff():
     os.system("sudo poweroff")
     # os.system("shutdown now -h")  # shut down the Pi -h is or -r will reset
 
+
 def close_timer(window, stop, arresta=None):
     stop()
     if arresta != None:
         arresta()
     window.close()
+
+
 def display_riepilogo(riepilogo):
     formatted_str = ""
     formatted_str += f"Data del trattamento: {riepilogo['data']} \n"
@@ -105,20 +114,48 @@ def format_info(info):
 FSTYPE_USB_TYPES = ('NTFS', 'FAT32', 'exFAT', 'HFS+', 'EXT2', 'EXT3', 'EXT4', 'ext4', 'fuseblk')
 
 
-def copy_info():
+def download_status_timer(timer, seconds, label):
+    seconds[0] -= 1
+    if seconds[0] <= 0:
+        timer.stop()
+        label.setText("Download Completato!")
+
+
+def copy_info(label, btn):
     disk_partitions = unpack(psutil.disk_partitions())
-    #pprint(disk_partitions)
+    pprint(disk_partitions)
     try:
         usb_drive_path = next((drive["mountpoint"] for drive in disk_partitions if
-                           drive["fstype"] in FSTYPE_USB_TYPES and any(x in ['removable', 'relatime'] for x in drive["opts"].split(','))))
+                               drive["fstype"] in FSTYPE_USB_TYPES and any(
+                                   x in ['removable', 'relatime'] for x in drive["opts"].split(','))))
     except:
         usb_drive_path = None
+    print(usb_drive_path)
     if usb_drive_path not in [None, '']:
-        copy(get_file_path('info'), usb_drive_path)
-        #os.rename(usb_drive_path + "info.json",usb_drive_path + 'info.txt')
+        label.setStyleSheet("color: rgb(85,170,0); \n"
+                            "font-size: 20px; \n")
+        btn.setStyleSheet('''background-color: rgb(0, 134, 255);
+                 color: rgb(255, 255, 255);
+                 border-radius:10px;
+             ''')
+        timer = QtCore.QTimer()
+        seconds = [7]
+        timer.timeout.connect(lambda: download_status_timer(timer,seconds, label))
+        timer.start(1000)
+        try:
+            copy(get_file_path(INFO), usb_drive_path)
+        except:
+            label.setText("Errore Download!")
+        else:
+            label.setText("Download in corso!")
+            timer.startTimer(seconds[0], timerType=Qt.VeryCoarseTimer)
+        # os.rename(usb_drive_path + "logMicroOne.json",usb_drive_path + 'info.txt')
     else:
         print('Error: Nessuna Pen Drive Trovata', file=stderr)
-        # raise FileNotFoundError
+        label.setStyleSheet("color: rgb(255,0,0); \n"
+                            "font-size: 20px; \n")
+        label.setText("Inserire Chiavetta USB!")
+
 
 
 def get_system_info():

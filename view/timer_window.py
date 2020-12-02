@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Timer_Window(object):
     def setupUi(self, Timer_Window):
         Timer_Window.setObjectName("Timer_Window")
-        Timer_Window.resize(480, 320)
+        Timer_Window.resize(480, 315)
         Timer_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.description_label = QtWidgets.QLabel(Timer_Window)
         self.description_label.setGeometry(QtCore.QRect(30, 85, 420, 31))

@@ -11,8 +11,33 @@ class Keyboard():
         if ui != None:
             if ui.nome_textbox.text() == '':
                 ui.nome_textbox.setFocus()
+                ui.metri_cubi_spinBox.setDisabled(True)
+                ui.save_btn.setDisabled(True)
             else:
+                ui.nome_textbox.setStyleSheet('''border-radius:30px; 
+                                background-color: rgb(0, 0, 0);
+                                    background-color: rgb(255, 255, 255);
+                                    border: 5px solid rgb(0, 134, 255);
+                                ''')
+                ui.metri_cubi_spinBox.setDisabled(False)
+                ui.metri_cubi_spinBox.setStyleSheet('''QSpinBox::down-button {
+  image: url(:/arrows/res/down_arrow.png);
+  width: 50px;
+}
+
+QSpinBox::up-button {
+  image: url(:/arrows/res/up_arrow.png);
+  width: 50px;
+}
+
+QSpinBox {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgb(255, 0, 0);
+  border-radius: 30px;
+}''')
                 ui.metri_cubi_spinBox.setFocus()
+                ui.save_btn.setDisabled(False)
         keyboard = Process(target=Keyboard.exec_command, args=())
         keyboard.start()
 
@@ -21,8 +46,33 @@ class Keyboard():
         if ui != None:
             if ui.nome_textbox.text() == '':
                 ui.nome_textbox.setFocus()
+                ui.concentrazione_spinBox.setDisabled(True)
+                ui.save_btn.setDisabled(True)
             else:
+                ui.nome_textbox.setStyleSheet('''border-radius:30px; 
+                                                background-color: rgb(0, 0, 0);
+                                                    background-color: rgb(255, 255, 255);
+                                                    border: 5px solid rgb(0, 134, 255);
+                                                ''')
+                ui.concentrazione_spinBox.setDisabled(False)
+                ui.concentrazione_spinBox.setStyleSheet('''QSpinBox::down-button {
+                  image: url(:/arrows/res/down_arrow.png);
+                  width: 50px;
+                }
+
+                QSpinBox::up-button {
+                  image: url(:/arrows/res/up_arrow.png);
+                  width: 50px;
+                }
+
+                QSpinBox {
+                  color: rgb(0, 0, 0);
+                  background-color: rgb(255, 255, 255);
+                  border: 5px solid rgb(255, 0, 0);
+                  border-radius: 30px;
+                }''')
                 ui.concentrazione_spinBox.setFocus()
+                ui.save_btn.setDisabled(False)
         keyboard = Process(target=Keyboard.exec_command, args=())
         keyboard.start()
 

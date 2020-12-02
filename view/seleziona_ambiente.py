@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Sel_ambiente_Window(object):
     def setupUi(self, Sel_ambiente_Window):
         Sel_ambiente_Window.setObjectName("Sel_ambiente_Window")
-        Sel_ambiente_Window.resize(480, 320)
+        Sel_ambiente_Window.resize(480, 315)
         Sel_ambiente_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.comboBox = QtWidgets.QComboBox(Sel_ambiente_Window)
         self.comboBox.setGeometry(QtCore.QRect(87, 40, 376, 60))

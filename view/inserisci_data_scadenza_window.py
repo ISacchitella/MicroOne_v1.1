@@ -85,7 +85,7 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
 "\n"
 "}")
         self.data_scad_dateEdit.setAlignment(QtCore.Qt.AlignCenter)
-        self.data_scad_dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 10, 1), QtCore.QTime(0, 0, 0)))
+        self.data_scad_dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2050, 10, 1), QtCore.QTime(0, 0, 0)))
         self.data_scad_dateEdit.setObjectName("data_scad_dateEdit")
         self.keyboard_btn = QtWidgets.QPushButton(Inserisci_Data_Scadenza_Window)
         self.keyboard_btn.setGeometry(QtCore.QRect(10, 235, 120, 70))

@@ -45,6 +45,7 @@ class Ui_Reg_ambiente_Window(object):
         self.metri_cubi_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.metri_cubi_label.setObjectName("metri_cubi_label")
         self.save_btn = QtWidgets.QPushButton(Reg_ambiente_Window)
+        self.save_btn.setEnabled(False)
         self.save_btn.setGeometry(QtCore.QRect(340, 240, 120, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
@@ -58,6 +59,7 @@ class Ui_Reg_ambiente_Window(object):
 "                ")
         self.save_btn.setObjectName("save_btn")
         self.metri_cubi_spinBox = QtWidgets.QSpinBox(Reg_ambiente_Window)
+        self.metri_cubi_spinBox.setEnabled(False)
         self.metri_cubi_spinBox.setGeometry(QtCore.QRect(161, 110, 158, 60))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
@@ -107,7 +109,7 @@ class Ui_Reg_ambiente_Window(object):
         self.nome_textbox.setStyleSheet("border-radius:30px;\n"
 "                    background-color: rgb(0, 0, 0);\n"
 "                    background-color: rgb(255, 255, 255);\n"
-"                    border: 5px solid rgb(0, 134, 255);\n"
+"border: 5px solid rgb(255, 0, 0);\n"
 "                ")
         self.nome_textbox.setText("")
         self.nome_textbox.setAlignment(QtCore.Qt.AlignCenter)

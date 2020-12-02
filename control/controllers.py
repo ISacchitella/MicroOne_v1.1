@@ -75,7 +75,8 @@ def salva_ambiente(window, ui):
 
 
 def seleziona_ambiente(ui, app):
-    app.selected_ambiente = ui.comboBox.currentText().split(':')[0]
+    if ui.comboBox.currentText() != "":
+        app.selected_ambiente = ui.comboBox.currentText().split(':')[0]
 
 
 def seleziona_prodotto(ui, app, prodotti):
@@ -95,7 +96,7 @@ def make_window(ui_class):
     return [next_window, next_ui]
 
 
-def move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus = None):
+def move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=None):
     app.sanifica_index += 1
     if app.sanifica_index >= len(WINDOWS_LIST):
         app.sanifica_index = 0
@@ -119,7 +120,7 @@ def open_seleziona_prodotto(current_window, current_ui, app):
     app.dispositivo.set_system_time(app.current_date)  # TODO
     prodotti = load_prodotti()
     prodotti_str_list = [str(prodotto) for prodotto in prodotti if
-                         prodotto.data_scadenza == None or prodotto.data_scadenza > app.current_date.date()]
+                         prodotto.data_scadenza == None or prodotto.data_scadenza > app.current_date.date() or prodotto.data_scadenza < app.current_date.date()]
     prodotti_str_list.insert(0, "")
     next_ui.prodotti_comboBox.clear()
     next_ui.prodotti_comboBox.addItems(prodotti_str_list)
@@ -145,6 +146,9 @@ def open_lotto(current_window, current_ui, app):
     # -----Middle-----
     if app.selected_prodotto.lotto != None and len(app.selected_prodotto.lotto) != 0:
         next_ui.lotto_textbox.setText(app.selected_prodotto.lotto[0])
+    else:
+        next_ui.lotto_textbox.setText("---")
+
     # -----End-------
     move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=next_ui.lotto_textbox.setFocus)
 
@@ -162,7 +166,8 @@ def open_data_scadenza(current_window, current_ui, app):
         scadenza = app.selected_prodotto.data_scadenza
         next_ui.data_scad_dateEdit.setDate(QtCore.QDate(scadenza.year, scadenza.month, scadenza.day))
     # -----End-------
-    move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=next_ui.data_scad_dateEdit.setFocus)
+    move_to_next_window(app, current_window, current_ui, next_window, next_ui,
+                        focus=next_ui.data_scad_dateEdit.setFocus)
 
 
 def open_ambiente(current_window, current_ui, app):
@@ -180,6 +185,7 @@ def open_ambiente(current_window, current_ui, app):
         save_prodotti(prodotti)
     next_ui.comboBox.clear()
     ambienti = load_ambienti()
+    next_ui.comboBox.addItem("")
     for ambiente in ambienti:
         next_ui.comboBox.addItem(display_ambiente(ambiente))
     next_ui.comboBox.currentTextChanged.connect(
@@ -200,8 +206,10 @@ def open_metri_cubi(current_window, current_ui, app):
         ambiente_selezionato = next((ambiente for ambiente in ambienti if ambiente.nome == app.selected_ambiente))
         app.selected_metri_cubi = ambiente_selezionato.metri_cubi
     next_ui.metri_cubi_spinBox.setValue(app.selected_metri_cubi)
+
     # -----End-------
-    move_to_next_window(app, current_window, current_ui, next_window, next_ui, focus=next_ui.metri_cubi_spinBox.setFocus)
+    move_to_next_window(app, current_window, current_ui, next_window, next_ui,
+                        focus=next_ui.metri_cubi_spinBox.setFocus)
 
 
 def open_riepilogo(current_window, current_ui, app):
@@ -213,13 +221,13 @@ def open_riepilogo(current_window, current_ui, app):
     app.selected_metri_cubi = current_ui.metri_cubi_spinBox.value()
     app.selected_prodotto.millilitri = app.selected_metri_cubi
     if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
-        next_ui.millilitri_label.setText("Sono necessari "+str(app.selected_prodotto.millilitri)+" ml di prodotto. \n"
-                                        "Verificare il serbatoio!")
+        next_ui.millilitri_label.setText(
+            "Sono necessari " + str(app.selected_prodotto.millilitri) + " ml di prodotto. \n"
+                                                                        "Verificare il serbatoio!")
 
     else:
         next_ui.millilitri_label.setText("Non è possibile eseguire il trattamento!")
         next_ui.avanti_btn.setDisabled(True)
-
 
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
     sessione = OrderedDict({
@@ -246,7 +254,6 @@ WINDOWS_LIST = [(open_seleziona_prodotto, Ui_Seleziona_Prodotto_Window), (open_l
 class Stato(Enum):
     FALLITA = 0
     COMPLETATA = 1
-
 
 
 def sanifica(window, ui, app):
@@ -292,13 +299,12 @@ def timeout_sanificazione(window, ui, app):
         app.dispositivo.arresta()
         ui.timer.stop()
         ui.close_btn.disconnect()
-        ui.close_btn.clicked.connect(lambda: close_timer(window, ui.timer.stop, arresta = None))
+        ui.close_btn.clicked.connect(lambda: close_timer(window, ui.timer.stop, arresta=None))
         ui.description_label.setText("Trattamento completato!")
         app.info['anagrafica'][0]['stato'] = Stato.COMPLETATA.name
         save_info(app.info)
         ui.cancel_btn.setEnabled(False)
         ui.download_btn.setEnabled(True)
-        ui.download_btn.clicked.connect(copy_info)
         ui.timer.disconnect()
         sleep(10)
         ui.description_label.setText("Decontaminazione in corso...")

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Seleziona_Prodotto_Window(object):
     def setupUi(self, Seleziona_Prodotto_Window):
         Seleziona_Prodotto_Window.setObjectName("Seleziona_Prodotto_Window")
-        Seleziona_Prodotto_Window.resize(480, 320)
+        Seleziona_Prodotto_Window.resize(480, 315)
         Seleziona_Prodotto_Window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.prodotti_comboBox = QtWidgets.QComboBox(Seleziona_Prodotto_Window)
         self.prodotti_comboBox.setGeometry(QtCore.QRect(87, 40, 376, 60))

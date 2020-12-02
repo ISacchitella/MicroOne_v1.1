@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_recap_info_sanifica_window(object):
     def setupUi(self, recap_info_sanifica_window):
         recap_info_sanifica_window.setObjectName("recap_info_sanifica_window")
-        recap_info_sanifica_window.resize(480, 320)
+        recap_info_sanifica_window.resize(480, 315)
         recap_info_sanifica_window.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.recap_info_scrollarea = QtWidgets.QScrollArea(recap_info_sanifica_window)
         self.recap_info_scrollarea.setGeometry(QtCore.QRect(10, 50, 441, 231))
