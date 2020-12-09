@@ -4,7 +4,7 @@ from multiprocessing import Process
 
 
 class Keyboard():
-    OPEN_COMMAND = "dbus-send --type=method_call --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.Show"
+    OPEN_COMMAND = "dbus-send --type=method_call --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.ToggleVisible"
 
     @classmethod
     def open_keyboard_salva_ambienti(cls, ui):

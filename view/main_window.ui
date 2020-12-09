@@ -68,10 +68,14 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+     <string notr="true">
+QPushButton:pressed{background-color: rgb(10, 57, 126);}
+
+QPushButton{
+background-color: rgb(255, 255, 255);
       border: 5px solid rgb(0, 134, 255);
 border-radius:50px;
-     </string>
+     }</string>
     </property>
     <property name="text">
      <string/>
@@ -108,10 +112,14 @@ border-radius:50px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+     <string notr="true">QPushButton:pressed{background-color: rgb(10, 57, 126);}
+
+QPushButton{
+
+background-color: rgb(255, 255, 255);
       border: 5px solid rgb(0, 134, 255);
       border-radius:50px;
-     </string>
+     }</string>
     </property>
     <property name="text">
      <string/>
@@ -142,10 +150,11 @@ border-radius:50px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
+     <string notr="true">QPushButton{color: rgb(255, 255, 255);
 image: url(:/poweroff /res/poweroff_icon.png);
 background-color: rgb(255, 255, 255);
-border-radius:10px;</string>
+border-radius:10px;}
+QPushButton:pressed{background-color: rgb(10, 57, 126);}</string>
     </property>
     <property name="text">
      <string/>
@@ -211,11 +220,14 @@ border-radius:10px;</string>
      <number>10</number>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
+     <string notr="true">QPushButton:pressed{background-color: rgb(10, 57, 126);}
+
+QPushButton{
+color: rgb(0, 0, 0);
       background-color: rgb(255, 255, 255);
       border-radius:75px;
       border: 5px solid rgb(0, 134, 255);
-     </string>
+   }</string>
     </property>
     <property name="text">
      <string/>
@@ -349,7 +361,8 @@ color: rgb(0, 0, 0);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">QPushButton{background-color: rgb(255, 255, 255);}
+QPushButton:pressed{background-color: rgb(10, 57, 126);}</string>
     </property>
     <property name="text">
      <string/>

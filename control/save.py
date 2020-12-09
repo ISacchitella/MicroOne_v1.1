@@ -118,6 +118,8 @@ def download_status_timer(timer, seconds, label):
     seconds[0] -= 1
     if seconds[0] <= 0:
         timer.stop()
+        label.setStyleSheet("color: rgb(85,170,0); \n"
+                            "font-size: 20px; \n")
         label.setText("Download Completato!")
 
 
@@ -132,22 +134,26 @@ def copy_info(label, btn):
         usb_drive_path = None
     print(usb_drive_path)
     if usb_drive_path not in [None, '']:
-        label.setStyleSheet("color: rgb(85,170,0); \n"
-                            "font-size: 20px; \n")
+
         btn.setStyleSheet('''background-color: rgb(0, 134, 255);
                  color: rgb(255, 255, 255);
                  border-radius:10px;
              ''')
+
         timer = QtCore.QTimer()
-        seconds = [7]
+        seconds = [20]
         timer.timeout.connect(lambda: download_status_timer(timer,seconds, label))
-        timer.start(1000)
+        timer.start(2000)
         try:
             copy(get_file_path(INFO), usb_drive_path)
         except:
+            label.setStyleSheet("color: rgb(255, 0, 0); \n"
+                                "font-size: 20px; \n")
             label.setText("Errore Download!")
         else:
-            label.setText("Download in corso!")
+            label.setStyleSheet("color: rgb(226, 119, 30); \n"
+                                "font-size: 20px; \n")
+            label.setText("Download in corso...")
             timer.startTimer(seconds[0], timerType=Qt.VeryCoarseTimer)
         # os.rename(usb_drive_path + "logMicroOne.json",usb_drive_path + 'info.txt')
     else:

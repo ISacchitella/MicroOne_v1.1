@@ -226,10 +226,11 @@ def open_riepilogo(current_window, current_ui, app):
                                                                         "Verificare il serbatoio!")
 
     else:
-        next_ui.millilitri_label.setText("Non è possibile eseguire il trattamento!")
+        next_ui.millilitri_label.setText("Non è possibile eseguire" + "\n" +"il trattamento!")
         next_ui.avanti_btn.setDisabled(True)
 
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
+
     sessione = OrderedDict({
         'data': app.current_date.strftime("%H:%M:%S %d/%m/%y"),
         'tempo': str(app.dispositivo.tempo_sanificazione),

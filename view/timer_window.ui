@@ -110,11 +110,12 @@ image: url(:/sfondo_timer/res/pagina_MICROONE_trattamento_in_corso.png);</string
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 134, 255);
+    <string notr="true">QPushButton{background-color: rgb(0, 134, 255);
 background-color: rgb(255, 255, 255);
                  color: rgb(255, 255, 255);
              
-background-color: rgb(0, 134, 255);</string>
+background-color: rgb(0, 134, 255);}
+QPushButton:pressed{background-color: rgb(10, 57, 126);}</string>
    </property>
    <property name="text">
     <string/>

@@ -1,30 +1,6 @@
 [
  {
-  "nome": "PEROX-Tratt.di Alta Disinfezione",
-  "concentrazione": 3,
-  "data_scadenza": "01/10/19",
-  "lotto": [
-   "---"
-  ]
- },
- {
   "nome": "PEROX-Tratt. d'urto",
-  "concentrazione": 5,
-  "data_scadenza": "01/12/30",
-  "lotto": [
-   "---"
-  ]
- },
- {
-  "nome": "PEROX-Tratt.di Disinfezione Standard",
-  "concentrazione": 1,
-  "data_scadenza": "01/12/30",
-  "lotto": [
-   "---"
-  ]
- },
- {
-  "nome": "P31-Tratt. d'urto",
   "concentrazione": 5,
   "data_scadenza": "01/12/30",
   "lotto": [
@@ -40,9 +16,33 @@
   ]
  },
  {
+  "nome": "PEROX-Tratt.di Disinfezione Standard",
+  "concentrazione": 1,
+  "data_scadenza": "01/12/30",
+  "lotto": [
+   "---"
+  ]
+ },
+ {
   "nome": "P31-Tratt.di Disinfezione Standard",
   "concentrazione": 1,
   "data_scadenza": "01/09/16",
+  "lotto": [
+   "---"
+  ]
+ },
+ {
+  "nome": "PEROX-Tratt.di Alta Disinfezione",
+  "concentrazione": 3,
+  "data_scadenza": "01/10/19",
+  "lotto": [
+   "---"
+  ]
+ },
+ {
+  "nome": "P31-Tratt. d'urto",
+  "concentrazione": 5,
+  "data_scadenza": "01/12/30",
   "lotto": [
    "---"
   ]

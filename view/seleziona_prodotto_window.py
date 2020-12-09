@@ -82,11 +82,12 @@ class Ui_Seleziona_Prodotto_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.cancel_btn_.setStyleSheet("QPushButton{background-color: rgb(0, 134, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
 "             \n"
-"background-color: rgb(0, 134, 255);")
+"background-color: rgb(0, 134, 255);}\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}")
         self.cancel_btn_.setText("")
         self.cancel_btn_.setIcon(icon)
         self.cancel_btn_.setFlat(True)
@@ -99,10 +100,13 @@ class Ui_Seleziona_Prodotto_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.avanti_btn.setFont(font)
-        self.avanti_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.avanti_btn.setStyleSheet("QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"QPushButton{\n"
+"background-color: rgb(0, 134, 255);\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
-"border-radius:10px;")
+"border-radius:10px;\n"
+"}")
         self.avanti_btn.setObjectName("avanti_btn")
         self.cancel_btn_1.raise_()
         self.label_5.raise_()

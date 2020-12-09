@@ -53,11 +53,12 @@ class Ui_Timer_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn.setFont(font)
-        self.cancel_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.cancel_btn.setStyleSheet("QPushButton{background-color: rgb(0, 134, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
 "             \n"
-"background-color: rgb(0, 134, 255);")
+"background-color: rgb(0, 134, 255);}\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}")
         self.cancel_btn.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)

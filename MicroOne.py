@@ -104,11 +104,12 @@ class Micro_One_App(Ui_MainWindow):
         keyboard_btn.setEnabled(True)
         keyboard_btn.move(10, 235)
         keyboard_btn.resize(120, 70)
-        keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                   "image: url(:/keyboard/res/keyboard.png);\n"
-
-                                   "color: rgb(255, 255, 255);\n"
-                                   "border-radius:10px;")
+        keyboard_btn.setStyleSheet("QPushButton{\n"
+        "background-color: rgb(255, 255, 255);\n"
+        "image: url(:/keyboard/res/keyboard.png);\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius:10px;\n}"
+        "QPushButton:pressed{background-color: rgb(10, 57, 126);}\n")
         keyboard_btn.setObjectName("keyboard_btn")
         keyboard_btn.setFocus()  # TODO
         sn_button.clicked.connect(lambda: self.salva_seriale(serial_number_dialog, sn_textbox))

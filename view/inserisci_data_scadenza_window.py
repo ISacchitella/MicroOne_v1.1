@@ -23,11 +23,15 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn_.setFont(font)
-        self.cancel_btn_.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.cancel_btn_.setStyleSheet("\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"QPushButton{\n"
+"background-color: rgb(0, 134, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
 "             \n"
-"background-color: rgb(0, 134, 255);")
+"background-color: rgb(0, 134, 255);\n"
+"}")
         self.cancel_btn_.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -42,10 +46,19 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
         font.setBold(True)
         font.setWeight(75)
         self.avanti_btn.setFont(font)
-        self.avanti_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.avanti_btn.setStyleSheet("\n"
 "\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);;}\n"
+"\n"
+"\n"
+"\n"
+"QPushButton\n"
+"{\n"
+"background-color: rgb(0, 134, 255);\n"
 "color: rgb(255, 255, 255);\n"
-"border-radius:10px;")
+"border-radius:10px;\n"
+"}\n"
+"")
         self.avanti_btn.setObjectName("avanti_btn")
         self.data_scad_dateEdit = QtWidgets.QDateEdit(Inserisci_Data_Scadenza_Window)
         self.data_scad_dateEdit.setEnabled(True)
@@ -92,11 +105,15 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.keyboard_btn.setFont(font)
-        self.keyboard_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.keyboard_btn.setStyleSheet("\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"QPushButton{\n"
+"background-color: rgb(255, 255, 255);\n"
 "image: url(:/keyboard/res/keyboard.png);\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
-"border-radius:10px;")
+"border-radius:10px;\n"
+"}")
         self.keyboard_btn.setText("")
         self.keyboard_btn.setFlat(False)
         self.keyboard_btn.setObjectName("keyboard_btn")

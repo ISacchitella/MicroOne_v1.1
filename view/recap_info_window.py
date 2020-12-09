@@ -25,10 +25,15 @@ class Ui_recap_info_window(object):
         font.setBold(True)
         font.setWeight(75)
         self.download_btn.setFont(font)
-        self.download_btn.setStyleSheet("background-color: rgb(255, 0, 0);\n"
+        self.download_btn.setStyleSheet("\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"\n"
+"QPushButton{\n"
+"\n"
+"background-color: rgb(255, 0, 0);\n"
 "                 color: rgb(255, 255, 255);\n"
 "                 border-radius:10px;\n"
-"             ")
+"    }")
         self.download_btn.setObjectName("download_btn")
         self.recap_info_scrollarea = QtWidgets.QScrollArea(recap_info_window)
         self.recap_info_scrollarea.setGeometry(QtCore.QRect(20, 60, 361, 151))
@@ -72,11 +77,13 @@ class Ui_recap_info_window(object):
         font.setBold(False)
         font.setWeight(50)
         self.cancel_btn.setFont(font)
-        self.cancel_btn.setStyleSheet("background-color: rgb(0, 134, 255);\n"
+        self.cancel_btn.setStyleSheet("QPushButton{background-color: rgb(0, 134, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "                 color: rgb(255, 255, 255);\n"
 "             \n"
-"background-color: rgb(0, 134, 255);")
+"background-color: rgb(0, 134, 255);}\n"
+"\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}")
         self.cancel_btn.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/cancel/res/cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -90,6 +97,7 @@ class Ui_recap_info_window(object):
         font.setPointSize(-1)
         self.usb_download_check.setFont(font)
         self.usb_download_check.setStyleSheet("color: rgb(255, 0, 127);\n"
+"\n"
 "font-size: 20px;")
         self.usb_download_check.setText("")
         self.usb_download_check.setObjectName("usb_download_check")

@@ -43,10 +43,14 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.reg_ambiente_btn.setFont(font)
-        self.reg_ambiente_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.reg_ambiente_btn.setStyleSheet("\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"\n"
+"QPushButton{\n"
+"background-color: rgb(255, 255, 255);\n"
 "      border: 5px solid rgb(0, 134, 255);\n"
 "border-radius:50px;\n"
-"     ")
+"     }")
         self.reg_ambiente_btn.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/an_ambiente/res/Anagrafica ambientale.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -59,10 +63,14 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.reg_prodotto_btn.setFont(font)
-        self.reg_prodotto_btn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.reg_prodotto_btn.setStyleSheet("QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"\n"
+"QPushButton{\n"
+"\n"
+"background-color: rgb(255, 255, 255);\n"
 "      border: 5px solid rgb(0, 134, 255);\n"
 "      border-radius:50px;\n"
-"     ")
+"     }")
         self.reg_prodotto_btn.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/icons/res/prodotto_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -74,10 +82,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.poweroff_btn.setFont(font)
-        self.poweroff_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.poweroff_btn.setStyleSheet("QPushButton{color: rgb(255, 255, 255);\n"
 "image: url(:/poweroff /res/poweroff_icon.png);\n"
 "background-color: rgb(255, 255, 255);\n"
-"border-radius:10px;")
+"border-radius:10px;}\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}")
         self.poweroff_btn.setText("")
         self.poweroff_btn.setObjectName("poweroff_btn")
         self.sanifica_label = QtWidgets.QLabel(self.centralwidget)
@@ -100,11 +109,14 @@ class Ui_MainWindow(object):
         font.setPointSize(15)
         self.sanifica_btn.setFont(font)
         self.sanifica_btn.setToolTipDuration(10)
-        self.sanifica_btn.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.sanifica_btn.setStyleSheet("QPushButton:pressed{background-color: rgb(10, 57, 126);}\n"
+"\n"
+"QPushButton{\n"
+"color: rgb(0, 0, 0);\n"
 "      background-color: rgb(255, 255, 255);\n"
 "      border-radius:75px;\n"
 "      border: 5px solid rgb(0, 134, 255);\n"
-"     ")
+"   }")
         self.sanifica_btn.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/wind/res/wind.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -156,7 +168,8 @@ class Ui_MainWindow(object):
         self.serial_label.setObjectName("serial_label")
         self.settings_btn = QtWidgets.QPushButton(self.centralwidget)
         self.settings_btn.setGeometry(QtCore.QRect(410, 0, 51, 31))
-        self.settings_btn.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.settings_btn.setStyleSheet("QPushButton{background-color: rgb(255, 255, 255);}\n"
+"QPushButton:pressed{background-color: rgb(10, 57, 126);}")
         self.settings_btn.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap(":/gear/res/gear.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
