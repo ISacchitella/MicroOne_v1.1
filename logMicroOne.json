@@ -1,24 +1,3 @@
 {
-	"serial_number": "PPPPPP",
-	"version": "v1.0",
-	"details": [
-		{
-			"date": "11:43:06 13/01/21",
-			"disinfection_duration": "0:00:04",
-			"state": "COMPLETED",
-			"room": "pppppp",
-			"cubic_meters": 1,
-			"product": {
-				"name": "ttt",
-				"concentration": 2,
-				"expiry_date": "01/10/50",
-				"batch_number": [
-					"---"
-				]
-			}
-		}
-	],
-	"sistema": {
-		"boot_time": "00:27:00 01/01/21"
-	}
+	"serial_number": ""
 }

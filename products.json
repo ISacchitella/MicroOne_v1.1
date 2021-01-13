@@ -1,18 +1,38 @@
 [
  {
-  "name": "ppppp",
-  "concentration": 1,
-  "expiry_date": "01/10/50",
-  "batch_number": [
-   "---"
-  ]
+  "name": "PEROX-Shock Treat.",
+  "concentration": 5,
+  "expiry_date": null,
+  "batch_number": []
  },
  {
-  "name": "ttt",
-  "concentration": 2,
-  "expiry_date": "01/10/50",
-  "batch_number": [
-   "---"
-  ]
+  "name": "P31-High Level Treat.",
+  "concentration": 3,
+  "expiry_date": null,
+  "batch_number": []
+ },
+ {
+  "name": "PEROX-Standard Level Treat.",
+  "concentration": 1,
+  "expiry_date": null,
+  "batch_number": []
+ },
+ {
+  "name": "P31-Standard Level Treat.",
+  "concentration": 1,
+  "expiry_date": null,
+  "batch_number": []
+ },
+ {
+  "name": "PEROX-High Level Treat.",
+  "concentration": 3,
+  "expiry_date": null,
+  "batch_number": []
+ },
+ {
+  "name": "P31-Shock Treat.",
+  "concentration": 5,
+  "expiry_date": null,
+  "batch_number": []
  }
 ]
