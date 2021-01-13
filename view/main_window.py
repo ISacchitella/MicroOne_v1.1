@@ -152,7 +152,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_m_window/res/pagina_MICROONE_m_window.png.png);")
+"image: url(:/main_window_eng/res/pagina_MICROONE_m_window_eng.png);")
         self.label.setText("")
         self.label.setObjectName("label")
         self.serial_label = QtWidgets.QLabel(self.centralwidget)
@@ -194,10 +194,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MicroOne"))
-        self.sanifica_label.setText(_translate("MainWindow", "Avvio Ciclo Trattamento"))
+        self.sanifica_label.setText(_translate("MainWindow", "Start Treatment"))
         self.sanifica_btn.setToolTip(_translate("MainWindow", "Clicca per avviare la sanificazione"))
-        self.registra_p_label.setText(_translate("MainWindow", "Anagrafica Prodotto"))
-        self.registra_a_label.setText(_translate("MainWindow", "Anagrafica Ambiente"))
+        self.registra_p_label.setText(_translate("MainWindow", "Chemical Product"))
+        self.registra_a_label.setText(_translate("MainWindow", "Room"))
         self.serial_label.setText(_translate("MainWindow", "MicroOne-"))
 import img_resources_rc
 

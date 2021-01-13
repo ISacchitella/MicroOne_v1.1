@@ -10,6 +10,7 @@ from multiprocessing import Process
 from control.controllers import salva_prodotto, salva_ambiente, make_logger, make_error_msg, \
     open_seleziona_prodotto
 from control.keyboard_controller import Keyboard
+from control.literals import VERSIONE, ANAGRAFICA
 from control.save import load_info, save_info, format_info, copy_info, get_system_info, \
     poweroff
 from model.ambiente_prodotto import MAX_METRI_CUBI, Prodotto
@@ -58,10 +59,10 @@ class Micro_One_App(Ui_MainWindow):
             self.info['serial_number'] = self.dispositivo.serial_number
             save_info(self.info)
         self.serial_label.setText("MicroOne-" + self.dispositivo.serial_number)
-        if 'versione' not in self.info.keys():
-            self.info['versione'] = "v1.0"
-        if 'anagrafica' not in self.info.keys():
-            self.info['anagrafica'] = []
+        if VERSIONE not in self.info.keys():
+            self.info[VERSIONE] = "v1.0"
+        if ANAGRAFICA not in self.info.keys():
+            self.info[ANAGRAFICA] = []
 
     def setup_serial_number(self):
         serial_number_dialog = QDialog(flags=(Qt.Dialog | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint))
@@ -73,7 +74,7 @@ class Micro_One_App(Ui_MainWindow):
         label_blu = QLabel(serial_number_dialog)
         label_blu.resize(480, 320)
         label_blu.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-                                "image: url(:/sfondo_microone/res/pagina_MICROONE.png);")
+                                "image: url(:/sfondo_microone_eng/res/pagina_MICROONE_eng.png);")
 
         sn_textbox = QLineEdit(serial_number_dialog)
         sn_textbox.move(100, 40)  # TEXTBOX per inserire serial number
@@ -86,18 +87,21 @@ class Micro_One_App(Ui_MainWindow):
                                  "font-size: 17px; \n")
         sn_textbox.setAlignment(Qt.AlignCenter)
         # button
-        sn_button = QPushButton('Salva', serial_number_dialog)
+        sn_button = QPushButton('Save', serial_number_dialog)
         sn_button.move(340, 240)
         sn_button.resize(120, 60)
         sn_button.setStyleSheet("background-color: rgb(0, 140, 255); \n"
                                 "color: rgb(255, 255, 255); \n"
                                 "border-radius: 10px; \n")
 
+
         font = QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
+
+        sn_button.setFont(font)
 
         # TASTIERA
         keyboard_btn = QPushButton(serial_number_dialog)

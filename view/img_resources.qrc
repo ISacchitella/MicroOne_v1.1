@@ -3,6 +3,39 @@
     <file>res/up_arrow.png</file>
     <file>res/down_arrow.png</file>
   </qresource>
+  <qresource prefix="tratt_in_corso_eng">
+    <file>res/pagina_MICROONE_trattamento_in_corso_eng.png</file>
+  </qresource>
+  <qresource prefix="select_product">
+    <file>res/pagina_MICROONE_selezione_prodotto_eng.png</file>
+  </qresource>
+  <qresource prefix="select_room_eng">
+    <file>res/pagina_MICROONE_selezione_amb_eng.png</file>
+  </qresource>
+  <qresource prefix="sanifica_summary_eng">
+    <file>res/pagina_MICROONE_riepilogo_trattamento_eng.png</file>
+  </qresource>
+  <qresource prefix="recap_info_eng">
+    <file>res/pagina_MICROONE_info_eng.png</file>
+  </qresource>
+  <qresource prefix="inserisci_nome_prodotto_eng">
+    <file>res/pagina_MICROONE_ins_nome_prod_eng.png</file>
+  </qresource>
+  <qresource prefix="inserisci_nome_ambiente_eng">
+    <file>res/pagina_MICROONE_ins_nome_amb_eng.png</file>
+  </qresource>
+  <qresource prefix="main_window_eng">
+    <file>res/pagina_MICROONE_m_window_eng.png</file>
+  </qresource>
+  <qresource prefix="metricubi_eng">
+    <file>res/pagina_MICROONE_ins_metri_cubi_eng.png</file>
+  </qresource>
+  <qresource prefix="data_ora_eng">
+    <file>res/pagina_MICROONE_inserisci_data_ora_eng.png</file>
+  </qresource>
+  <qresource prefix="data_scadenza_eng">
+    <file>res/pagina_MICROONE_ins_data_scad_eng.png</file>
+  </qresource>
   <qresource prefix="sfondo_timer">
     <file>res/pagina_MICROONE_trattamento_in_corso.png</file>
   </qresource>
@@ -30,8 +63,8 @@
   <qresource prefix="sfondo_m_window">
     <file>res/pagina_MICROONE_m_window.png.png</file>
   </qresource>
-  <qresource prefix="sfondo_lotto">
-    <file>res/pagina_MICROONE_ins_lotto.png</file>
+  <qresource prefix="sfondo_lotto_eng">
+    <file>res/pagina_MICROONE_ins_lotto_eng.png</file>
   </qresource>
   <qresource prefix="sfondo_data_scadenza">
     <file>res/pagina_MICROONE_ins_data_scad.png</file>
@@ -48,8 +81,8 @@
   <qresource prefix="an_ambiente">
     <file>res/Anagrafica ambientale.png</file>
   </qresource>
-  <qresource prefix="sfondo_microone">
-    <file>res/pagina_MICROONE.png</file>
+  <qresource prefix="sfondo_microone_eng">
+    <file>res/pagina_MICROONE_eng.png</file>
   </qresource>
   <qresource prefix="hand">
     <file>res/Hand.png</file>

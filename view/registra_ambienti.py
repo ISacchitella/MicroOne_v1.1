@@ -121,7 +121,7 @@ class Ui_Reg_ambiente_Window(object):
         self.label_5 = QtWidgets.QLabel(Reg_ambiente_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_registra_ambiente/res/pagina_MICROONE_ins_nome_amb.png);")
+"image: url(:/inserisci_nome_ambiente_eng/res/pagina_MICROONE_ins_nome_amb_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Reg_ambiente_Window)
@@ -197,7 +197,7 @@ class Ui_Reg_ambiente_Window(object):
         _translate = QtCore.QCoreApplication.translate
         Reg_ambiente_Window.setWindowTitle(_translate("Reg_ambiente_Window", "Registra Ambiente"))
         self.metri_cubi_label.setText(_translate("Reg_ambiente_Window", "m"))
-        self.save_btn.setText(_translate("Reg_ambiente_Window", "Salva"))
+        self.save_btn.setText(_translate("Reg_ambiente_Window", "Save"))
         self.concentrazione_label_2.setText(_translate("Reg_ambiente_Window", "3"))
 import img_resources_rc
 

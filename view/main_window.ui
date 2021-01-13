@@ -184,7 +184,7 @@ QPushButton:pressed{background-color: rgb(10, 57, 126);}</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Avvio Ciclo Trattamento</string>
+     <string>Start Treatment</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -267,7 +267,7 @@ color: rgb(0, 0, 0);
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Anagrafica Prodotto</string>
+     <string>Chemical Product</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -300,7 +300,7 @@ color: rgb(0, 0, 0);
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Anagrafica Ambiente</string>
+     <string>Room</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -320,7 +320,7 @@ color: rgb(0, 0, 0);
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(0, 140, 255);
-image: url(:/sfondo_m_window/res/pagina_MICROONE_m_window.png.png);</string>
+image: url(:/main_window_eng/res/pagina_MICROONE_m_window_eng.png);</string>
     </property>
     <property name="text">
      <string/>

@@ -1,10 +1,12 @@
 from collections import namedtuple, OrderedDict
 from datetime import datetime
 
+from control.literals import NOME_AMBIENTE, METRI_CUBI, NOME_PRODOTTO, DATA_SCADENZA, CONCENTRAZIONE, LOTTO
+
 '''Timer misurato in secondi'''
 TEMPO_ALLONTANAMENTO = 10
 '''Ambiente'''
-Ambiente = namedtuple('Ambiente', ['nome', 'metri_cubi'])
+Ambiente = namedtuple('Ambiente', [NOME_AMBIENTE, METRI_CUBI])
 MAX_METRI_CUBI = 3000
 MIN_METRI_CUBI = 1
 check_metri_cubi = lambda metri_cubi: MAX_METRI_CUBI if (metri_cubi > MAX_METRI_CUBI) else (
@@ -12,7 +14,7 @@ check_metri_cubi = lambda metri_cubi: MAX_METRI_CUBI if (metri_cubi > MAX_METRI_
 
 
 def display_ambiente(ambiente):
-    return ambiente.nome + ': ' + str(ambiente.metri_cubi) + ' m^3'
+    return ambiente.name + ': ' + str(ambiente.cubic_meters) + ' m^3'
 
 
 # ---------------------------------------------------------------------------------------
@@ -56,13 +58,13 @@ class Prodotto:
 
     def __dict__(self):
         return OrderedDict(
-            {'nome': self.nome, 'concentrazione': self.concentrazione,
-             'data_scadenza': self.format_data_scadenza(), 'lotto': self.lotto
+            {NOME_PRODOTTO: self.nome, CONCENTRAZIONE: self.concentrazione,
+             DATA_SCADENZA: self.format_data_scadenza(), LOTTO: self.lotto
              })
 
     def __repr__(self):
-        return str({'nome': self.nome, 'data_scadenza': self.format_data_scadenza(), 'lotto': self.lotto,
-                    'concentrazione': self.concentrazione})
+        return str({NOME_PRODOTTO: self.nome, DATA_SCADENZA: self.format_data_scadenza(), LOTTO: self.lotto,
+                    CONCENTRAZIONE: self.concentrazione})
 
     def __str__(self):
         return self.nome + ": " + str(self.concentrazione)

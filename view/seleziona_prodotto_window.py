@@ -47,8 +47,8 @@ class Ui_Seleziona_Prodotto_Window(object):
         self.prodotti_comboBox.setObjectName("prodotti_comboBox")
         self.label_5 = QtWidgets.QLabel(Seleziona_Prodotto_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
-        self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_sel_prodotto/res/pagina_MICROONE_selezione_prodotto.png);")
+        self.label_5.setStyleSheet("\n"
+"image: url(:/select_product/res/pagina_MICROONE_selezione_prodotto_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label_2 = QtWidgets.QLabel(Seleziona_Prodotto_Window)
@@ -122,7 +122,7 @@ class Ui_Seleziona_Prodotto_Window(object):
     def retranslateUi(self, Seleziona_Prodotto_Window):
         _translate = QtCore.QCoreApplication.translate
         Seleziona_Prodotto_Window.setWindowTitle(_translate("Seleziona_Prodotto_Window", "Prodotto"))
-        self.avanti_btn.setText(_translate("Seleziona_Prodotto_Window", "Avanti"))
+        self.avanti_btn.setText(_translate("Seleziona_Prodotto_Window", "Confirm"))
 import img_resources_rc
 
 

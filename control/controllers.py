@@ -1,6 +1,6 @@
 import logging
 from collections import OrderedDict
-from datetime import timedelta, datetime
+from datetime import timedelta
 from enum import Enum
 from time import sleep
 
@@ -8,12 +8,11 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import Qt
 
 from control.keyboard_controller import Keyboard
+from control.literals import DATA, TEMPO, STATO, AMBIENTE, METRI_CUBI, PRODOTTO, ANAGRAFICA
 from control.save import load_ambienti, save_ambienti, load_prodotti, save_prodotti, save_info, get_system_info, \
-    copy_info, poweroff, display_riepilogo, close_timer
-from model import dispositivo
+    display_riepilogo, close_timer
 from model.ambiente_prodotto import Ambiente, check_metri_cubi, Prodotto, TEMPO_ALLONTANAMENTO, display_ambiente, \
     MAX_METRI_CUBI
-from model.dispositivo import Dispositivo, IS_RASPBERRY
 from view.inserisci_data_scadenza_window import Ui_Inserisci_Data_Scadenza_Window
 from view.inserisci_lotto_window import Ui_Inserisci_Lotto_Window
 from view.inserisci_metri_cubi_window import Ui_Inserisci_Metri_Cubi_Window
@@ -58,7 +57,7 @@ def salva_prodotto(window, ui):
         save_prodotti(prodotti)
         window.close()
     else:
-        print('Scrivi il nome')
+        print('Write the name')
 
 
 # Ambiente Widgets Controller
@@ -71,7 +70,7 @@ def salva_ambiente(window, ui):
         save_ambienti(ambienti)
         window.close()
     else:
-        print('Scrivi il nome')
+        print('Write the name')
 
 
 def seleziona_ambiente(ui, app):
@@ -203,8 +202,8 @@ def open_metri_cubi(current_window, current_ui, app):
     ambienti = load_ambienti()
     next_ui.metri_cubi_spinBox.setMaximum(MAX_METRI_CUBI)
     if app.selected_ambiente != None:
-        ambiente_selezionato = next((ambiente for ambiente in ambienti if ambiente.nome == app.selected_ambiente))
-        app.selected_metri_cubi = ambiente_selezionato.metri_cubi
+        ambiente_selezionato = next((ambiente for ambiente in ambienti if ambiente.name == app.selected_ambiente))
+        app.selected_metri_cubi = ambiente_selezionato.cubic_meters
     next_ui.metri_cubi_spinBox.setValue(app.selected_metri_cubi)
 
     # -----End-------
@@ -222,24 +221,24 @@ def open_riepilogo(current_window, current_ui, app):
     app.selected_prodotto.millilitri = app.selected_metri_cubi
     if app.selected_prodotto.millilitri <= Prodotto.MAX_MILLILITRI:
         next_ui.millilitri_label.setText(
-            "Sono necessari " + str(app.selected_prodotto.millilitri) + " ml di prodotto. \n"
-                                                                        "Verificare il serbatoio!")
+            "Needed " + str(app.selected_prodotto.millilitri) + " ml of product. \n"
+                                                                        "Check the tank!")
 
     else:
-        next_ui.millilitri_label.setText("Non è possibile eseguire" + "\n" +"il trattamento!")
+        next_ui.millilitri_label.setText("It is not possible to" + "\n" + "run medical procedure!")
         next_ui.avanti_btn.setDisabled(True)
 
     app.dispositivo.calcola_tempo(app.selected_metri_cubi, concentrazione=app.selected_prodotto.get_concentrazione())
 
     sessione = OrderedDict({
-        'data': app.current_date.strftime("%H:%M:%S %d/%m/%y"),
-        'tempo': str(app.dispositivo.tempo_sanificazione),
-        'stato': Stato.FALLITA.name,
-        'ambiente': app.selected_ambiente,
-        'metri_cubi': app.selected_metri_cubi,
-        'prodotto': app.selected_prodotto.__dict__()
+        DATA: app.current_date.strftime("%H:%M:%S %d/%m/%y"),
+        TEMPO: str(app.dispositivo.tempo_sanificazione),
+        STATO: Stato.FAILED.name,
+        AMBIENTE: app.selected_ambiente,
+        METRI_CUBI: app.selected_metri_cubi,
+        PRODOTTO: app.selected_prodotto.__dict__()
     })
-    app.info['anagrafica'].insert(0, sessione)
+    app.info[ANAGRAFICA].insert(0, sessione)
     next_ui.recap_info_text_edit.setText(display_riepilogo(sessione))
     # -----End-------
     move_to_next_window(app, current_window, current_ui, next_window, next_ui)
@@ -253,8 +252,8 @@ WINDOWS_LIST = [(open_seleziona_prodotto, Ui_Seleziona_Prodotto_Window), (open_l
 
 # ---------timer-------
 class Stato(Enum):
-    FALLITA = 0
-    COMPLETATA = 1
+    FAILED = 0
+    COMPLETED = 1
 
 
 def sanifica(window, ui, app):
@@ -280,7 +279,7 @@ def timeout_allontanarsi(window, ui, app):
     if ui.allontanarsi_sec <= 0:
         ui.timer.stop()
         ui.timer.disconnect()  # TODO aumentare o diminuire scritta timer
-        ui.description_label.setText("Sanificazione in corso...")
+        ui.description_label.setText("Ongoing Disinfection...")
         ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
                                            "font-size: 20px; \n")
         ui.timer_label.setText(str(ui.tempo_sanificazione))
@@ -301,14 +300,14 @@ def timeout_sanificazione(window, ui, app):
         ui.timer.stop()
         ui.close_btn.disconnect()
         ui.close_btn.clicked.connect(lambda: close_timer(window, ui.timer.stop, arresta=None))
-        ui.description_label.setText("Trattamento completato!")
-        app.info['anagrafica'][0]['stato'] = Stato.COMPLETATA.name
+        ui.description_label.setText("Treatment completed!")
+        app.info[ANAGRAFICA][0][STATO] = Stato.COMPLETED.name
         save_info(app.info)
         ui.cancel_btn.setEnabled(False)
         ui.download_btn.setEnabled(True)
         ui.timer.disconnect()
         sleep(10)
-        ui.description_label.setText("Decontaminazione in corso...")
+        ui.description_label.setText("Ongoing Decontamination...")
         ui.description_label.setStyleSheet("color: rgb(170, 0, 0);\n"
                                            "font-size: 18px;")
         ui.decontaminazione_sec = timedelta(hours=1)
@@ -325,6 +324,6 @@ def timeout_decontaminazione(window, ui, app):
     if ui.decontaminazione_sec.total_seconds() <= 0:
         ui.timer.stop()
         ui.cancel_btn.setDisabled(True)
-        ui.description_label.setText("Decontaminazione completata!")
+        ui.description_label.setText("Decontamination completed!")
         ui.description_label.setStyleSheet("color: rgb(85,170,0); \n"
                                            "font-size: 20px;")

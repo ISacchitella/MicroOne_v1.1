@@ -56,7 +56,7 @@ class Ui_Reg_prodotto_Window(object):
         self.label_5 = QtWidgets.QLabel(Reg_prodotto_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_registra_prodotto/res/pagina_MICROONE_ins_nome_prod.png);")
+"image: url(:/inserisci_nome_prodotto_eng/res/pagina_MICROONE_ins_nome_prod_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(Reg_prodotto_Window)
@@ -230,7 +230,7 @@ class Ui_Reg_prodotto_Window(object):
         _translate = QtCore.QCoreApplication.translate
         Reg_prodotto_Window.setWindowTitle(_translate("Reg_prodotto_Window", "Registra Prodotto"))
         self.data_scad_label.setText(_translate("Reg_prodotto_Window", "Inserisci data di scadenza"))
-        self.save_btn.setText(_translate("Reg_prodotto_Window", "Salva"))
+        self.save_btn.setText(_translate("Reg_prodotto_Window", "Save"))
         self.concentrazione_label.setText(_translate("Reg_prodotto_Window", "ml/m"))
         self.concentrazione_label_2.setText(_translate("Reg_prodotto_Window", "3"))
 import img_resources_rc

@@ -104,7 +104,7 @@ class Ui_recap_info_sanifica_window(object):
         self.label_5 = QtWidgets.QLabel(recap_info_sanifica_window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_recap_sanifica/res/pagina_MICROONE_riepilogo_trattamento.png);")
+"image: url(:/sanifica_summary_eng/res/pagina_MICROONE_riepilogo_trattamento_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(recap_info_sanifica_window)
@@ -148,7 +148,7 @@ class Ui_recap_info_sanifica_window(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Prova Text Edit</p></body></html>"))
-        self.avanti_btn.setText(_translate("recap_info_sanifica_window", "Avvia"))
+        self.avanti_btn.setText(_translate("recap_info_sanifica_window", "Start"))
 import img_resources_rc
 
 

@@ -19,7 +19,7 @@ class Ui_Inserisci_Lotto_Window(object):
         self.label_5 = QtWidgets.QLabel(Inserisci_Lotto_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_lotto/res/pagina_MICROONE_ins_lotto.png);")
+"image: url(:/sfondo_lotto_eng/res/pagina_MICROONE_ins_lotto_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Lotto_Window)
@@ -103,7 +103,7 @@ class Ui_Inserisci_Lotto_Window(object):
     def retranslateUi(self, Inserisci_Lotto_Window):
         _translate = QtCore.QCoreApplication.translate
         Inserisci_Lotto_Window.setWindowTitle(_translate("Inserisci_Lotto_Window", "Lotto"))
-        self.avanti_btn.setText(_translate("Inserisci_Lotto_Window", "Avanti"))
+        self.avanti_btn.setText(_translate("Inserisci_Lotto_Window", "Skip"))
 import img_resources_rc
 
 

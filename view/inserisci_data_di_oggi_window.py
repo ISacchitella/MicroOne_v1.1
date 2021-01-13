@@ -121,7 +121,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
         self.keyboard_btn.setObjectName("keyboard_btn")
         self.label = QtWidgets.QLabel(Inserisci_Data_di_Oggi_Window)
         self.label.setGeometry(QtCore.QRect(0, 0, 480, 320))
-        self.label.setStyleSheet("image: url(:/sfondo_data_ora/res/pagina_MICROONE_inserisci_data_ora.png);")
+        self.label.setStyleSheet("image: url(:/data_ora_eng/res/pagina_MICROONE_inserisci_data_ora_eng.png);")
         self.label.setText("")
         self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label.setObjectName("label")
@@ -138,7 +138,7 @@ class Ui_Inserisci_Data_di_Oggi_Window(object):
     def retranslateUi(self, Inserisci_Data_di_Oggi_Window):
         _translate = QtCore.QCoreApplication.translate
         Inserisci_Data_di_Oggi_Window.setWindowTitle(_translate("Inserisci_Data_di_Oggi_Window", "Data Scadenza"))
-        self.avanti_btn.setText(_translate("Inserisci_Data_di_Oggi_Window", "Avanti"))
+        self.avanti_btn.setText(_translate("Inserisci_Data_di_Oggi_Window", "Skip"))
 import img_resources_rc
 
 

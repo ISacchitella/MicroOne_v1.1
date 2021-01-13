@@ -119,7 +119,8 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
         self.keyboard_btn.setObjectName("keyboard_btn")
         self.label_2 = QtWidgets.QLabel(Inserisci_Data_Scadenza_Window)
         self.label_2.setGeometry(QtCore.QRect(0, 0, 480, 320))
-        self.label_2.setStyleSheet("image: url(:/sfondo_data_scadenza/res/pagina_MICROONE_ins_data_scad.png);")
+        self.label_2.setStyleSheet("image: url(:/sfondo_data_scadenza/res/pagina_MICROONE_ins_data_scad.png);\n"
+"image: url(:/data_scadenza_eng/res/pagina_MICROONE_ins_data_scad_eng.png);")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.label_2.raise_()
@@ -135,7 +136,7 @@ class Ui_Inserisci_Data_Scadenza_Window(object):
     def retranslateUi(self, Inserisci_Data_Scadenza_Window):
         _translate = QtCore.QCoreApplication.translate
         Inserisci_Data_Scadenza_Window.setWindowTitle(_translate("Inserisci_Data_Scadenza_Window", "Data Scadenza"))
-        self.avanti_btn.setText(_translate("Inserisci_Data_Scadenza_Window", "Avanti"))
+        self.avanti_btn.setText(_translate("Inserisci_Data_Scadenza_Window", "Skip"))
 import img_resources_rc
 
 

@@ -87,7 +87,7 @@ border-radius:10px;
 </string>
    </property>
    <property name="text">
-    <string>Avanti</string>
+    <string>Skip</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="data_scad_dateEdit">
@@ -200,7 +200,8 @@ border-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/sfondo_data_scadenza/res/pagina_MICROONE_ins_data_scad.png);</string>
+    <string notr="true">image: url(:/sfondo_data_scadenza/res/pagina_MICROONE_ins_data_scad.png);
+image: url(:/data_scadenza_eng/res/pagina_MICROONE_ins_data_scad_eng.png);</string>
    </property>
    <property name="text">
     <string/>

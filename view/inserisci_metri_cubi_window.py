@@ -19,7 +19,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
         self.label_5 = QtWidgets.QLabel(Inserisci_Metri_Cubi_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfonod_metri_cubi/res/pagina_MICROONE_ins_metri_cubi.png);")
+"image: url(:/metricubi_eng/res/pagina_MICROONE_ins_metri_cubi_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn_ = QtWidgets.QPushButton(Inserisci_Metri_Cubi_Window)
@@ -130,7 +130,7 @@ class Ui_Inserisci_Metri_Cubi_Window(object):
     def retranslateUi(self, Inserisci_Metri_Cubi_Window):
         _translate = QtCore.QCoreApplication.translate
         Inserisci_Metri_Cubi_Window.setWindowTitle(_translate("Inserisci_Metri_Cubi_Window", "Metri Cubi"))
-        self.avanti_btn.setText(_translate("Inserisci_Metri_Cubi_Window", "Riepilogo"))
+        self.avanti_btn.setText(_translate("Inserisci_Metri_Cubi_Window", "Summary"))
 import img_resources_rc
 
 

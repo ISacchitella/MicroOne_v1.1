@@ -1,25 +1,24 @@
 {
-	"serial_number": "",
-	"versione": "v1.1",
-	"anagrafica": [
+	"serial_number": "PPPPPP",
+	"version": "v1.0",
+	"details": [
 		{
-			"data": "10:13:33 03/12/20",
-			"tempo": "0:00:10",
-			"stato": "COMPLETATA",
-			"ambiente": "Test funzionamento 1",
-			"metri_cubi": 1,
-			"prodotto": {
-				"nome": "P31-Tratt. d'urto",
-				"concentrazione": 5,
-				"data_scadenza": "01/12/30",
-				"lotto": [
+			"date": "11:43:06 13/01/21",
+			"disinfection_duration": "0:00:04",
+			"state": "COMPLETED",
+			"room": "pppppp",
+			"cubic_meters": 1,
+			"product": {
+				"name": "ttt",
+				"concentration": 2,
+				"expiry_date": "01/10/50",
+				"batch_number": [
 					"---"
 				]
 			}
-		},
-		{}
+		}
 	],
 	"sistema": {
-		"boot_time": "19:12:46 04/12/20"
+		"boot_time": "00:27:00 01/01/21"
 	}
 }

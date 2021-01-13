@@ -66,7 +66,7 @@ class Ui_recap_info_window(object):
         self.label_5 = QtWidgets.QLabel(recap_info_window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_recap_info/res/pagina_MICROONE_info.png);")
+"image: url(:/recap_info_eng/res/pagina_MICROONE_info_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(recap_info_window)

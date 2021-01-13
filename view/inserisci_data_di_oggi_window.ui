@@ -88,7 +88,7 @@ border-radius:10px;
 </string>
    </property>
    <property name="text">
-    <string>Avanti</string>
+    <string>Skip</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -207,7 +207,7 @@ border-radius:10px;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/sfondo_data_ora/res/pagina_MICROONE_inserisci_data_ora.png);</string>
+    <string notr="true">image: url(:/data_ora_eng/res/pagina_MICROONE_inserisci_data_ora_eng.png);</string>
    </property>
    <property name="text">
     <string/>

@@ -54,7 +54,7 @@ class Ui_Sel_ambiente_Window(object):
         self.label_5 = QtWidgets.QLabel(Sel_ambiente_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_sel_ambiente/res/pagina_MICROONE_selezione_amb.png);")
+"image: url(:/select_room_eng/res/pagina_MICROONE_selezione_amb_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.nome_label = QtWidgets.QLabel(Sel_ambiente_Window)
@@ -120,7 +120,7 @@ class Ui_Sel_ambiente_Window(object):
     def retranslateUi(self, Sel_ambiente_Window):
         _translate = QtCore.QCoreApplication.translate
         Sel_ambiente_Window.setWindowTitle(_translate("Sel_ambiente_Window", "Seleziona Ambiente"))
-        self.avanti_btn.setText(_translate("Sel_ambiente_Window", "Avanti"))
+        self.avanti_btn.setText(_translate("Sel_ambiente_Window", "Skip"))
 import img_resources_rc
 
 

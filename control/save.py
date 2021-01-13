@@ -11,17 +11,17 @@ import string
 from collections import OrderedDict
 from datetime import date, datetime
 
+from control.literals import INFO, PRODOTTI, AMBIENTI, DATA_SCADENZA, NOME_PRODOTTO, CONCENTRAZIONE, LOTTO, DATA, \
+    PRODOTTO, AMBIENTE, METRI_CUBI, VERSIONE
 from model.ambiente_prodotto import Ambiente, Prodotto
 from model.dispositivo import IS_RASPBERRY
 from view import recap_info_window
-
-INFO = "logMicroOne"
 
 
 def get_file_path(file_name, extension='.json'):
     path = os.path.join(os.path.abspath(os.getcwd()), file_name + extension)
     if not os.path.exists(path):
-        inizializer = {INFO: {}, 'prodotti': [], 'ambienti': []}
+        inizializer = {INFO: {}, PRODOTTI: [], AMBIENTI: []}
         json.dump(inizializer[file_name], open(path, 'w+'), indent=1)
     return path
 
@@ -33,17 +33,17 @@ def save_all(ambienti, prodotti, info):
 
 
 def save_ambienti(ambienti):
-    with open(get_file_path('ambienti'), 'w') as f:
+    with open(get_file_path(AMBIENTI), 'w') as f:
         json.dump(ambienti, f, indent=1)
 
 
 def save_prodotti(prodotti):
-    with open(get_file_path('prodotti'), 'w') as f:
+    with open(get_file_path(PRODOTTI), 'w') as f:
         json.dump([p.__dict__() for p in prodotti], f, indent=1)
 
 
 def load_ambienti():
-    list = json.load(open(get_file_path('ambienti')))
+    list = json.load(open(get_file_path(AMBIENTI)))
     ambienti = []
     for ambiente in list:
         ambienti.append(Ambiente(ambiente[0], ambiente[1]))
@@ -51,16 +51,16 @@ def load_ambienti():
 
 
 def load_prodotti():
-    list = json.load(open(get_file_path('prodotti')))
+    list = json.load(open(get_file_path(PRODOTTI)))
     prodotti = []
     for prodotto in list:
-        if prodotto['data_scadenza'] != None:
-            data_scadenza_l = prodotto['data_scadenza'].split('/')
+        if prodotto[DATA_SCADENZA] != None:
+            data_scadenza_l = prodotto[DATA_SCADENZA].split('/')
             data_scadenza = date(int(data_scadenza_l[2]) + 2000, int(data_scadenza_l[1]), int(data_scadenza_l[0]))
         else:
             data_scadenza = None
-        prodotti.append(Prodotto(prodotto['nome'], prodotto['concentrazione'], data_scadenza=data_scadenza,
-                                 lotto=prodotto['lotto']))
+        prodotti.append(Prodotto(prodotto[NOME_PRODOTTO], prodotto[CONCENTRAZIONE], data_scadenza=data_scadenza,
+                                 lotto=prodotto[LOTTO]))
     return prodotti
 
 
@@ -94,20 +94,20 @@ def close_timer(window, stop, arresta=None):
 
 def display_riepilogo(riepilogo):
     formatted_str = ""
-    formatted_str += f"Data del trattamento: {riepilogo['data']} \n"
-    formatted_str += f"Prodotto selezionato:{riepilogo['prodotto']['nome']}\n"
-    formatted_str += f"Concentrazione: {str(riepilogo['prodotto']['concentrazione'])}\n"
-    formatted_str += f"Data Scadenza Prodotto: {riepilogo['prodotto']['data_scadenza']}\n"
-    formatted_str += f"Lotto: {riepilogo['prodotto']['lotto'][0]}\n"
-    formatted_str += f"Ambiente selezionato: {riepilogo['ambiente']} \n"
-    formatted_str += f"Metri cubi inseriti: {riepilogo['metri_cubi']} \n"
+    formatted_str += f"Treatment Date: {riepilogo[DATA]} \n"
+    formatted_str += f"Selected Product:{riepilogo[PRODOTTO][NOME_PRODOTTO]}\n"
+    formatted_str += f"Concentration: {str(riepilogo[PRODOTTO][CONCENTRAZIONE])}\n"
+    formatted_str += f"Product Expiry Date: {riepilogo[PRODOTTO][DATA_SCADENZA]}\n"
+    formatted_str += f"Batch Number: {riepilogo[PRODOTTO][LOTTO][0]}\n"
+    formatted_str += f"Selected Room: {riepilogo[AMBIENTE]} \n"
+    formatted_str += f"Cubic Meters: {riepilogo[METRI_CUBI]} \n"
     return formatted_str
 
 
 def format_info(info):
     formatted_str = ""
     formatted_str += f"Serial Number {info['serial_number'].upper()}\n"
-    formatted_str += f"Versione {info['versione']}\n"
+    formatted_str += f"Version {info[VERSIONE]}\n"
     return formatted_str
 
 
@@ -120,7 +120,7 @@ def download_status_timer(timer, seconds, label):
         timer.stop()
         label.setStyleSheet("color: rgb(85,170,0); \n"
                             "font-size: 20px; \n")
-        label.setText("Download Completato!")
+        label.setText("Download Completed!")
 
 
 def copy_info(label, btn):
@@ -149,18 +149,18 @@ def copy_info(label, btn):
         except:
             label.setStyleSheet("color: rgb(255, 0, 0); \n"
                                 "font-size: 20px; \n")
-            label.setText("Errore Download!")
+            label.setText("Error Download!")
         else:
             label.setStyleSheet("color: rgb(226, 119, 30); \n"
                                 "font-size: 20px; \n")
-            label.setText("Download in corso...")
+            label.setText("Ongoing Download...")
             timer.startTimer(seconds[0], timerType=Qt.VeryCoarseTimer)
         # os.rename(usb_drive_path + "logMicroOne.json",usb_drive_path + 'info.txt')
     else:
-        print('Error: Nessuna Pen Drive Trovata', file=stderr)
+        print('Error: No Pen Drive Found', file=stderr)
         label.setStyleSheet("color: rgb(255,0,0); \n"
                             "font-size: 20px; \n")
-        label.setText("Inserire Chiavetta USB!")
+        label.setText("Plug in a Pen Drive!")
 
 
 
@@ -223,7 +223,7 @@ def unpack(obj):
 
 
 if __name__ == '__main__':
-    pass
+    print('test')
     # poweroff()
     # print(Ambiente('p',9)._asdict())
     # print()

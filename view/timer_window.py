@@ -42,7 +42,7 @@ class Ui_Timer_Window(object):
         self.label_5 = QtWidgets.QLabel(Timer_Window)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.label_5.setStyleSheet("background-color: rgb(0, 140, 255);\n"
-"image: url(:/sfondo_timer/res/pagina_MICROONE_trattamento_in_corso.png);")
+"image: url(:/tratt_in_corso_eng/res/pagina_MICROONE_trattamento_in_corso_eng.png);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.cancel_btn = QtWidgets.QPushButton(Timer_Window)
@@ -103,7 +103,7 @@ class Ui_Timer_Window(object):
     def retranslateUi(self, Timer_Window):
         _translate = QtCore.QCoreApplication.translate
         Timer_Window.setWindowTitle(_translate("Timer_Window", "Timer"))
-        self.description_label.setText(_translate("Timer_Window", "ALLONTANARSI"))
+        self.description_label.setText(_translate("Timer_Window", "KEEP BACK, PLEASE!"))
         self.timer_label.setText(_translate("Timer_Window", "10"))
         self.download_btn.setText(_translate("Timer_Window", "Download"))
 import img_resources_rc
